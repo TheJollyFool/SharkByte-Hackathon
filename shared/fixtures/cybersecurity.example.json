@@ -1,0 +1,88 @@
+{
+  "id": "example-cybersecurity",
+  "source": "fallback",
+  "career": {
+    "title": "Cybersecurity Specialist",
+    "overview": "EXAMPLE FIXTURE — illustrative values only, replace with a real generated roadmap. Protects an organization's systems and data from attacks.",
+    "responsibilities": ["Monitor networks for threats", "Respond to incidents", "Harden systems"],
+    "qualifications": ["Networking fundamentals", "Security+ or equivalent", "Analytical thinking"],
+    "median_salary_usd": null,
+    "outlook": null,
+    "related_careers": ["Network Administrator", "SOC Analyst", "Cloud Security Engineer"]
+  },
+  "routes": [
+    {
+      "id": "short",
+      "name": "Fast track: certificate to first job",
+      "type": "short",
+      "summary": "Short MDC credential plus industry certification to enter the workforce quickly.",
+      "total_months": 12,
+      "total_cost_usd": 4000,
+      "steps": [
+        {
+          "order": 0,
+          "institution": "Miami Dade College",
+          "program_id": "TODO",
+          "credential": "College Credit Certificate",
+          "program_name": "TODO — real MDC certificate from data/mdc_programs.json",
+          "duration_months": 12,
+          "cost_usd": 4000,
+          "estimate": true,
+          "transfer_agreement": null,
+          "key_courses": [],
+          "source_url": null
+        }
+      ],
+      "workforce_entry_points": [{ "after_step": 0, "job_title": "Help Desk / SOC Analyst I", "salary_range_usd": "TODO" }],
+      "credentials": [{ "name": "CompTIA Security+", "type": "certification", "required": false }],
+      "experience": ["Internship"],
+      "exams": ["CompTIA Security+"]
+    },
+    {
+      "id": "long",
+      "name": "Degree track: MDC to bachelor's",
+      "type": "long",
+      "summary": "Associate at MDC, transfer, bachelor's degree.",
+      "total_months": 48,
+      "total_cost_usd": 25000,
+      "steps": [
+        {
+          "order": 0,
+          "institution": "Miami Dade College",
+          "program_id": "TODO",
+          "credential": "A.A. or A.S.",
+          "program_name": "TODO",
+          "duration_months": 24,
+          "cost_usd": 8000,
+          "estimate": true,
+          "transfer_agreement": null,
+          "key_courses": [],
+          "source_url": null
+        },
+        {
+          "order": 1,
+          "institution": "TODO — transfer university",
+          "program_id": null,
+          "credential": "B.S.",
+          "program_name": "TODO",
+          "duration_months": 24,
+          "cost_usd": 17000,
+          "estimate": true,
+          "transfer_agreement": "TODO",
+          "key_courses": [],
+          "source_url": null
+        }
+      ],
+      "workforce_entry_points": [
+        { "after_step": 0, "job_title": "IT Support Specialist" },
+        { "after_step": 1, "job_title": "Cybersecurity Analyst" }
+      ],
+      "credentials": [],
+      "experience": [],
+      "exams": []
+    }
+  ],
+  "alternative_mdc_programs": [],
+  "resources": [],
+  "usage": { "total_tokens": 0, "total_cost_usd": 0 }
+}

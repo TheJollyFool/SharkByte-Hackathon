@@ -1,0 +1,13 @@
+{
+  "mdc": {
+    "tuition_per_credit_in_state": null,
+    "tuition_per_credit_out_of_state": null,
+    "fees_per_term_estimate": null,
+    "books_per_year_estimate": null,
+    "source_url": "TODO"
+  },
+  "universities": [
+    { "name": "TODO (e.g. FIU)", "tuition_per_credit_in_state": null, "source_url": "TODO" }
+  ],
+  "part_time_multiplier": 1.8
+}

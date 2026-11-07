@@ -1,0 +1,14 @@
+[
+  {
+    "id": "TODO-program-id",
+    "name": "TODO program name",
+    "credential": "College Credit Certificate | A.S. | A.A. | B.S. | B.A.S.",
+    "school": "TODO MDC school/department",
+    "credits": 0,
+    "typical_months_full_time": 0,
+    "careers": ["cybersecurity"],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/TODO"
+  }
+]

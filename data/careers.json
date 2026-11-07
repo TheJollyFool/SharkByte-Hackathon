@@ -1,0 +1,7 @@
+[
+  { "id": "cybersecurity", "title": "Cybersecurity Specialist", "keywords": ["cybersecurity", "network", "information technology"] },
+  { "id": "mechanical-engineer", "title": "Mechanical Engineer", "keywords": ["engineering", "mechanical", "pre-engineering"] },
+  { "id": "architect", "title": "Architect", "keywords": ["architecture", "design", "drafting"] },
+  { "id": "chef", "title": "Chef", "keywords": ["culinary", "hospitality", "food"] },
+  { "id": "it-consultant", "title": "IT Consultant", "keywords": ["information technology", "business", "computer"] }
+]
