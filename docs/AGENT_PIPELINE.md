@@ -6,10 +6,16 @@ Docs: https://docs.swarms.ai/api-reference/graph-workflow/execute-graph-workflow
 
 ## Graph
 
-```
-            ┌─ Career Researcher ──┐
- task ──────┼─ MDC Program Finder ─┼──► Pathway Planner ──► Roadmap Writer ──► outputs["Roadmap Writer"]
-            └─ Cost & Time Analyst ┘
+```mermaid
+flowchart LR
+    T([task: career + preferences<br/>+ injected MDC data]) --> R[Career Researcher]
+    T --> P[MDC Program Finder]
+    T --> C[Cost & Time Analyst]
+    R --> PL[Pathway Planner]
+    P --> PL
+    C --> PL
+    PL --> W[Roadmap Writer]
+    W --> O([outputs&#91;'Roadmap Writer'&#93;<br/>Roadmap JSON])
 ```
 
 Agents at the same level run in parallel. The Planner waits for all three.

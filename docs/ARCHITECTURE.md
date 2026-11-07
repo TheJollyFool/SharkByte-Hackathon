@@ -1,18 +1,18 @@
 # Architecture
 
+```mermaid
+flowchart LR
+    U([Student phone / QR]) --> F[Next.js frontend<br/>Vercel]
+    F -- "POST /roadmap" --> B[FastAPI backend<br/>Render/Railway]
+    B -- "Roadmap JSON" --> F
+    B -- "graph-workflow/completions" --> S[Swarms API<br/>5 agents]
+    S -- "outputs + usage" --> B
+    B -. reads .-> D[(data/*.json<br/>MDC programs, costs,<br/>transfer agreements)]
+    B -. read/write .-> C[(Disk cache<br/>roadmaps by id)]
+    B -. fallback .-> X[(shared/fixtures)]
 ```
-┌──────────────┐  POST /roadmap   ┌────────────────────────────┐   POST /v1/graph-workflow/completions   ┌──────────────┐
-│  Next.js app │ ───────────────► │  FastAPI backend           │ ─────────────────────────────────────► │  Swarms API  │
-│  (Vercel)    │ ◄─────────────── │  - builds graph request    │ ◄───────────────────────────────────── │  5 agents    │
-└──────────────┘   Roadmap JSON   │  - injects data/ into      │        outputs keyed by agent_name     └──────────────┘
-       ▲                          │    agent prompts           │
-       │ QR / share link          │  - validates Writer JSON   │
-       │ /r/{id}                  │  - caches on disk          │
-                                  └────────────────────────────┘
-                                         │ reads
-                                         ▼
-                                  data/*.json (MDC programs, costs, transfer agreements)
-```
+
+Contracts for every endpoint: [CONTRACTS.md](CONTRACTS.md).
 
 ## Request flow
 1. Frontend sends `{career, preferences}` to `POST /roadmap`.
@@ -25,6 +25,21 @@
    - Invalid → one repair attempt (single cheap agent: "fix this JSON to match the schema"), else fallback fixture.
 6. Adds `id`, `usage` (tokens, cost), stores in cache, returns.
 7. `GET /roadmap/{id}` serves the cached result for share links / QR codes.
+
+```mermaid
+flowchart TD
+    A[POST /roadmap] --> K{cache hit<br/>or DEMO_MODE?}
+    K -- yes --> R[return cached / fixture]
+    K -- no --> L[load MDC data for career]
+    L --> G[build graph request]
+    G --> S[call Swarms]
+    S --> V{valid JSON<br/>vs schema?}
+    V -- yes --> W[save to cache] --> R2[return source=live]
+    V -- no --> P[repair call] --> V2{valid?}
+    V2 -- yes --> W
+    V2 -- no --> FB[return fixture source=fallback]
+    S -- timeout/error --> FB
+```
 
 ## Backend module layout (planned)
 ```

@@ -15,7 +15,7 @@ Pathway Planner merges them and the Roadmap Writer produces the final roadmap.
 | `shared/` | Roadmap JSON schema + example fixtures (the backend ↔ frontend contract) |
 | `docs/` | Product spec, architecture, agent pipeline, team plan, demo script |
 
-Start here: [AGENTS.md](AGENTS.md) · [docs/PRODUCT.md](docs/PRODUCT.md) · [docs/TEAM_PLAN.md](docs/TEAM_PLAN.md)
+Start here: [AGENTS.md](AGENTS.md) · [docs/REQUIREMENTS.md](docs/REQUIREMENTS.md) · [docs/CONTRACTS.md](docs/CONTRACTS.md) · [docs/PRODUCT.md](docs/PRODUCT.md) · [docs/TEAM_PLAN.md](docs/TEAM_PLAN.md)
 
 ## Quick start
 

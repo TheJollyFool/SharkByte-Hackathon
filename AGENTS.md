@@ -14,7 +14,24 @@ already enter the workforce.
 
 Target prizes: **MDC Challenge**, **Swarms Challenge**, overall prize. Stretch: Gemini, GoDaddy domain.
 
-Full product spec: [docs/PRODUCT.md](docs/PRODUCT.md). Judging criteria checklist lives there too.
+## Read order (source of truth)
+
+| Doc | What | Who edits |
+|---|---|---|
+| [docs/TRACKS.md](docs/TRACKS.md) | Which prizes we target and why | Team |
+| [docs/REQUIREMENTS.md](docs/REQUIREMENTS.md) | **Scope: what we build and what we DON'T** | **Humans only — read-only for agents** |
+| [docs/PRODUCT.md](docs/PRODUCT.md) | Product spec + MDC judging checklist | Team |
+| [docs/CONTRACTS.md](docs/CONTRACTS.md) | API endpoints, request/response, errors | Backend + frontend together |
+| [shared/roadmap.schema.json](shared/roadmap.schema.json) | Roadmap JSON shape | Backend + frontend together |
+| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Diagrams (Mermaid), modules, deploy | Anyone, keep in sync |
+| [docs/AGENT_PIPELINE.md](docs/AGENT_PIPELINE.md) | Swarms graph, prompts, models | Backend |
+| [docs/TEAM_PLAN.md](docs/TEAM_PLAN.md) | Who does what, task checklist | Team |
+
+**Scope rule:** never build anything not in REQUIREMENTS.md or listed under its "Out of scope".
+If a task seems to need it, stop and ask a human instead of inventing features.
+
+**Diagrams:** use Mermaid code blocks in `docs/`. When you change architecture, flow or the
+agent graph, update the matching Mermaid diagram in the same PR.
 
 ## Architecture (short version)
 
