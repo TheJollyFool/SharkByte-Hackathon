@@ -9,9 +9,8 @@
 |---|---|---|
 | **Piero** | Backend + Swarms | `backend/`, `docs/AGENT_PIPELINE.md`, prompts, cache, deploy backend |
 | **Diego** | Frontend | `frontend/`, UI de resultados, QR, deploy Vercel, monitor para el stand |
-| **Robert** | Frontend + integración | timeline/comparador de rutas, animación del grafo de agentes, Gemini en un agente |
-| **Steeven** | Datos MDC | `data/*.json` (programas, costos, transfer agreements) con `source_url` |
-| **Adrian** | Producto + pitch | `docs/PRODUCT.md` checklist, `docs/DEMO.md`, slides, video, ensayar la exposición |
+| **Robert** | Frontend + integración | timeline/comparador de rutas, animación del grafo de agentes, Gemini en un agente, deploy |
+| **Adrian** | Datos MDC + pitch | `data/*.json` (programas, costos, transfer agreements) con `source_url`, `docs/DEMO.md`, slides, ensayar la exposición |
 
 Regla: los LLMs (Claude, Codex, Gemini) escriben el código leyendo `AGENTS.md`. Los humanos
 deciden, revisan y prueban. El que tenga límite de uso pasa su tarea a otro modelo, no se para.
@@ -39,13 +38,13 @@ deciden, revisan y prueban. El que tenga límite de uso pasa su tarea a otro mod
 - [ ] Share link `/r/[id]` + QR
 - [ ] Panel "agentes trabajando" (grafo animado de los 5 agentes)
 
-**Datos (Steeven)**
+**Datos (Adrian, con ayuda de quien termine primero)**
 - [ ] `data/careers.json` — las 5 carreras showcase + keywords
 - [ ] `data/mdc_programs.json` — programas reales de MDC relacionados (A.S., A.A., certificados, B.S.)
 - [ ] `data/transfer_agreements.json` — 2+2 / articulación con FIU, FAU, UCF, etc.
 - [ ] `data/costs.json` — costo por crédito MDC in-state/out-of-state, universidades destino, libros/fees
 
-**Pitch (Adrian)**
+**Pitch (Adrian + todos)**
 - [ ] Llenar tabla de requisitos MDC en PRODUCT.md mientras se construye
 - [ ] `docs/DEMO.md` — guion de 3 min
 - [ ] Slides (problema → demo → swarm → impacto → escala)

@@ -1,6 +1,6 @@
 # Requirements & Scope
 
-> **Human-owned file.** The team writes and approves this, not an AI. Agents must treat it as
+> **Human-owned file.** The team (Piero, Adrian, Robert, Diego) writes and approves this, not an AI. Agents must treat it as
 > read-only and must not build anything listed under "Out of scope". If a task seems to need
 > something not listed here, stop and ask a human.
 
@@ -8,7 +8,7 @@
 
 | ID | Requirement | Covers |
 |---|---|---|
-| FR-1 | Student can search or pick a career from a list (5 showcase careers + free text) | MDC §1 |
+| FR-1 | Student picks a career from a list of 5 showcase careers (free-text search is "should have", best effort) | MDC §1 |
 | FR-2 | Career overview: description, responsibilities, qualifications, related careers | MDC §1 |
 | FR-3 | Student sets preferences: budget, pace, full/part-time, existing credits | Personalized |
 | FR-4 | System returns 2–4 routes; **step 1 of every route is a real MDC program** from `data/` | MDC §2, §5 |
@@ -31,7 +31,8 @@
 - NFR-5 Adding a career requires only data changes (`data/*.json`), no code.
 
 ## Should have (if time)
-- Live "agents working" graph animation
+- Free-text career search (any career, best effort)
+- Live "agents working" graph animation (high priority — it sells the Swarms track)
 - Gemini model on ≥1 agent
 - GoDaddy custom domain
 
@@ -46,3 +47,9 @@
 ## Definition of done (MVP)
 The 5 showcase careers each produce a valid roadmap (matches the schema) that a judge can open
 from a QR code on their phone, and the demo runs end-to-end with `DEMO_MODE=true` and with it off.
+
+## Approval
+- Status: **APPROVED v1** — 2026-11-07, by Piero on behalf of the team (Piero, Adrian, Robert, Diego).
+- Decisions: 5 showcase careers; 4 preferences (budget, pace, schedule, existing credits); resources (FR-11) stay in MVP but minimal (a few links);
+  agents graph animation is first in the should-have list; Gemini + GoDaddy only if time remains.
+- Anyone on the team can propose changes; edit this file and tell the others.
