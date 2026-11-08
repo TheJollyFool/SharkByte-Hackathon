@@ -8,3 +8,9 @@ body { @apply bg-white text-slate-900 antialiased; font-family: system-ui, -appl
 @media print {
   .no-print { display: none !important; }
 }
+
+@media print {
+  body { background: #fff; }
+  main { max-width: none !important; box-shadow: none !important; }
+  .react-flow__controls { display: none !important; }
+}

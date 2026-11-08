@@ -1,6 +1,6 @@
 "use client";
 import "@xyflow/react/dist/style.css";
-import { useMemo } from "react";
+import { useMemo, useRef, useState } from "react";
 import {
   Background,
   Controls,
@@ -116,6 +116,9 @@ export default function Flowchart({
   guideStatus: Record<string, GuideStatus>;
   onBack: () => void;
 }) {
+  const captureRef = useRef<HTMLDivElement>(null);
+  const [busyPdf, setBusyPdf] = useState(false);
+
   const { nodes, edges } = useMemo(() => {
     const nodes: Node[] = [];
     const edges: Edge[] = [];
@@ -190,15 +193,46 @@ export default function Flowchart({
     );
   }
 
+  // Task 12: PDF of the roadmap (career card + flowchart). Falls back to print on failure.
+  async function downloadPdf() {
+    const el = captureRef.current;
+    if (!el) return;
+    setBusyPdf(true);
+    try {
+      const [{ toPng }, { jsPDF }] = await Promise.all([import("html-to-image"), import("jspdf")]);
+      const png = await toPng(el, {
+        backgroundColor: "#ffffff",
+        pixelRatio: 2,
+        filter: (n) => !(n instanceof HTMLElement && n.closest(".no-print")),
+      });
+      const w = el.offsetWidth;
+      const h = el.offsetHeight;
+      const pdf = new jsPDF({ orientation: w > h ? "landscape" : "portrait", unit: "px", format: [w, h] });
+      pdf.addImage(png, "PNG", 0, 0, w, h);
+      pdf.save("shark-advisor-roadmap.pdf");
+    } catch {
+      window.print(); // cut-list fallback: print stylesheet
+    } finally {
+      setBusyPdf(false);
+    }
+  }
+
   const c = roadmap.career;
   return (
     <div className="flex min-h-0 flex-1 flex-col overflow-y-auto">
       <header className="no-print sticky top-0 z-10 flex items-center gap-2 border-b border-slate-200 bg-white p-3">
         <button onClick={onBack} aria-label={t(lang, "back")} className="text-sm text-shark-600">←</button>
         <h2 className="flex-1 font-bold text-shark-900">{t(lang, "yourRoadmap")}</h2>
+        <button
+          onClick={() => void downloadPdf()}
+          disabled={busyPdf}
+          className="rounded-full bg-shark-600 px-3 py-1 text-xs font-semibold text-white disabled:bg-slate-300"
+        >
+          {busyPdf ? "…" : t(lang, "downloadPdf")}
+        </button>
       </header>
 
-      <div className="bg-white">
+      <div ref={captureRef} className="bg-white">
         {roadmap.warnings && roadmap.warnings.length > 0 && (
           <div className="m-3 rounded-xl border border-amber-300 bg-amber-50 p-3 text-xs text-amber-900">
             <b>⚠️ {t(lang, "warnings")}</b>
