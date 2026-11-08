@@ -6,4 +6,7 @@ Not scaffolded yet. Read [AGENTS.md](../AGENTS.md) (extension conventions + "Res
 [docs/ARCHITECTURE.md](../docs/ARCHITECTURE.md).
 
 Load it: `chrome://extensions` → Developer mode → **Load unpacked** → this folder (or its `dist/`).
-Set `PANEL_ORIGIN` / `API_URL` / `MOCK_NAVIGATE` in `config.ts`.
+Set `PANEL_ORIGIN`, `NAVIGATE_URL`, and `MOCK_NAVIGATE` in `config.js`.
+Set `MOCK_NAVIGATE` to `true` to test the recorded Cybersecurity Analyst guide
+from Academic Programs. The default uses the live Navigator and tries the
+recorded guide when the initial request fails or returns `open_url`.

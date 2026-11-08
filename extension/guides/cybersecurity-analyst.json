@@ -1,0 +1,25 @@
+{
+  "id": "cybersecurity-analyst",
+  "destination_url": "https://www.mdc.edu/cybersecurity-analyst/",
+  "match": {
+    "goal_urls": [
+      "https://www.mdc.edu/cybersecurity-analyst",
+      "https://mdc.curricunet.com/catalog/iq/9132/9244/"
+    ],
+    "step_ids": []
+  },
+  "steps": [
+    {
+      "url_pattern": "https://www.mdc.edu/academics/programs/default.aspx*",
+      "selector": "input[name='search']",
+      "action": "type",
+      "bubble": "Type Cybersecurity in the search field, then click Search."
+    },
+    {
+      "url_pattern": "https://www.mdc.edu/academics/programs/search-results.aspx*",
+      "selector": "#pgm-search-results a[href='/cybersecurity-analyst']",
+      "action": "click",
+      "bubble": "Click Cybersecurity Analyst to open the certificate page."
+    }
+  ]
+}
