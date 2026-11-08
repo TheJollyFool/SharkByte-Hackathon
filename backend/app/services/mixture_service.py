@@ -71,7 +71,13 @@ async def run(req: MixtureRequest) -> MixtureResponse:
         "max_loops": 1,
     }
     try:
-        resp = await get_swarms().swarm_completion(body)
+        try:
+            resp = await get_swarms().swarm_completion(body)
+        except ApiError:
+            # One advisor model failed (quota/outage): rerun the swarm on the backup model
+            for agent in body["agents"]:
+                agent["model_name"] = s.model_fallback
+            resp = await get_swarms().swarm_completion(body)
     except ApiError:
         if fb := _fallback(req):
             return fb

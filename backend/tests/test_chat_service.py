@@ -16,7 +16,12 @@ async def test_uncached_chat_turn_reports_unavailable(
         advisor_id="career",
         history=[Message(role="student", text="I want to study data science")],
     )
-    settings = SimpleNamespace(demo_mode=demo_mode, model_for=lambda _: "test", max_tokens_chat=100)
+    settings = SimpleNamespace(
+        demo_mode=demo_mode,
+        model_for=lambda _: "test",
+        model_fallback="backup",
+        max_tokens_chat=100,
+    )
     completion = AsyncMock(side_effect=ApiError("upstream_failed", "Swarms unavailable"))
     monkeypatch.setattr(chat_service.cache, "get", lambda *_: None)
     monkeypatch.setattr(chat_service, "get_settings", lambda: settings)
@@ -30,4 +35,5 @@ async def test_uncached_chat_turn_reports_unavailable(
         await chat_service.reply(request)
 
     assert error.value.code == "upstream_failed"
-    assert completion.await_count == (0 if demo_mode else 1)
+    # live: the advisor's model, then the backup model, then the error
+    assert completion.await_count == (0 if demo_mode else 2)
