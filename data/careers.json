@@ -1,7 +1,586 @@
 [
-  { "id": "cybersecurity", "title": "Cybersecurity Specialist", "keywords": ["cybersecurity", "network", "information technology"] },
-  { "id": "mechanical-engineer", "title": "Mechanical Engineer", "keywords": ["engineering", "mechanical", "pre-engineering"] },
-  { "id": "architect", "title": "Architect", "keywords": ["architecture", "design", "drafting"] },
-  { "id": "chef", "title": "Chef", "keywords": ["culinary", "hospitality", "food"] },
-  { "id": "it-consultant", "title": "IT Consultant", "keywords": ["information technology", "business", "computer"] }
+  {
+    "id": "cybersecurity",
+    "title": "Cybersecurity Specialist",
+    "keywords": [
+      "cybersecurity",
+      "cyber",
+      "hacking",
+      "ciberseguridad"
+    ]
+  },
+  {
+    "id": "software-developer",
+    "title": "Software Developer",
+    "keywords": [
+      "software",
+      "programming",
+      "programmer",
+      "developer",
+      "app",
+      "coding",
+      "computer science",
+      "programador"
+    ]
+  },
+  {
+    "id": "it-consultant",
+    "title": "IT Consultant / IT Support",
+    "keywords": [
+      "information technology",
+      "it support",
+      "help desk",
+      "computer",
+      "tecnologia"
+    ]
+  },
+  {
+    "id": "network-engineer",
+    "title": "Network / Cloud Engineer",
+    "keywords": [
+      "network",
+      "cloud",
+      "redes"
+    ]
+  },
+  {
+    "id": "data-analyst",
+    "title": "Data Analyst",
+    "keywords": [
+      "data",
+      "analytics",
+      "database",
+      "datos"
+    ]
+  },
+  {
+    "id": "ai-engineer",
+    "title": "Artificial Intelligence Specialist",
+    "keywords": [
+      "artificial intelligence",
+      "ai",
+      "machine learning",
+      "inteligencia artificial"
+    ]
+  },
+  {
+    "id": "mechanical-engineer",
+    "title": "Mechanical / Industrial Engineer",
+    "keywords": [
+      "mechanical",
+      "engineering",
+      "pre-engineering",
+      "manufacturing",
+      "robotics",
+      "ingeniero"
+    ]
+  },
+  {
+    "id": "electrical-engineer",
+    "title": "Electrical / Computer Engineer",
+    "keywords": [
+      "electrical",
+      "electronics",
+      "solar",
+      "electrician",
+      "electrico"
+    ]
+  },
+  {
+    "id": "civil-engineer",
+    "title": "Civil Engineer / Construction Manager",
+    "keywords": [
+      "civil",
+      "construction",
+      "construccion",
+      "surveying",
+      "gis"
+    ]
+  },
+  {
+    "id": "biomedical-engineer",
+    "title": "Biomedical / Chemical Engineer",
+    "keywords": [
+      "biomedical",
+      "chemical engineering",
+      "biomedica"
+    ]
+  },
+  {
+    "id": "architect",
+    "title": "Architect / Interior Designer",
+    "keywords": [
+      "architecture",
+      "architect",
+      "interior design",
+      "drafting",
+      "arquitecto"
+    ]
+  },
+  {
+    "id": "chef",
+    "title": "Chef",
+    "keywords": [
+      "culinary",
+      "chef",
+      "cook",
+      "food",
+      "cocina"
+    ]
+  },
+  {
+    "id": "hospitality-manager",
+    "title": "Hotel & Hospitality Manager",
+    "keywords": [
+      "hospitality",
+      "hotel",
+      "tourism",
+      "cruise",
+      "turismo"
+    ]
+  },
+  {
+    "id": "nurse",
+    "title": "Registered Nurse",
+    "keywords": [
+      "nurse",
+      "nursing",
+      "enfermera",
+      "enfermeria"
+    ]
+  },
+  {
+    "id": "doctor",
+    "title": "Physician / Dentist / Optometrist (pre-med)",
+    "keywords": [
+      "doctor",
+      "physician",
+      "medicine",
+      "pre-med",
+      "dentist",
+      "optometrist",
+      "medico"
+    ]
+  },
+  {
+    "id": "pharmacist",
+    "title": "Pharmacist / Pharmacy Technician",
+    "keywords": [
+      "pharmacy",
+      "pharmacist",
+      "farmacia"
+    ]
+  },
+  {
+    "id": "medical-imaging",
+    "title": "Medical Imaging / Radiology Technologist",
+    "keywords": [
+      "radiology",
+      "x-ray",
+      "sonography",
+      "ultrasound",
+      "mri",
+      "radiologia"
+    ]
+  },
+  {
+    "id": "lab-scientist",
+    "title": "Lab Scientist / Biotechnologist",
+    "keywords": [
+      "lab",
+      "laboratory",
+      "biotech",
+      "laboratorio"
+    ]
+  },
+  {
+    "id": "scientist",
+    "title": "Scientist (biology, chemistry, physics, environment)",
+    "keywords": [
+      "science",
+      "scientist",
+      "biology",
+      "chemistry",
+      "physics",
+      "environment",
+      "meteorology",
+      "ciencia"
+    ]
+  },
+  {
+    "id": "dental-hygienist",
+    "title": "Dental Hygienist / Dental Assistant",
+    "keywords": [
+      "dental",
+      "dentista"
+    ]
+  },
+  {
+    "id": "physician-assistant",
+    "title": "Physician Assistant",
+    "keywords": [
+      "physician assistant",
+      "pa"
+    ]
+  },
+  {
+    "id": "paramedic",
+    "title": "Paramedic / EMT",
+    "keywords": [
+      "paramedic",
+      "emt",
+      "ambulance",
+      "paramedico"
+    ]
+  },
+  {
+    "id": "therapist",
+    "title": "Physical / Occupational / Respiratory / Speech Therapy",
+    "keywords": [
+      "therapy",
+      "therapist",
+      "physical therapy",
+      "respiratory",
+      "speech",
+      "occupational",
+      "terapia"
+    ]
+  },
+  {
+    "id": "health-admin",
+    "title": "Healthcare Administrator / Health Informatics",
+    "keywords": [
+      "health administration",
+      "healthcare management",
+      "medical coding",
+      "health information"
+    ]
+  },
+  {
+    "id": "allied-health",
+    "title": "Medical Assistant / Surgical & Sterile Tech",
+    "keywords": [
+      "medical assistant",
+      "surgical",
+      "optician"
+    ]
+  },
+  {
+    "id": "dietitian",
+    "title": "Dietitian / Nutritionist",
+    "keywords": [
+      "dietitian",
+      "nutrition",
+      "nutricion"
+    ]
+  },
+  {
+    "id": "vet-tech",
+    "title": "Veterinarian / Veterinary Technician",
+    "keywords": [
+      "veterinary",
+      "vet",
+      "animals",
+      "veterinario"
+    ]
+  },
+  {
+    "id": "police-officer",
+    "title": "Police / Law Enforcement Officer",
+    "keywords": [
+      "police",
+      "law enforcement",
+      "criminal justice",
+      "security",
+      "policia"
+    ]
+  },
+  {
+    "id": "crime-scene",
+    "title": "Crime Scene Investigator / Forensics",
+    "keywords": [
+      "forensic",
+      "crime scene",
+      "csi",
+      "forense"
+    ]
+  },
+  {
+    "id": "firefighter",
+    "title": "Firefighter",
+    "keywords": [
+      "firefighter",
+      "fire",
+      "bombero"
+    ]
+  },
+  {
+    "id": "lawyer",
+    "title": "Lawyer / Paralegal",
+    "keywords": [
+      "lawyer",
+      "law",
+      "attorney",
+      "paralegal",
+      "legal",
+      "abogado"
+    ]
+  },
+  {
+    "id": "teacher",
+    "title": "Teacher / Educator",
+    "keywords": [
+      "teacher",
+      "teaching",
+      "education",
+      "maestro",
+      "profesor"
+    ]
+  },
+  {
+    "id": "accountant",
+    "title": "Accountant",
+    "keywords": [
+      "accounting",
+      "accountant",
+      "tax",
+      "contador",
+      "contabilidad"
+    ]
+  },
+  {
+    "id": "business-manager",
+    "title": "Business Manager / Entrepreneur",
+    "keywords": [
+      "business",
+      "management",
+      "manager",
+      "entrepreneur",
+      "negocios",
+      "administracion"
+    ]
+  },
+  {
+    "id": "marketing",
+    "title": "Marketing / Sales Specialist",
+    "keywords": [
+      "marketing",
+      "sales",
+      "advertising",
+      "mercadeo",
+      "ventas"
+    ]
+  },
+  {
+    "id": "finance",
+    "title": "Banking, Finance & Economics",
+    "keywords": [
+      "finance",
+      "banking",
+      "bank",
+      "financial",
+      "economics",
+      "finanzas"
+    ]
+  },
+  {
+    "id": "logistics",
+    "title": "Logistics & Supply Chain Manager",
+    "keywords": [
+      "logistics",
+      "supply chain",
+      "shipping",
+      "freight",
+      "logistica"
+    ]
+  },
+  {
+    "id": "pilot",
+    "title": "Airline Pilot",
+    "keywords": [
+      "pilot",
+      "flying",
+      "piloto"
+    ]
+  },
+  {
+    "id": "aviation",
+    "title": "Aviation Manager / Aircraft Technician",
+    "keywords": [
+      "aviation",
+      "airline",
+      "airport",
+      "aircraft",
+      "aviacion"
+    ]
+  },
+  {
+    "id": "graphic-designer",
+    "title": "Graphic Designer / Digital Artist",
+    "keywords": [
+      "graphic design",
+      "animation",
+      "photography",
+      "illustration",
+      "diseno grafico"
+    ]
+  },
+  {
+    "id": "artist",
+    "title": "Artist / Performer (art, music, dance, theater)",
+    "keywords": [
+      "art",
+      "artist",
+      "music",
+      "dance",
+      "theater",
+      "actor",
+      "arte",
+      "musica"
+    ]
+  },
+  {
+    "id": "game-designer",
+    "title": "Video Game Designer",
+    "keywords": [
+      "game",
+      "video game",
+      "videojuegos"
+    ]
+  },
+  {
+    "id": "film-media",
+    "title": "Film, TV & Media Production",
+    "keywords": [
+      "film",
+      "movie",
+      "television",
+      "tv",
+      "audio",
+      "cine"
+    ]
+  },
+  {
+    "id": "journalist",
+    "title": "Journalist / Writer / Communications",
+    "keywords": [
+      "journalism",
+      "journalist",
+      "writer",
+      "communications",
+      "periodista"
+    ]
+  },
+  {
+    "id": "fashion-designer",
+    "title": "Fashion Designer",
+    "keywords": [
+      "fashion",
+      "moda"
+    ]
+  },
+  {
+    "id": "psychologist",
+    "title": "Psychologist",
+    "keywords": [
+      "psychology",
+      "psychologist",
+      "psicologia"
+    ]
+  },
+  {
+    "id": "social-worker",
+    "title": "Social Worker / Counselor",
+    "keywords": [
+      "social work",
+      "counselor",
+      "mental health",
+      "trabajo social"
+    ]
+  },
+  {
+    "id": "public-service",
+    "title": "Government, Public Policy & Social Sciences",
+    "keywords": [
+      "government",
+      "politics",
+      "public administration",
+      "history",
+      "sociology",
+      "international relations",
+      "gobierno"
+    ]
+  },
+  {
+    "id": "interpreter",
+    "title": "Interpreter / Translator",
+    "keywords": [
+      "interpreter",
+      "translator",
+      "sign language",
+      "traductor"
+    ]
+  },
+  {
+    "id": "sport-manager",
+    "title": "Sports Manager / Fitness & Recreation",
+    "keywords": [
+      "sports",
+      "sport",
+      "fitness",
+      "recreation",
+      "deportes"
+    ]
+  },
+  {
+    "id": "funeral-director",
+    "title": "Funeral Director",
+    "keywords": [
+      "funeral",
+      "mortuary"
+    ]
+  },
+  {
+    "id": "horticulturist",
+    "title": "Horticulture / Landscape",
+    "keywords": [
+      "horticulture",
+      "landscape",
+      "plants",
+      "jardineria"
+    ]
+  },
+  {
+    "id": "automotive-transport",
+    "title": "Automotive Technician / Truck Driver",
+    "keywords": [
+      "automotive",
+      "mechanic",
+      "car",
+      "truck",
+      "cdl",
+      "tesla",
+      "mecanico"
+    ]
+  },
+  {
+    "id": "museum-curator",
+    "title": "Museum Professional",
+    "keywords": [
+      "museum",
+      "curator",
+      "museo"
+    ]
+  },
+  {
+    "id": "undecided",
+    "title": "Not sure yet — explore with an A.A.",
+    "keywords": [
+      "not sure",
+      "undecided",
+      "don't know",
+      "no se",
+      "explore"
+    ]
+  }
 ]

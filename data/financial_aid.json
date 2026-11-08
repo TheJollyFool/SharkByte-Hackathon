@@ -1,12 +1,48 @@
 {
-  "_note": "Template — replace TODO with real values from the official pages. Every entry needs source_url; guesses get \"estimate\": true.",
+  "_note": "2026-27 award year (July 1, 2026 - June 30, 2027), from official federal/Florida pages read on 2026-11-07. Every entry has source_url; anything not from those pages has \"estimate\": true.",
   "programs": [
-    { "id": "pell", "name": "Federal Pell Grant", "max_award_usd_per_year": "TODO", "who": "Undergraduates with financial need (FAFSA)", "estimate": true, "source_url": "https://studentaid.gov/understand-aid/types/grants/pell" },
-    { "id": "bright-futures", "name": "Florida Bright Futures", "award": "TODO per credit hour at MDC", "who": "Florida high school graduates meeting GPA/test/service requirements", "estimate": true, "source_url": "https://www.floridastudentfinancialaidsg.org/SAPHome/SAPHome?url=home" },
-    { "id": "fsag", "name": "Florida Student Assistance Grant (FSAG)", "award": "TODO", "who": "Florida residents with financial need", "estimate": true, "source_url": "TODO" },
-    { "id": "work-study", "name": "Federal Work-Study", "award": "Part-time job on/near campus", "who": "Students with financial need (FAFSA)", "estimate": true, "source_url": "https://studentaid.gov/understand-aid/types/work-study" },
-    { "id": "mdc-foundation", "name": "MDC Foundation scholarships", "award": "Varies", "who": "MDC students", "estimate": true, "source_url": "TODO — mdc.edu scholarships page" }
+    {
+      "id": "pell",
+      "name": "Federal Pell Grant",
+      "max_award_usd_per_year": 7395,
+      "min_award_usd_per_year": 740,
+      "who": "Undergraduates with financial need (FAFSA). Not eligible if Student Aid Index (SAI) is $14,790 or more in 2026-27.",
+      "notes": "Some students can receive up to 150% of their scheduled award (e.g. year-round enrollment). Grant — does not need to be repaid.",
+      "source_url": "https://fsapartners.ed.gov/knowledge-center/library/dear-colleague-letters/2026-01-30/2026-27-federal-pell-grant-maximum-and-minimum-award-amounts"
+    },
+    {
+      "id": "bright-futures",
+      "name": "Florida Bright Futures",
+      "award": "Florida Academic Scholars (FAS): 100% of tuition and applicable fees at a public institution. Florida Medallion Scholars (FMS): 75% of tuition and fees, but 100% when enrolled in an associate degree program at a Florida College System institution like MDC. Gold Seal (GSV/GSC): $48 per semester credit for A.S./CCC and B.S./B.A.S., $39 per credit for career certificates (PSAV).",
+      "who": "Florida high school graduates who meet GPA/test/service-hour requirements (FAS 3.50 weighted GPA, FMS 3.00).",
+      "notes": "Funds up to 100% of the program of study; Gold Seal up to 72 hours for A.S./CCC. Must be used within 5 years of high school graduation.",
+      "source_url": "https://www.floridastudentfinancialaidsg.org/PDF/BFHandbookChapter2.pdf"
+    },
+    {
+      "id": "fsag",
+      "name": "Florida Student Assistance Grant (FSAG)",
+      "award": "Need-based; minimum $200 per year. Maximum is set by the Florida Legislature each year and MDC decides each student's amount.",
+      "who": "Florida residents, degree-seeking undergraduates with substantial financial need (FAFSA processed by MDC's deadline).",
+      "notes": "Career certificate students may qualify for FSAG-CE instead.",
+      "source_url": "https://www.floridastudentfinancialaidsg.org/PDF/factsheets/FSAG.pdf"
+    },
+    {
+      "id": "work-study",
+      "name": "Federal Work-Study",
+      "award": "Part-time job on or near campus; pay depends on the job and hours.",
+      "who": "Students with financial need (FAFSA).",
+      "estimate": true,
+      "source_url": "https://studentaid.gov/understand-aid/types/work-study"
+    },
+    {
+      "id": "mdc-scholarships",
+      "name": "MDC scholarships (MDC Foundation and others)",
+      "award": "Varies by scholarship.",
+      "who": "MDC students; each scholarship has its own requirements.",
+      "estimate": true,
+      "source_url": "https://www.mdc.edu/financialaid/scholarships/"
+    }
   ],
   "fafsa_url": "https://studentaid.gov/h/apply-for-aid/fafsa",
-  "mdc_financial_aid_url": "TODO — mdc.edu financial aid page"
+  "mdc_financial_aid_url": "https://www.mdc.edu/financialaid/"
 }
