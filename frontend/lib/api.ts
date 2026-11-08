@@ -142,3 +142,8 @@ export async function getRoadmap(id: string): Promise<Roadmap> {
   if (USE_MOCK) return roadmapMock as Roadmap;
   return http<Roadmap>(`/roadmap/${encodeURIComponent(id)}`);
 }
+
+export async function getHealth(): Promise<{ status: string; demo_mode: boolean }> {
+  if (USE_MOCK) return { status: "ok", demo_mode: true };
+  return http<{ status: string; demo_mode: boolean }>("/health");
+}
