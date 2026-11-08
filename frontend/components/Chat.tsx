@@ -109,7 +109,7 @@ export default function Chat({
         </div>
       </header>
 
-      <div className="min-h-0 flex-1 space-y-2 overflow-y-auto bg-chat-bg p-3">
+      <div aria-live="polite" className="min-h-0 flex-1 space-y-2 overflow-y-auto bg-chat-bg p-3">
         {messages.length === 0 && <p className="mt-6 text-center text-sm text-slate-500">{t(lang, "emptyChat")}</p>}
 
         {messages.map((m) => {

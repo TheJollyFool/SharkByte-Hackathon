@@ -41,6 +41,10 @@ export default function Home() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  useEffect(() => {
+    document.documentElement.lang = lang; // a11y: screen readers pick the right language
+  }, [lang]);
+
   const pickMode = (m: Mode) => {
     setMode(m);
     setMessages([]);
