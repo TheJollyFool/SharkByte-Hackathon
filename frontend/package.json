@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "sync-mock": "node scripts/sync-mock.mjs",
+    "predev": "node scripts/sync-mock.mjs",
+    "prebuild": "node scripts/sync-mock.mjs",
     "dev": "next dev -p 3000",
     "build": "next build",
     "start": "next start",
@@ -11,7 +14,6 @@
   },
   "dependencies": {
     "@xyflow/react": "^12.3.5",
-    "html-to-image": "^1.11.11",
     "jspdf": "^2.5.2",
     "next": "14.2.15",
     "react": "^18.3.1",

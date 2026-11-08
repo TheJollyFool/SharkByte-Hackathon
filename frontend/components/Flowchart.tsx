@@ -1,6 +1,6 @@
 "use client";
 import "@xyflow/react/dist/style.css";
-import { useMemo, useRef, useState } from "react";
+import { useMemo, useState } from "react";
 import {
   Background,
   Controls,
@@ -12,7 +12,7 @@ import {
   type Node,
   type NodeProps,
 } from "@xyflow/react";
-import { bridge } from "@/lib/shark-bridge";
+import { guideOrOpen, openExternal } from "@/lib/shark-bridge";
 import { fmtMoney } from "@/lib/format";
 import { t, type StringKey } from "@/lib/i18n";
 import type { GuideStatus, Language, Roadmap, Step, StepKind } from "@/lib/types";
@@ -77,7 +77,7 @@ function StepBox({ data }: NodeProps<StepNode>) {
           className="nodrag nopan mt-1.5 rounded-full border border-slate-300 px-2 py-0.5 text-[10px] text-slate-700 hover:bg-slate-100"
           onClick={(e) => {
             e.stopPropagation(); // secondary action: don't start the guide
-            bridge.openUrl(step.source_url!);
+            openExternal(step.source_url!);
           }}
         >
           {t(lang, "openPage")} ↗
@@ -110,13 +110,14 @@ export default function Flowchart({
   lang,
   guideStatus,
   onBack,
+  onOpenProgram,
 }: {
   roadmap: Roadmap;
   lang: Language;
   guideStatus: Record<string, GuideStatus>;
   onBack: () => void;
+  onOpenProgram: (step: Step) => void;
 }) {
-  const captureRef = useRef<HTMLDivElement>(null);
   const [busyPdf, setBusyPdf] = useState(false);
 
   const { nodes, edges } = useMemo(() => {
@@ -178,11 +179,15 @@ export default function Flowchart({
     return { nodes, edges };
   }, [roadmap, lang, guideStatus]);
 
-  // Task 10: clicking a box asks the extension to start the in-page guide.
+  // Tapping a program opens its plan by semester; other boxes ask the shark to guide on mdc.edu.
   function onNodeClick(_: unknown, node: Node) {
     if (node.type !== "step") return;
     const step = (node.data as StepData).step;
-    bridge.startGuide(
+    if (step.kind === "mdc_program" && step.program_id) {
+      onOpenProgram(step);
+      return;
+    }
+    guideOrOpen(
       {
         label: step.program_name ?? step.credential,
         kind: step.kind,
@@ -193,25 +198,14 @@ export default function Flowchart({
     );
   }
 
-  // Task 12: PDF of the roadmap (career card + flowchart). Falls back to print on failure.
+  // Real-text PDF (selectable text, clickable links). Falls back to the print stylesheet if it fails.
   async function downloadPdf() {
-    const el = captureRef.current;
-    if (!el) return;
     setBusyPdf(true);
     try {
-      const [{ toPng }, { jsPDF }] = await Promise.all([import("html-to-image"), import("jspdf")]);
-      const png = await toPng(el, {
-        backgroundColor: "#ffffff",
-        pixelRatio: 2,
-        filter: (n) => !(n instanceof HTMLElement && n.closest(".no-print")),
-      });
-      const w = el.offsetWidth;
-      const h = el.offsetHeight;
-      const pdf = new jsPDF({ orientation: w > h ? "landscape" : "portrait", unit: "px", format: [w, h] });
-      pdf.addImage(png, "PNG", 0, 0, w, h);
-      pdf.save("shark-advisor-roadmap.pdf");
+      const { generateRoadmapPdf } = await import("@/lib/roadmap-pdf");
+      generateRoadmapPdf(roadmap, lang);
     } catch {
-      window.print(); // cut-list fallback: print stylesheet
+      window.print();
     } finally {
       setBusyPdf(false);
     }
@@ -232,7 +226,7 @@ export default function Flowchart({
         </button>
       </header>
 
-      <div ref={captureRef} className="bg-white">
+      <div className="bg-white">
         {roadmap.warnings && roadmap.warnings.length > 0 && (
           <div className="m-3 rounded-xl border border-amber-300 bg-amber-50 p-3 text-xs text-amber-900">
             <b>⚠️ {t(lang, "warnings")}</b>
