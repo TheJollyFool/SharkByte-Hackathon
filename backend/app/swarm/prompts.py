@@ -85,11 +85,22 @@ _PLACEHOLDERS = {
 _BLOCK = re.compile(r"##\s*System prompt.*?```text\s*\n(.*?)```", re.S | re.I)
 
 
+# Appended to every agent that reads student text: students make typos and use shorthand.
+_TYPO_NOTE = (
+    "\n\nThe student may make typos, mix English and Spanish, or use shorthand (e.g. "
+    "'sybersecurity', 'cs', 'enfermeria'). Silently infer what they mean and answer normally; "
+    "never say you can't understand because of a typo and never ask them to retype. "
+    "Match what they mean to the MDC programs in MDC DATA."
+)
+_TEXT_AGENTS = {"navigator", "json-repair"}  # these never read free student text
+
+
 @lru_cache
 def system_prompt(agent_id: str) -> str:
+    base = _PLACEHOLDERS[agent_id]
     path = AGENTS_DOCS_DIR / f"{agent_id}.md"
     if path.exists():
         m = _BLOCK.search(path.read_text(encoding="utf-8"))
         if m and m.group(1).strip():
-            return m.group(1).strip()
-    return _PLACEHOLDERS[agent_id]
+            base = m.group(1).strip()
+    return base if agent_id in _TEXT_AGENTS else base + _TYPO_NOTE
