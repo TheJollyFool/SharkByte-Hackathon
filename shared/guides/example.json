@@ -1,0 +1,9 @@
+{
+  "id": "example",
+  "_note": "Template for a pre-recorded guide. Fill selectors by visiting mdc.edu. See docs/CONTRACTS.md section A.",
+  "goal_step_ids": ["short-0"],
+  "steps": [
+    { "url_pattern": "https://www.mdc.edu/", "selector": "TODO", "action": "click", "bubble": "Click Academics" },
+    { "url_pattern": "https://www.mdc.edu/academics/*", "selector": "TODO", "action": "click", "bubble": "Open the program page" }
+  ]
+}

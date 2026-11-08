@@ -1,0 +1,12 @@
+{
+  "_note": "Template — replace TODO with real values from the official pages. Every entry needs source_url; guesses get \"estimate\": true.",
+  "programs": [
+    { "id": "pell", "name": "Federal Pell Grant", "max_award_usd_per_year": "TODO", "who": "Undergraduates with financial need (FAFSA)", "estimate": true, "source_url": "https://studentaid.gov/understand-aid/types/grants/pell" },
+    { "id": "bright-futures", "name": "Florida Bright Futures", "award": "TODO per credit hour at MDC", "who": "Florida high school graduates meeting GPA/test/service requirements", "estimate": true, "source_url": "https://www.floridastudentfinancialaidsg.org/SAPHome/SAPHome?url=home" },
+    { "id": "fsag", "name": "Florida Student Assistance Grant (FSAG)", "award": "TODO", "who": "Florida residents with financial need", "estimate": true, "source_url": "TODO" },
+    { "id": "work-study", "name": "Federal Work-Study", "award": "Part-time job on/near campus", "who": "Students with financial need (FAFSA)", "estimate": true, "source_url": "https://studentaid.gov/understand-aid/types/work-study" },
+    { "id": "mdc-foundation", "name": "MDC Foundation scholarships", "award": "Varies", "who": "MDC students", "estimate": true, "source_url": "TODO — mdc.edu scholarships page" }
+  ],
+  "fafsa_url": "https://studentaid.gov/h/apply-for-aid/fafsa",
+  "mdc_financial_aid_url": "TODO — mdc.edu financial aid page"
+}

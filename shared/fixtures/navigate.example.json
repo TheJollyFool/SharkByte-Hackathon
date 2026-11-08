@@ -1,0 +1,7 @@
+{
+  "action": "click",
+  "element_id": "e1",
+  "bubble": "EXAMPLE — Click \"Academics\" to see MDC's programs",
+  "usage": { "input_tokens": 1500, "output_tokens": 40, "total_tokens": 1540, "cost_usd": 0.0006 },
+  "source": "fallback"
+}

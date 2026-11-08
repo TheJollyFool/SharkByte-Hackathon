@@ -1,16 +1,13 @@
-# Tracks / prizes we compete for
+# Challenges
 
-Decision: **MDC Challenge + Swarms Challenge + Overall**, stretch **Gemini + GoDaddy**.
-They stack because one product satisfies all of them without extra features.
+Decision: we build for the **two main challenges**, not for side prizes.
 
-| Track | Prize | Why we fit | What we must show | Cost to us |
-|---|---|---|---|---|
-| **MDC Challenge** | 1st: backpack, charger, headphones | It *is* the MDC prompt: career → roadmaps starting at MDC | All 5 MDC requirement sections + "what MDC looks for" checklist ([REQUIREMENTS.md](REQUIREMENTS.md)) | Core product |
-| **Swarms Challenge** | Interview with the CEO + $1,000 credits | Our backend is a real Swarms graph workflow (3 parallel agents → planner → writer) | Live agent graph in UI, explain the graph in the pitch, show cost per roadmap | Core product |
-| **Overall** | — | Polished, useful, demo works on judges' phones | QR → working mobile site | Polish |
-| Gemini (stretch) | — | Swarms lets us pick the model per agent | ≥1 agent running a Gemini model, said out loud in the pitch | ~5 min config |
-| GoDaddy (stretch) | — | Domain pointing to the Vercel deploy | Live custom domain | ~30 min |
+| Challenge | What they ask | How we answer | What judges must see |
+|---|---|---|---|
+| **MDC North Campus — Smart Career and Education Pathway Navigator** | Student selects a career → clear step-by-step roadmap. Easy, personalized, actionable, multiple pathways, starts at MDC, designed to grow (+ alternative pathways slide) | Advisors cover the 5 MDC sections; flowchart where every route starts at an MDC program; in-page guide makes it actionable on mdc.edu itself | Every row of the checklist in [PRODUCT.md](PRODUCT.md), live on mdc.edu |
+| **Swarms API** | "Describe your agents in JSON and send a task" — real multi-agent apps on the Swarms API | Two collaboration patterns the student chooses: group-chat turns (one agent call per advisor) and `MixtureOfAgents`; plus Roadmap Writer and Navigator agents | Agents visibly collaborating, tokens + cost per message, explanation of the swarm in the pitch |
 
-Rejected: EC-Council (security track — would need a different product, splits the team).
+Overall prizes come from doing these two well with a polished demo.
 
-If a better combination appears, change it **here first**, then update REQUIREMENTS.md.
+Rejected: EC-Council hurricane verifier; side sponsor prizes don't drive scope.
+If this changes, change it **here first**, then REQUIREMENTS.md.

@@ -1,14 +1,28 @@
 {
   "id": "example-cybersecurity",
   "source": "fallback",
+  "mode": "group_chat",
+  "language": "en",
   "career": {
     "title": "Cybersecurity Specialist",
     "overview": "EXAMPLE FIXTURE — illustrative values only, replace with a real generated roadmap. Protects an organization's systems and data from attacks.",
-    "responsibilities": ["Monitor networks for threats", "Respond to incidents", "Harden systems"],
-    "qualifications": ["Networking fundamentals", "Security+ or equivalent", "Analytical thinking"],
+    "responsibilities": [
+      "Monitor networks for threats",
+      "Respond to incidents",
+      "Harden systems"
+    ],
+    "qualifications": [
+      "Networking fundamentals",
+      "Security+ or equivalent",
+      "Analytical thinking"
+    ],
     "median_salary_usd": null,
     "outlook": null,
-    "related_careers": ["Network Administrator", "SOC Analyst", "Cloud Security Engineer"]
+    "related_careers": [
+      "Network Administrator",
+      "SOC Analyst",
+      "Cloud Security Engineer"
+    ]
   },
   "routes": [
     {
@@ -20,7 +34,9 @@
       "total_cost_usd": 4000,
       "steps": [
         {
+          "id": "short-0",
           "order": 0,
+          "kind": "mdc_program",
           "institution": "Miami Dade College",
           "program_id": "TODO",
           "credential": "College Credit Certificate",
@@ -33,10 +49,27 @@
           "source_url": null
         }
       ],
-      "workforce_entry_points": [{ "after_step": 0, "job_title": "Help Desk / SOC Analyst I", "salary_range_usd": "TODO" }],
-      "credentials": [{ "name": "CompTIA Security+", "type": "certification", "required": false }],
-      "experience": ["Internship"],
-      "exams": ["CompTIA Security+"]
+      "workforce_entry_points": [
+        {
+          "after_step": 0,
+          "job_title": "Help Desk / SOC Analyst I",
+          "salary_range_usd": "TODO"
+        }
+      ],
+      "credentials": [
+        {
+          "name": "CompTIA Security+",
+          "type": "certification",
+          "required": false
+        }
+      ],
+      "experience": [
+        "Internship"
+      ],
+      "exams": [
+        "CompTIA Security+"
+      ],
+      "net_cost_after_aid_usd": null
     },
     {
       "id": "long",
@@ -47,7 +80,9 @@
       "total_cost_usd": 25000,
       "steps": [
         {
+          "id": "long-0",
           "order": 0,
+          "kind": "mdc_program",
           "institution": "Miami Dade College",
           "program_id": "TODO",
           "credential": "A.A. or A.S.",
@@ -60,7 +95,9 @@
           "source_url": null
         },
         {
+          "id": "long-1",
           "order": 1,
+          "kind": "degree",
           "institution": "TODO — transfer university",
           "program_id": null,
           "credential": "B.S.",
@@ -74,15 +111,28 @@
         }
       ],
       "workforce_entry_points": [
-        { "after_step": 0, "job_title": "IT Support Specialist" },
-        { "after_step": 1, "job_title": "Cybersecurity Analyst" }
+        {
+          "after_step": 0,
+          "job_title": "IT Support Specialist"
+        },
+        {
+          "after_step": 1,
+          "job_title": "Cybersecurity Analyst"
+        }
       ],
       "credentials": [],
       "experience": [],
-      "exams": []
+      "exams": [],
+      "net_cost_after_aid_usd": null
     }
   ],
   "alternative_mdc_programs": [],
   "resources": [],
-  "usage": { "total_tokens": 0, "total_cost_usd": 0 }
+  "usage": {
+    "total_tokens": 0,
+    "total_cost_usd": 0
+  },
+  "warnings": [
+    "EXAMPLE FIXTURE — values are placeholders, not real MDC data."
+  ]
 }

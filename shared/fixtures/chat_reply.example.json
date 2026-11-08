@@ -1,0 +1,9 @@
+{
+  "id": "msg-example-1",
+  "role": "advisor",
+  "advisor_id": "pathway",
+  "text": "EXAMPLE — Start with MDC's **Cybersecurity A.S.** (2 years). If you want a bachelor's later, the A.A. route transfers fully to FIU through Connect4Success.",
+  "usage": { "input_tokens": 812, "output_tokens": 96, "total_tokens": 908, "cost_usd": 0.0004 },
+  "source": "fallback",
+  "created_at": "2026-11-07T22:00:00Z"
+}

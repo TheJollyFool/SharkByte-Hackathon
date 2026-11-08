@@ -5,120 +5,108 @@ Read this file fully before writing code. Humans: read it too.
 
 ## What we are building
 
-**MDC Pathways** (working name) — a career roadmap platform for the SharkByte Hackathon.
-A student picks a career (e.g. architect, mechanical engineer, chef, cybersecurity specialist,
-IT consultant) and gets **several pathways that all start at Miami Dade College (MDC)**:
-short routes (certificates, A.S.) and long routes (A.A. → transfer → bachelor's → master's),
-each with **estimated time and cost**, certifications, and points where the student can
-already enter the workforce.
+**Shark Advisor** (working name, final name TBD) — for the SharkByte Hackathon (MDC + Swarms challenges).
+A Chrome extension puts a shark 🦈 button on mdc.edu. The student opens it and either:
+- **Group Chat** — picks AI advisors like adding friends to a WhatsApp group; each advisor owns one MDC
+  challenge section and they answer in turns (one message each, then wait), showing tokens + cost; or
+- **Mixture of Agents** — all advisors merged into one best answer.
 
-Target prizes: **MDC Challenge**, **Swarms Challenge**, overall prize. Stretch: Gemini, GoDaddy domain.
+When ready, the student gets a **flowchart roadmap** (every route starts at a real MDC program,
+downloadable as PDF). Clicking a box closes the panel and an **in-page guide** points at what to click
+or type on the real mdc.edu page until the student reaches that program/course/certificate.
+
+Full spec: [docs/PRODUCT.md](docs/PRODUCT.md).
 
 ## Read order (source of truth)
 
 | Doc | What | Who edits |
 |---|---|---|
-| [docs/TRACKS.md](docs/TRACKS.md) | Which prizes we target and why | Team |
 | [docs/REQUIREMENTS.md](docs/REQUIREMENTS.md) | **Scope: what we build and what we DON'T** | **Humans only — read-only for agents** |
-| [docs/PRODUCT.md](docs/PRODUCT.md) | Product spec + MDC judging checklist | Team |
-| [docs/CONTRACTS.md](docs/CONTRACTS.md) | API endpoints, request/response, errors | Backend + frontend together |
-| [shared/roadmap.schema.json](shared/roadmap.schema.json) | Roadmap JSON shape | Backend + frontend together |
-| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Diagrams (Mermaid), modules, deploy | Anyone, keep in sync |
-| [docs/AGENT_PIPELINE.md](docs/AGENT_PIPELINE.md) | Swarms graph, prompts, models | Backend |
-| [docs/TEAM_PLAN.md](docs/TEAM_PLAN.md) | Who does what, task checklist | Team |
+| [docs/PRODUCT.md](docs/PRODUCT.md) | Product spec, user flow, advisors, MDC judging checklist | Team |
+| [docs/CONTRACTS.md](docs/CONTRACTS.md) | HTTP endpoints, shared types, extension ↔ panel messages | Owners of both sides together |
+| [shared/roadmap.schema.json](shared/roadmap.schema.json) | Roadmap (flowchart) JSON shape | Backend + panel together |
+| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Diagrams, folder layouts, deploy, risks | Anyone, keep in sync |
+| [docs/AGENT_PIPELINE.md](docs/AGENT_PIPELINE.md) | Swarms calls, agents, prompts, models | Backend |
+| [docs/TEAM_PLAN.md](docs/TEAM_PLAN.md) | 4 roles, task checklist, timeline | Team |
+| [docs/TRACKS.md](docs/TRACKS.md) | The two challenges and what judges must see | Team |
+| [docs/DEMO.md](docs/DEMO.md) | Demo script | Pitch owner |
 
-**Scope rule:** never build anything not in REQUIREMENTS.md or listed under its "Out of scope".
+**Scope rule:** never build anything not in REQUIREMENTS.md, and nothing under its "Out of scope".
 If a task seems to need it, stop and ask a human instead of inventing features.
 
-**Diagrams:** use Mermaid code blocks in `docs/`. When you change architecture, flow or the
-agent graph, update the matching Mermaid diagram in the same PR.
+**Diagrams:** Mermaid code blocks in `docs/`. Change architecture/flows → update the diagram in the same PR.
 
 ## Architecture (short version)
 
 ```
-frontend/  Next.js (App Router) + TypeScript + Tailwind   → deploy on Vercel
-backend/   Python 3.11 + FastAPI + httpx + Pydantic v2     → deploy on Render/Railway
-data/      Curated MDC programs, costs, transfer agreements (JSON, hand-checked)
-shared/    The JSON contract between backend and frontend + example fixtures
-docs/      Product, architecture, agent pipeline, team plan, demo script
+extension/  Chrome MV3: shark button + iframe panel + in-page guide overlay   → load unpacked
+frontend/   Next.js (App Router) + TS + Tailwind: the panel app (chat, mixture, flowchart, PDF) → Vercel
+backend/    Python 3.11 + FastAPI + httpx + Pydantic v2: calls Swarms           → Render/Railway
+data/       Curated MDC data + advisor list (JSON, hand-checked, source_url on every entry)
+shared/     Roadmap schema, mock fixtures, pre-recorded guides
+docs/       Product, requirements, contracts, architecture, agents, team plan, demo
 ```
-
-The backend calls the **Swarms API graph workflow** (`POST https://api.swarms.world/v1/graph-workflow/completions`).
-Five agents:
-
-```
-Career Researcher ─┐
-MDC Program Finder ─┼─► Pathway Planner ─► Roadmap Writer
-Cost & Time Analyst┘
-```
-
-- The 3 entry agents run **in parallel** (same level in the graph).
-- `Pathway Planner` merges their outputs into 2–4 routes.
-- `Roadmap Writer` emits the final JSON that matches [shared/roadmap.schema.json](shared/roadmap.schema.json).
-
-Details, prompts and the request body: [docs/AGENT_PIPELINE.md](docs/AGENT_PIPELINE.md).
-Architecture and data flow: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 ## Golden rules
 
-1. **The contract is law.** `shared/roadmap.schema.json` is the single source of truth for the
-   roadmap shape. Backend must validate the Writer output against it (Pydantic model mirrors it).
-   Frontend builds against `shared/fixtures/*.json`. Changing the schema = tell the team + update
-   fixtures + both sides in the same PR.
-2. **Every pathway starts at MDC.** The first step of every route is an MDC program from `data/`.
-   Never let an agent invent an MDC program — the Program Finder gets the real list injected
-   into its prompt and must only pick from it.
-3. **Never block the demo on the LLM.** The backend must have a `DEMO_MODE` / cache fallback that
-   returns a pre-generated roadmap from `shared/fixtures/` if Swarms fails or is slow. The live
-   demo should prefer cached results for the 5 showcase careers.
-4. **No secrets in git.** Keys only in `.env` (gitignored). Copy `.env.example`.
-5. **Small PRs, short-lived branches.** `feat/<area>-<thing>`, e.g. `feat/backend-swarm-client`.
-   Rebase on `main` often. Never force-push `main`.
-6. **Cost awareness.** We have limited Swarms credits. Use cheap models while developing,
-   set `max_tokens`, cache responses on disk by `(career, preferences)` hash.
+1. **Contracts are law.** [docs/CONTRACTS.md](docs/CONTRACTS.md) + `shared/roadmap.schema.json`.
+   Build against `shared/fixtures/` (mock mode) so nobody waits for anybody. Changing a contract =
+   tell the team + update fixtures + both sides in the same PR.
+2. **Every route starts at MDC.** The first step of every route is a real MDC program from `data/`.
+   Agents get the real list injected and may only pick from it. Never invent programs, ids or agreements.
+3. **Honest data.** Numbers not from `data/` are `"estimate": true` and the UI says "estimate". Missing
+   data is said, not invented. Limited-access majors get a warning.
+4. **Never block the demo on the LLM.** `DEMO_MODE` + disk cache + fixtures for every endpoint;
+   pre-recorded guides for the in-page guide.
+5. **No secrets outside the backend.** Keys only in `.env` (gitignored). Never in `frontend/`,
+   `extension/` or git. Only the backend calls Swarms.
+6. **Respect mdc.edu.** The extension only overlays (button, panel, highlight, bubble). It never copies
+   MDC's site, changes its content, or clicks/submits for the student. Prefix all injected CSS classes and
+   ids with `shark-` so they don't clash with MDC's styles.
+7. **Small PRs, short-lived branches.** `feat/<area>-<thing>` (`feat/ext-guide-overlay`,
+   `feat/panel-chat`, `feat/backend-mixture`). Rebase on `main` often. Never force-push `main`.
+8. **Cost awareness.** Cheap models while developing, low `max_tokens`, cache by request hash.
 
 ## Conventions
 
-### Backend (Python)
-- Python 3.11, FastAPI, Pydantic v2, `httpx.AsyncClient` for Swarms calls.
-- Layout: `backend/app/{main.py, config.py, api/, swarm/, models/, services/, data_loader.py}`.
-- Format/lint: `ruff format` + `ruff check`. Type hints everywhere.
-- Config via `pydantic-settings` reading `.env`. Never read `os.environ` ad hoc.
-- Endpoints (planned):
-  - `GET  /health`
-  - `GET  /careers` → list of supported careers (from `data/careers.json`)
-  - `POST /roadmap` → body `{career, preferences}` → `Roadmap` (schema in `shared/`)
-  - `GET  /roadmap/{id}` → cached roadmap (for shareable links / QR)
-- Tests: `pytest`. Mock the Swarms API with fixtures — tests must not spend credits.
+### Extension (`extension/`)
+- Manifest V3. Content script on `*://*.mdc.edu/*`. Service worker makes backend calls.
+- Plain TypeScript (or JS) — no React needed. One floating button, one iframe, one overlay layer.
+- `config.ts`: `PANEL_ORIGIN`, `API_URL`, `MOCK_NAVIGATE`. Check `event.origin` on every message.
+- Guide state in `chrome.storage.session` so it survives page loads.
 
-### Frontend (TypeScript)
-- Next.js App Router, TypeScript strict, Tailwind, shadcn/ui if needed.
-- API base URL from `NEXT_PUBLIC_API_URL`. Add a `USE_MOCK` flag that reads fixtures so UI
-  work never waits for the backend.
-- Types for the roadmap generated from / hand-mirrored to `shared/roadmap.schema.json`
-  in `frontend/lib/types.ts`.
-- Key screens: Landing → Career picker (search + cards) → Preferences (budget, time, part-time?)
-  → Results (route comparison + timeline per route) → Share (link + QR code).
-- Mobile-first: judges will scan a QR code and open it on their phone.
+### Panel app (`frontend/`)
+- Next.js App Router, TypeScript strict, Tailwind. Designed for a ~400 px wide panel.
+- `lib/types.ts` mirrors CONTRACTS.md types + the roadmap schema. `lib/api.ts` honors
+  `NEXT_PUBLIC_USE_MOCK`. `lib/shark-bridge.ts` wraps postMessage. `lib/i18n.ts` holds EN/ES UI strings.
+- Flowchart: React Flow (`@xyflow/react`). PDF: html-to-image + jsPDF (or a print stylesheet).
+- Must be frameable by mdc.edu (`frame-ancestors https://*.mdc.edu` in `next.config` headers).
 
-### Data
-- `data/*.json` is hand-curated from MDC's public catalog. Every entry includes a `source_url`.
-- If a number is an estimate, mark `"estimate": true`. Show estimates as estimates in the UI.
+### Backend (`backend/`)
+- Python 3.11, FastAPI, Pydantic v2, `httpx.AsyncClient`. Layout in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
+- Config via `pydantic-settings` reading `.env`. `ruff format` + `ruff check`. Type hints everywhere.
+- CORS: panel origin + `chrome-extension://*`.
+- Tests: `pytest`, Swarms mocked — tests never spend credits.
+
+### Data (`data/`)
+- Hand-curated from mdc.edu and official aid pages. Every entry has `source_url`. Guesses get `"estimate": true`.
 
 ## How to run (once scaffolded)
 
 ```bash
-cp .env.example .env            # fill SWARMS_API_KEY
+cp .env.example .env            # fill SWARMS_API_KEY (backend only)
 # backend
-cd backend && python -m venv .venv && source .venv/bin/activate
+cd backend && python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt && uvicorn app.main:app --reload --port 8000
-# frontend
+# panel
 cd frontend && npm install && npm run dev   # http://localhost:3000
+# extension
+# chrome://extensions → Developer mode → Load unpacked → extension/  (set PANEL_ORIGIN=http://localhost:3000)
 ```
 
 ## When you (the agent) finish a task
 
-- Run lint + tests for the side you touched.
-- Update the relevant doc in `docs/` if you changed behavior, endpoints, or the schema.
+- Run lint + tests for the part you touched.
+- Update the relevant doc in `docs/` if you changed behavior, endpoints, messages or the schema.
 - Check off the task in [docs/TEAM_PLAN.md](docs/TEAM_PLAN.md).
-- Keep commits small with clear messages (`feat(backend): ...`, `fix(frontend): ...`).
+- Small commits with clear messages (`feat(ext): ...`, `feat(panel): ...`, `fix(backend): ...`).
