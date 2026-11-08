@@ -1,0 +1,246 @@
+<title>MDC Cybersecurity Course Map</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: one letter-size "program sheet" (like a university flowchart) centered on the page; semesters run left to right, arrows = prerequisites. The sheet is paper on purpose (same look on screen and in the PDF). */
+:root {
+  --bg: #e9eef2;
+  --fg: #12222e;
+  --paper: #ffffff;
+  --ink: #12222e;
+  --muted: #55636e;
+  --mdc: #0b5fa5;
+  --core: #fff2a8;
+  --core-line: #b99a00;
+  --gen: #eef2f5;
+  --gen-line: #93a3b0;
+  --pick: #c0392b;
+  --star: #0b5fa5;
+  --job: #0f7a55;
+  --job-soft: #e3f5ec;
+  --arrow: #33424d;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #0e171e; --fg: #dfe8ee; color-scheme: dark } }
+:root[data-theme="dark"] { --bg: #0e171e; --fg: #dfe8ee; color-scheme: dark }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); margin: 0; font: 14px/1.35 Arial, "Helvetica Neue", Helvetica, sans-serif;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 24px; }
+.scroller { overflow-x: auto; }
+.sheet { width: 760px; margin: 0 auto; background: var(--paper); color: var(--ink); padding: 18px 12px 14px; box-shadow: 0 2px 14px rgba(0,0,0,.18); }
+a { color: var(--mdc); }
+
+.head { display: grid; grid-template-columns: 170px 1fr 170px; align-items: start; gap: 8px; }
+.logo { font-weight: 800; color: var(--mdc); font-size: 13px; line-height: 1.15; border-left: 5px solid var(--mdc); padding-left: 7px; }
+.logo small { display: block; font-weight: 600; color: var(--muted); font-size: 10.5px; }
+.head h1 { margin: 0; text-align: center; font-size: 19px; line-height: 1.15; }
+.head .sub { text-align: center; font-size: 12px; color: var(--muted); margin-top: 3px; }
+.head .rev { text-align: right; font-size: 10px; color: var(--muted); }
+
+.routes { display: flex; align-items: stretch; gap: 0; margin: 12px 0 4px; }
+.r { flex: 1; border: 2px solid var(--mdc); border-radius: 6px; padding: 6px 8px; text-align: center; font-size: 12px; }
+.r b { display: block; font-size: 13px; }
+.r .n { font-weight: 700; }
+.r-arrow { width: 26px; display: grid; place-items: center; font-size: 18px; color: var(--arrow); }
+.jobs { display: flex; gap: 26px; margin-bottom: 8px; }
+.jobs div { flex: 1; text-align: center; font-size: 11px; font-weight: 700; color: var(--job); background: var(--job-soft); border-radius: 4px; padding: 3px 4px; }
+
+.band { position: relative; border-top: 2px solid var(--ink); margin-top: 10px; }
+.band-title { display: flex; justify-content: space-between; align-items: baseline; padding: 6px 2px 2px; }
+.band-title h2 { margin: 0; font-size: 15px; }
+.band-title span { font-size: 11px; color: var(--muted); }
+.semhead { position: absolute; font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); text-align: center; }
+.canvas { position: relative; }
+.box { position: absolute; display: block; text-decoration: none; color: var(--ink); text-align: center; border: 1.5px solid var(--core-line);
+  background: var(--core); padding: 4px 5px; font-size: 11px; line-height: 1.2; }
+.box b { display: block; font-size: 12px; }
+.box i { display: block; }
+.box .cr { font-size: 9.5px; color: var(--muted); font-style: normal; }
+.box.gen { background: var(--gen); border-color: var(--gen-line); border-style: solid; }
+.box.pick { background: #fff; border: 1.5px dashed var(--pick); }
+.box.pick .t { color: var(--pick); font-weight: 700; font-style: italic; display: block; margin-bottom: 2px; }
+.box .opt { display: block; }
+.box.elec .t { font-weight: 700; display: block; margin-bottom: 2px; }
+.box.elec { background: #fff; border: 1.5px solid var(--core-line); text-align: left; }
+.box .star { position: absolute; top: -8px; right: -7px; width: 17px; height: 17px; border-radius: 50%; background: var(--star); color: #fff; font-size: 10px; line-height: 17px; text-align: center; font-weight: 700; }
+.box .req { display: block; font-size: 9px; color: var(--pick); margin-top: 2px; }
+svg.wires { position: absolute; inset: 0; pointer-events: none; overflow: visible; }
+
+.bottom { display: grid; grid-template-columns: 1.15fr 1fr 1fr; gap: 10px; margin-top: 12px; font-size: 10.5px; }
+.bottom > div { border: 1px solid var(--gen-line); padding: 7px 8px; }
+.bottom h3 { margin: 0 0 4px; font-size: 11.5px; }
+.legend-row { display: flex; align-items: center; gap: 6px; margin: 3px 0; }
+.sw { width: 22px; height: 13px; border: 1.5px solid var(--core-line); background: var(--core); flex: none; }
+.sw.gen { background: var(--gen); border-color: var(--gen-line); }
+.sw.pick { background: #fff; border: 1.5px dashed var(--pick); }
+.dot { width: 15px; height: 15px; border-radius: 50%; background: var(--star); color: #fff; font-size: 9px; text-align: center; line-height: 15px; font-weight: 700; flex: none; }
+.bottom ul { margin: 0; padding-left: 14px; }
+.bottom p { margin: 0 0 4px; }
+.fine { font-size: 9px; color: var(--muted); margin-top: 8px; }
+
+@media print {
+  @page { size: Letter; margin: 0.3in; }
+  body { background: #fff; padding: 0; }
+  .scroller { overflow: visible; }
+  .sheet { box-shadow: none; margin: 0 auto; zoom: .8; }
+}
+</style>
+
+<div class="scroller">
+<div class="sheet" id="sheet">
+  <div class="head">
+    <div class="logo">Miami Dade College<small>Programas de Cybersecurity</small></div>
+    <div>
+      <h1>Cybersecurity: del certificado al bachelor</h1>
+      <div class="sub">Mapa de cursos · Catálogo oficial MDC 2026–2028</div>
+    </div>
+    <div class="rev">Preparado: nov 2026<br>Shark Advisor 🦈</div>
+  </div>
+
+  <div class="routes">
+    <div class="r"><b>⚡ Certificado</b>Cybersecurity Analyst<br><span class="n">24 créditos · $2,837</span></div>
+    <div class="r-arrow">➜</div>
+    <div class="r"><b>🎓 A.S.</b>Cybersecurity<br><span class="n">60 créditos · $7,093</span></div>
+    <div class="r-arrow">➜</div>
+    <div class="r"><b>🏛️ B.S.</b>Cybersecurity<br><span class="n">+60 créditos · $7,793</span></div>
+  </div>
+  <div class="jobs">
+    <div>💼 Analista SOC I / Help Desk</div>
+    <div>💼 Técnico de Ciberseguridad</div>
+    <div>💼 Analista de Ciberseguridad / Pentester</div>
+  </div>
+
+  <div class="band" id="band-as"></div>
+  <div class="band" id="band-bs"></div>
+
+  <div class="bottom">
+    <div>
+      <h3>Cómo leerlo</h3>
+      <div class="legend-row"><span class="sw"></span>Curso del programa</div>
+      <div class="legend-row"><span class="sw gen"></span>Educación general</div>
+      <div class="legend-row"><span class="sw pick"></span>Elige UNA opción</div>
+      <div class="legend-row"><span class="dot">★</span>Curso del Certificado Cybersecurity Analyst</div>
+      <div class="legend-row"><svg width="26" height="10" aria-hidden="true"><path d="M1 5H21" stroke="#33424d" stroke-width="1.5" fill="none" marker-end="url(#ah)"/></svg>Prerrequisito: termina el de la izquierda primero</div>
+      <div class="legend-row"><svg width="26" height="10" aria-hidden="true"><path d="M1 5H21" stroke="#33424d" stroke-width="1.5" stroke-dasharray="3 3" fill="none" marker-end="url(#ah)"/></svg>Recomendado antes</div>
+    </div>
+    <div>
+      <h3>Datos clave</h3>
+      <ul>
+        <li>Los 6 cursos con ★ forman el Certificado (24 créditos) y también son parte del A.S.</li>
+        <li>El B.S. son los cursos de los últimos años; varios piden <b>CTS 1134</b> o <b>CET 2880C</b>, que ves en el A.S.</li>
+        <li>B.S.: requisito de idioma extranjero para graduarse.</li>
+        <li>Clases presenciales y online.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Links oficiales</h3>
+      <p><a href="https://mdc.curricunet.com/catalog/iq/9132/9244">Certificado Cybersecurity Analyst</a></p>
+      <p><a href="https://mdc.curricunet.com/catalog/iq/9132/9319">A.S. en Cybersecurity</a></p>
+      <p><a href="https://mdc.curricunet.com/catalog/iq/9132/9151">B.S. en Cybersecurity</a></p>
+      <p><a href="https://www.mdc.edu/tuition/">Matrícula MDC</a> · <a href="https://studentaid.gov/h/apply-for-aid/fafsa">FAFSA</a> · <a href="https://www.mdc.edu/financialaid/">Ayuda financiera</a></p>
+    </div>
+  </div>
+  <div class="fine">Costos = créditos × matrícula + fees de MDC para residentes de Florida ($118.22 por crédito en certificado y A.S.; $129.89 en B.S.), sin libros. Orden de semestres según la Course Sequence Guide de MDC (tiempo completo). Fuente: catálogo MDC 2026–2028; confirma tu plan con un asesor académico de MDC.</div>
+</div>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#33424d"/></marker></defs>
+</svg>
+
+<script>
+const AS_URL = "https://mdc.curricunet.com/catalog/iq/9132/9319";
+const BS_URL = "https://mdc.curricunet.com/catalog/iq/9132/9151";
+// type: core | gen | pick | elec. star = also in the Cybersecurity Analyst certificate.
+const AS = { id: "as", title: "A.S. en Cybersecurity · 60 créditos", note: "Semestres 1–5 a tiempo completo", url: AS_URL, cols: [
+  [ { code: "ENC 1101", t: "English Composition 1", cr: 3, type: "gen" },
+    { type: "pick", t: "Matemáticas (elige 1)", opts: ["MAC 1105 Algebra", "STA 2023 Statistics"], cr: 3 },
+    { code: "CGS 1060C", t: "Intro to Computer Technology", cr: 4 },
+    { code: "CTS 1134", t: "Networking Technologies", cr: 4, star: 1 } ],
+  [ { code: "CGS 1700", t: "Intro to Operating Systems", cr: 4 },
+    { code: "CIS 1531", t: "Intro to Secure Scripting", cr: 4, star: 1 },
+    { code: "CTS 1120", t: "Cybersecurity Fundamentals", cr: 4, star: 1 } ],
+  [ { code: "CTS 1111", t: "Linux +", cr: 4, star: 1 },
+    { type: "pick", t: "Ciencias sociales (elige 1)", opts: ["AMH 2010 US History I", "AMH 2020 US History II", "POS 2041 Government"], cr: 3 } ],
+  [ { type: "pick", t: "Humanidades (elige 1)", opts: ["HUM 1020 Humanities", "PHI 2010 Philosophy"], cr: 3 },
+    { type: "pick", t: "Ciencias naturales (elige 1)", opts: ["BSC 1005 Biology", "ESC 1000 Earth Science", "EVR 1001 Environment"], cr: 3 },
+    { code: "CET 2880C", t: "Digital Forensics", cr: 4 },
+    { code: "CTS 2314", t: "Network Defense & Countermeasures", cr: 4, star: 1 } ],
+  [ { type: "elec", t: "Electivas del programa (9 cr)", opts: ["AI Thinking, Prompt Engineering", "Machine Learning", "Python, Java, C++", "Cloud, Azure, Servers", "Check Point Security", "Co-op (trabajo)"] },
+    { code: "CIS 2350", t: "Cybersecurity Analysis (CySA+)", cr: 4, star: 1 } ]
+], edges: [ ["CTS 1134", "CTS 1120", "rec"], ["CTS 1134", "CTS 2314"], ["CTS 1120", "CTS 2314"], ["CTS 1134", "CIS 2350"], ["CTS 1120", "CIS 2350"] ] };
+
+const BS = { id: "bs", title: "B.S. en Cybersecurity · 60 créditos más (después del A.S.)", note: "Semestres 6–10 a tiempo completo", url: BS_URL, cols: [
+  [ { code: "ENC 1102", t: "English Composition 2", cr: 3, type: "gen" },
+    { type: "pick", t: "Matemáticas (elige 1)", opts: ["MAC 1105 Algebra", "STA 2023 Statistics"], cr: 3 },
+    { code: "CIS 3215", t: "Ethics in Cybersecurity", cr: 4 },
+    { code: "CIS 3360", t: "Principles of Information Security", cr: 4, req: "pide CTS 1134" } ],
+  [ { code: "CIS 3361", t: "Information Security Management", cr: 4 },
+    { code: "CIS 4204", t: "Ethical Hacking I", cr: 4 },
+    { code: "CIS 4366", t: "Computer Forensics", cr: 4, req: "o CET 2880C" } ],
+  [ { code: "CIS 4378", t: "Ethical Hacking II", cr: 4 },
+    { code: "CIS 4388", t: "Advanced Computer Forensics", cr: 4 },
+    { code: "Idioma", t: "Competencia en idioma extranjero", cr: "requisito", type: "gen" } ],
+  [ { type: "pick", t: "Comunicación oral (elige 1)", opts: ["SPC 1017 Communication", "SPC 2608 Public Speaking"], cr: 3 },
+    { type: "pick", t: "Ciencias sociales (elige 1)", opts: ["AMH 2010 o AMH 2020", "ECO 2013, POS 2041, PSY 2012"], cr: 3 },
+    { code: "CIS 4364", t: "Intrusion Detection & Incident Response", cr: 4 },
+    { code: "CNT 3409C", t: "Network Security", cr: 4 } ],
+  [ { code: "CIS 4891", t: "Cyber Security Capstone", cr: 4 },
+    { type: "pick", t: "Humanidades (elige 1)", opts: ["PHI 2010 Philosophy", "PHI 2600 Intro to Ethics"], cr: 3 },
+    { type: "pick", t: "Ciencias naturales (elige 1)", opts: ["BSC 1005, ESC 1000", "EVR 1001, PHY 1025"], cr: 3 },
+    { code: "Electiva", t: "General Education Elective", cr: 3, type: "gen" } ]
+], edges: [ ["CIS 3360", "CIS 3361"], ["CIS 3360", "CIS 4204"], ["CIS 3360", "CIS 4366"], ["CIS 4204", "CIS 4378"], ["CIS 4366", "CIS 4388"], ["CIS 3360", "CIS 4364"], ["CIS 3360", "CNT 3409C"] ] };
+
+const COL_W = 150, BOX_W = 126, PAD = 12, GAP_Y = 8, TOP = 18;
+function renderBand(cfg) {
+  const band = document.getElementById("band-" + cfg.id);
+  band.innerHTML = `<div class="band-title"><h2>${cfg.title}</h2><span>${cfg.note}</span></div><div class="canvas"></div>`;
+  const canvas = band.querySelector(".canvas");
+  const pos = {}, colOf = {};
+  let maxY = 0;
+  cfg.cols.forEach((col, ci) => {
+    const head = document.createElement("div");
+    head.className = "semhead"; head.style.cssText = `left:${ci * COL_W}px;width:${COL_W}px;top:0`;
+    head.textContent = "Semestre " + (cfg.id === "as" ? ci + 1 : ci + 6);
+    canvas.appendChild(head);
+    let y = TOP;
+    col.forEach(b => {
+      const a = document.createElement("a");
+      a.className = b.type === "gen" ? "box gen" : b.type === "pick" ? "box pick" : b.type === "elec" ? "box elec" : "box";
+      a.href = cfg.url;
+      a.innerHTML = (b.type === "pick" || b.type === "elec")
+        ? `<span class="t">${b.t}</span>${b.opts.map(o => `<span class="opt">${o}</span>`).join("")}`
+        : `<b>${b.code}</b><i>${b.t}</i><span class="cr">${typeof b.cr === "number" ? b.cr + " créditos" : b.cr}</span>${b.req ? `<span class="req">${b.req}</span>` : ""}${b.star ? '<span class="star" title="También en el certificado">★</span>' : ""}`;
+      const x = ci * COL_W + PAD;
+      a.style.cssText = `left:${x}px;top:${y}px;width:${BOX_W}px`;
+      canvas.appendChild(a);
+      const h = a.offsetHeight;
+      if (b.code) { pos[b.code] = { x, y, h }; colOf[b.code] = ci; }
+      y += h + GAP_Y;
+    });
+    maxY = Math.max(maxY, y);
+  });
+  // wires: exit right into the gutter after the source column; adjacent targets go straight across that gutter,
+  // farther targets drop to a lane under all boxes, run right, and climb the gutter left of the target column.
+  let lane = 0;
+  const longs = cfg.edges.filter(([a, b]) => colOf[b] - colOf[a] > 1).length;
+  const laneTop = maxY + 4;
+  const paths = cfg.edges.map(([a, b, kind]) => {
+    const s = pos[a], t = pos[b], sc = colOf[a], tc = colOf[b];
+    const x1 = s.x + BOX_W, y1 = s.y + s.h / 2, y2 = t.y + t.h / 2, x2 = t.x - 1;
+    let d;
+    if (tc - sc === 1) {
+      const gx = (sc + 1) * COL_W;
+      d = `M${x1} ${y1} H${gx} V${y2} H${x2}`;
+    } else {
+      const ly = laneTop + lane * 7, gx1 = (sc + 1) * COL_W - 3 + lane * 2, gx2 = tc * COL_W - 3 + lane * 2;
+      lane++;
+      d = `M${x1} ${y1} H${gx1} V${ly} H${gx2} V${y2} H${x2}`;
+    }
+    return `<path d="${d}" fill="none" stroke="#33424d" stroke-width="1.3" stroke-linejoin="round" ${kind === "rec" ? 'stroke-dasharray="3 3"' : ""} marker-end="url(#ah)"/>`;
+  }).join("");
+  const h = maxY + (longs ? longs * 7 + 8 : 0);
+  canvas.style.height = h + "px";
+  canvas.insertAdjacentHTML("beforeend", `<svg class="wires" width="${cfg.cols.length * COL_W}" height="${h}">${paths}</svg>`);
+}
+renderBand(AS);
+renderBand(BS);
+</script>

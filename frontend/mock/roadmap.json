@@ -1,0 +1,13 @@
+{
+  "id": "mock-1",
+  "source": "fallback",
+  "career": {"title": "Cybersecurity Analyst", "overview": "Protects systems and data from attacks.", "median_salary_usd": null, "outlook": null},
+  "routes": [
+    {"id":"short","name":"Fast track","type":"short","total_months":12,"total_cost_usd":4000,
+     "steps":[
+       {"id":"short-0","order":0,"kind":"mdc_program","institution":"Miami Dade College","credential":"College Credit Certificate","program_name":"Placeholder MDC program","duration_months":12,"cost_usd":4000,"estimate":true,"source_url":"https://www.mdc.edu/"}
+     ],
+     "workforce_entry_points":[{"after_step":0,"job_title":"Help Desk Technician","salary_range_usd":"$35k–$45k"}]}
+  ],
+  "warnings": ["Placeholder data. Run `npm run sync-mock` to copy the real fixtures from shared/fixtures/."]
+}

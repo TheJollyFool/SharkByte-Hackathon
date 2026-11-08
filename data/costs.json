@@ -27,9 +27,27 @@
     "source_url": "https://www.mdc.edu/tuition/"
   },
   "universities": [
-    { "name": "FIU", "tuition_per_credit_in_state": null, "source_url": "TODO — verify on fiu.edu" },
-    { "name": "FAU", "tuition_per_credit_in_state": null, "source_url": "TODO — verify on fau.edu" },
-    { "name": "UCF", "tuition_per_credit_in_state": null, "source_url": "TODO — verify on ucf.edu" }
+    {
+      "name": "UCF",
+      "tuition_per_credit_in_state": 212.28,
+      "notes": "2026-27 undergraduate, Florida resident, tuition ($105.07) + fees; UCF Online is $179.19",
+      "source_url": "https://studentaccounts.ucf.edu/tf-tuitionratescurrent/"
+    },
+    {
+      "name": "FAU",
+      "tuition_per_credit_in_state": 203.29,
+      "notes": "Undergraduate, Florida resident, includes the transportation access fee",
+      "source_url": "https://www.fau.edu/finaid/other/cost-of-attendance/"
+    },
+    {
+      "name": "FIU",
+      "tuition_per_credit_in_state": null,
+      "base_tuition_per_credit": 105.07,
+      "tuition_differential_per_credit": 52.29,
+      "notes": "FIU's 2026 regulation lists base tuition $105.07 + differential $52.29 per credit; other per-credit fees are extra and FIU publishes no single total. Use 'about $200/credit' only as an estimate.",
+      "estimate": true,
+      "source_url": "https://regulations.fiu.edu/wp-content/uploads/2026/04/FIU-1101-Tuition-Fees-Schedule-Regulation-4.29.26.pdf"
+    }
   ],
   "part_time_multiplier": 1.8
 }

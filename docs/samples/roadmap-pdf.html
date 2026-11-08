@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Tu camino - Especialista en Ciberseguridad</title>
+<style>
+@page { size: Letter; margin: 14mm 14mm 16mm; }
+* { box-sizing: border-box; }
+body { margin: 0; font: 10.5pt/1.45 "Segoe UI", Arial, sans-serif; color: #12222e; }
+a { color: #0b5fa5; }
+.top { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 3px solid #0b5fa5; padding-bottom: 8px; margin-bottom: 12px; }
+.top .brand { font-size: 9pt; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #0b5fa5; }
+h1 { font-size: 20pt; line-height: 1.1; margin: 2px 0 4px; }
+.top p { margin: 0; color: #566875; max-width: 120mm; }
+.date { font-size: 8.5pt; color: #566875; text-align: right; }
+h2 { font-size: 12.5pt; margin: 14px 0 6px; }
+table.compare { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.compare th, .compare td { text-align: left; padding: 6px 8px; border-bottom: 1px solid #d3dee5; vertical-align: top; }
+.compare th { font-size: 8.5pt; text-transform: uppercase; letter-spacing: .05em; color: #566875; }
+.compare td.n { text-align: right; white-space: nowrap; font-weight: 700; }
+.route { break-inside: avoid; border: 1px solid #d3dee5; border-radius: 8px; padding: 10px 12px; margin-top: 10px; }
+.route h3 { margin: 0 0 2px; font-size: 12pt; }
+.route .sum { margin: 0 0 8px; color: #566875; }
+.route .tot { float: right; font-weight: 700; font-variant-numeric: tabular-nums; }
+ol.steps { margin: 0; padding: 0; list-style: none; counter-reset: s; }
+ol.steps > li { counter-increment: s; position: relative; padding: 0 0 8px 28px; }
+ol.steps > li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 19px; height: 19px; border-radius: 50%; background: #0b5fa5; color: #fff; font-weight: 700; font-size: 9pt; text-align: center; line-height: 19px; }
+ol.steps > li.other::before { background: #6b4fa0; }
+.where { font-size: 8pt; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: #0b5fa5; }
+li.other .where { color: #6b4fa0; }
+.name { font-weight: 700; font-size: 11pt; }
+.facts { color: #12222e; }
+.learn { color: #566875; }
+.link { font-size: 9pt; word-break: break-all; }
+.job { margin-top: 4px; padding: 3px 8px; background: #e3f5ec; color: #0f7a55; font-weight: 700; border-radius: 4px; display: inline-block; }
+.money { break-inside: avoid; background: #fff4de; border-radius: 8px; padding: 10px 12px; margin-top: 12px; }
+.money ul { margin: 4px 0 0; padding-left: 18px; }
+.next { break-inside: avoid; margin-top: 12px; }
+.next ol { margin: 4px 0 0; padding-left: 18px; }
+.fine { margin-top: 14px; font-size: 8pt; color: #566875; border-top: 1px solid #d3dee5; padding-top: 6px; }
+</style>
+</head>
+<body>
+<div class="top">
+  <div>
+    <div class="brand">🦈 Shark Advisor · Miami Dade College</div>
+    <h1>Tu camino: Especialista en Ciberseguridad</h1>
+    <p>Protege los sistemas y datos de una empresa: vigila alertas, corrige puntos débiles y responde a ataques.</p>
+  </div>
+  <div class="date">Creado: 7 nov 2026<br>Datos: catálogo MDC 2026–2028</div>
+</div>
+
+<h2>Compara tus 3 caminos</h2>
+<table class="compare">
+  <thead><tr><th>Camino</th><th>Qué obtienes</th><th style="text-align:right">Tiempo*</th><th style="text-align:right">Costo*</th></tr></thead>
+  <tbody>
+    <tr><td><b>⚡ Rápido</b></td><td>Certificado de MDC + examen Security+ → primer trabajo</td><td class="n">~1 año</td><td class="n">$2,837</td></tr>
+    <tr><td><b>🎓 Associate</b></td><td>A.S. en Cybersecurity (título de 2 años)</td><td class="n">~2 ½ años</td><td class="n">$7,093</td></tr>
+    <tr><td><b>🏛️ Bachelor</b></td><td>A.S. + B.S. en Cybersecurity, todo en MDC</td><td class="n">~5 años</td><td class="n">$14,887</td></tr>
+  </tbody>
+</table>
+
+<div class="route">
+  <span class="tot">~1 año* · $2,837</span>
+  <h3>⚡ Rápido: certificado y primer trabajo</h3>
+  <p class="sum">Un certificado corto de MDC y un examen de la industria.</p>
+  <ol class="steps">
+    <li>
+      <div class="where">En Miami Dade College</div>
+      <div class="name">Certificado en Cybersecurity Analyst (College Credit Certificate)</div>
+      <div class="facts">24 créditos · ~1 año* · $2,837</div>
+      <div class="learn">Aprendes: Cybersecurity Fundamentals, Networking Technologies, Linux +, Cybersecurity Analysis (CySA+).</div>
+      <div class="link">Programa oficial: <a href="https://mdc.curricunet.com/catalog/iq/9132/9244">mdc.curricunet.com/catalog/iq/9132/9244</a></div>
+    </li>
+    <li class="other">
+      <div class="where">Fuera de MDC · CompTIA</div>
+      <div class="name">Examen CompTIA Security+</div>
+      <div class="facts">Certificación de la industria (costo del examen no incluido)</div>
+      <div class="job">✅ Ya puedes trabajar como: Analista SOC I / Help Desk</div>
+    </li>
+  </ol>
+</div>
+
+<div class="route">
+  <span class="tot">~2 ½ años* · $7,093</span>
+  <h3>🎓 Associate: A.S. en Cybersecurity</h3>
+  <p class="sum">Título de 2 años en MDC con redes, forense digital y defensa de redes.</p>
+  <ol class="steps">
+    <li>
+      <div class="where">En Miami Dade College</div>
+      <div class="name">A.S. en Cybersecurity</div>
+      <div class="facts">60 créditos · ~2 ½ años* · $7,093</div>
+      <div class="learn">Aprendes: Cybersecurity Fundamentals, Digital Forensics, Network Defense and Countermeasures, Cybersecurity Analysis (CySA+).</div>
+      <div class="link">Programa oficial: <a href="https://mdc.curricunet.com/catalog/iq/9132/9319">mdc.curricunet.com/catalog/iq/9132/9319</a></div>
+      <div class="job">✅ Ya puedes trabajar como: Técnico de Ciberseguridad / Analista SOC</div>
+    </li>
+  </ol>
+</div>
+
+<div class="route">
+  <span class="tot">~5 años* · $14,887</span>
+  <h3>🏛️ Bachelor: A.S. + B.S. en MDC</h3>
+  <p class="sum">Primero el A.S. (ya puedes trabajar) y luego el B.S. en Cybersecurity del mismo MDC.</p>
+  <ol class="steps">
+    <li>
+      <div class="where">En Miami Dade College</div>
+      <div class="name">A.S. en Cybersecurity</div>
+      <div class="facts">60 créditos · ~2 ½ años* · $7,093</div>
+      <div class="link">Programa oficial: <a href="https://mdc.curricunet.com/catalog/iq/9132/9319">mdc.curricunet.com/catalog/iq/9132/9319</a></div>
+      <div class="job">✅ Ya puedes trabajar como: Técnico de Ciberseguridad</div>
+    </li>
+    <li>
+      <div class="where">En Miami Dade College</div>
+      <div class="name">B.S. en Cybersecurity (60 créditos más)</div>
+      <div class="facts">60 créditos · ~2 ½ años* · $7,793</div>
+      <div class="learn">Aprendes: Ethical Hacking I, Computer Forensics, Intrusion Detection and Incident Response, Cyber Security Capstone.</div>
+      <div class="link">Programa oficial: <a href="https://mdc.curricunet.com/catalog/iq/9132/9151">mdc.curricunet.com/catalog/iq/9132/9151</a></div>
+      <div class="job">✅ Ya puedes trabajar como: Analista de Ciberseguridad / Pentester</div>
+    </li>
+  </ol>
+</div>
+
+<div class="money">
+  <b>💵 Cómo pagarlo</b>
+  <ul>
+    <li><b>Beca Pell:</b> hasta $7,395 al año (2026–27) si calificas. No se devuelve. <a href="https://fsapartners.ed.gov/knowledge-center/library/dear-colleague-letters/2026-01-30/2026-27-federal-pell-grant-maximum-and-minimum-award-amounts">Fuente oficial</a></li>
+    <li><b>Bright Futures:</b> cubre el 100% de la matrícula y fees de un associate en MDC (Academic y Medallion). <a href="https://www.floridastudentfinancialaidsg.org/PDF/BFHandbookChapter2.pdf">Handbook 2026–27</a></li>
+    <li><b>FSAG:</b> beca de Florida por necesidad, mínimo $200 al año. <a href="https://www.floridastudentfinancialaidsg.org/PDF/factsheets/FSAG.pdf">Fact sheet 2026–27</a></li>
+  </ul>
+</div>
+
+<div class="next">
+  <b>👉 Tus próximos pasos</b>
+  <ol>
+    <li>Llena la FAFSA: <a href="https://studentaid.gov/h/apply-for-aid/fafsa">studentaid.gov/h/apply-for-aid/fafsa</a></li>
+    <li>Habla con Ayuda Financiera de MDC: <a href="https://www.mdc.edu/financialaid/">mdc.edu/financialaid</a></li>
+    <li>Busca becas de MDC: <a href="https://www.mdc.edu/financialaid/scholarships/">mdc.edu/financialaid/scholarships</a></li>
+  </ol>
+</div>
+
+<p class="fine">* Tiempos estimados a tiempo completo, según la guía de semestres de MDC; a medio tiempo toma 1.5–2 veces más. Costos = matrícula + fees de MDC para residentes de Florida (<a href="https://www.mdc.edu/tuition/">mdc.edu/tuition</a>): $118.22 por crédito en associate y certificados, $129.89 en bachelor; sin libros. Programas y créditos: <a href="https://mdc.curricunet.com/catalog">catálogo oficial MDC 2026–2028</a>.</p>
+</body>
+</html>
