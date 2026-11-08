@@ -115,5 +115,27 @@ Different models per advisor is allowed and nice to show on the advisor cards.
 
 ## Observed responses
 _Fill this in after the first real call of each endpoint (paste a trimmed example)._
-- `agent/completions`: TODO
+- `agent/completions` (verified 2026-11-07 8:28 PM, `gpt-5.4-mini`, `max_tokens: 80`). Request body:
+  `{"agent_config": {"agent_name", "system_prompt", "model_name", "max_tokens", "temperature", "max_loops": 1}, "task": "..."}`.
+  Response — note it is **`outputs` (plural), a list of messages**; the text is `outputs[-1].content`
+  (`role` = our `agent_name`). Cost is `usage.total_cost` in USD → our `Usage.cost_usd`:
+  ```json
+  {
+    "job_id": "agent-bac4e0119ed1b7fb8d6f4256b8532c87",
+    "success": true,
+    "name": "career",
+    "description": "An autonomous agent that can perform tasks ...",
+    "temperature": 0.5,
+    "outputs": [
+      { "role": "career",
+        "content": "A cybersecurity specialist protects computer systems, networks, and data ...",
+        "timestamp": "2026-11-08T01:28:33.898358", "message_id": "7a08d8d3-..." }
+    ],
+    "usage": { "input_tokens": 29, "output_tokens": 34, "total_tokens": 63,
+               "image_count": 0, "img_cost": 0.0, "flash_sale_applied": false, "total_cost": 0.000201 },
+    "timestamp": "2026-11-08T01:28:34.322084+00:00"
+  }
+  ```
+  Parsed by `backend/app/swarm/client.py` (`extract_text`, `to_usage`).
+- `GET /v1/models/available`: `{"success", "count": 1935, "models": [{"model_name", "input_cost_per_1m", "output_cost_per_1m", "price_source"}]}`.
 - `swarm/completions` MixtureOfAgents: TODO
