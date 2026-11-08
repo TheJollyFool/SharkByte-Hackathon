@@ -1,14 +1,4572 @@
 [
   {
-    "id": "TODO-program-id",
-    "name": "TODO program name",
-    "credential": "College Credit Certificate | A.S. | A.A. | B.S. | B.A.S.",
-    "school": "TODO MDC school/department",
-    "credits": 0,
-    "typical_months_full_time": 0,
-    "careers": ["cybersecurity"],
+    "id": "mdc-aa-associate-in-arts-university-transfer",
+    "name": "Associate in Arts (university transfer)",
+    "credential": "A.A.",
+    "plan_code": "1",
+    "cip_code": "24.0101",
+    "soc_code": null,
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "cybersecurity",
+      "software-developer",
+      "it-consultant",
+      "network-engineer",
+      "data-analyst",
+      "ai-engineer",
+      "mechanical-engineer",
+      "electrical-engineer",
+      "civil-engineer",
+      "architect",
+      "chef",
+      "hospitality-manager",
+      "nurse",
+      "medical-imaging",
+      "lab-scientist",
+      "dental-hygienist",
+      "physician-assistant",
+      "paramedic",
+      "therapist",
+      "health-admin",
+      "allied-health",
+      "vet-tech",
+      "police-officer",
+      "crime-scene",
+      "firefighter",
+      "paralegal",
+      "teacher",
+      "accountant",
+      "business-manager",
+      "marketing",
+      "finance",
+      "logistics",
+      "pilot",
+      "aviation",
+      "graphic-designer",
+      "game-designer",
+      "film-media",
+      "fashion-designer",
+      "social-worker",
+      "interpreter",
+      "sport-manager",
+      "funeral-director",
+      "horticulturist",
+      "automotive-transport",
+      "museum-curator"
+    ],
     "key_courses": [],
     "stackable_into": [],
-    "source_url": "https://www.mdc.edu/TODO"
+    "source_url": "https://www.mdc.edu/academics/programs/associate.aspx",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-appr-aircraft-structural-assembly-and-fabrication-apprenticeship",
+    "name": "Aircraft Structural Assembly and Fabrication Apprenticeship",
+    "credential": "Apprenticeship",
+    "plan_code": "59005",
+    "cip_code": "47.0609",
+    "soc_code": "512011",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "aviation"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-as-accounting-technology",
+    "name": "Accounting Technology",
+    "credential": "A.S.",
+    "plan_code": "25022",
+    "cip_code": "52.0302",
+    "soc_code": "433031",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "accountant"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-animation-game-art",
+    "name": "Animation & Game Art",
+    "credential": "A.S.",
+    "plan_code": "25074",
+    "cip_code": "10.0304",
+    "soc_code": "271011",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "graphic-designer",
+      "game-designer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-applied-artificial-intelligence",
+    "name": "Applied Artificial Intelligence",
+    "credential": "A.S.",
+    "plan_code": "25080",
+    "cip_code": "11.0102",
+    "soc_code": "151252",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "ai-engineer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-architectural-design-construction-technology",
+    "name": "Architectural Design & Construction Technology",
+    "credential": "A.S.",
+    "plan_code": "26034",
+    "cip_code": "04.0901",
+    "soc_code": "173011",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "architect"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-aviation-administration",
+    "name": "Aviation Administration",
+    "credential": "A.S.",
+    "plan_code": "26028",
+    "cip_code": "49.0104",
+    "soc_code": "532022",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "aviation"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-aviation-maintenance-management",
+    "name": "Aviation Maintenance Management",
+    "credential": "A.S.",
+    "plan_code": "26027",
+    "cip_code": "49.0104",
+    "soc_code": "493011",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "aviation"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-biomedical-engineering-technology",
+    "name": "Biomedical Engineering Technology",
+    "credential": "A.S.",
+    "plan_code": "26053",
+    "cip_code": "15.0401",
+    "soc_code": "499062",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "mechanical-engineer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-biotechnology",
+    "name": "Biotechnology",
+    "credential": "A.S.",
+    "plan_code": "22027",
+    "cip_code": "41.0101",
+    "soc_code": "194021",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "lab-scientist"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-biotechnology-bioinformatics",
+    "name": "Biotechnology - Bioinformatics",
+    "credential": "A.S.",
+    "plan_code": "22028",
+    "cip_code": "41.0101",
+    "soc_code": "194021",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "lab-scientist"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-biotechnology-chemical-technology",
+    "name": "Biotechnology - Chemical Technology",
+    "credential": "A.S.",
+    "plan_code": "22029",
+    "cip_code": "41.0101",
+    "soc_code": "194021",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "lab-scientist"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-building-construction-technology",
+    "name": "Building Construction Technology",
+    "credential": "A.S.",
+    "plan_code": "26033",
+    "cip_code": "15.1001",
+    "soc_code": "119021",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "civil-engineer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-business-administration",
+    "name": "Business Administration",
+    "credential": "A.S.",
+    "plan_code": "25051",
+    "cip_code": "52.0201",
+    "soc_code": "111021",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "business-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-business-intelligence-specialist",
+    "name": "Business Intelligence Specialist",
+    "credential": "A.S.",
+    "plan_code": "25073",
+    "cip_code": "30.7001",
+    "soc_code": "152051",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "data-analyst",
+      "business-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-civil-engineering-technology",
+    "name": "Civil Engineering Technology",
+    "credential": "A.S.",
+    "plan_code": "26035",
+    "cip_code": "15.0201",
+    "soc_code": "173022",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "mechanical-engineer",
+      "civil-engineer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-clinical-laboratory-sciences",
+    "name": "Clinical Laboratory Sciences",
+    "credential": "A.S.",
+    "plan_code": "23024",
+    "cip_code": "51.1004",
+    "soc_code": "292011",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "lab-scientist"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-computer-crime-investigation",
+    "name": "Computer Crime Investigation",
+    "credential": "A.S.",
+    "plan_code": "27028",
+    "cip_code": "43.0116",
+    "soc_code": "151199",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "cybersecurity"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-computer-engineering-technology",
+    "name": "Computer Engineering Technology",
+    "credential": "A.S.",
+    "plan_code": "26052",
+    "cip_code": "15.1201",
+    "soc_code": "151199",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "mechanical-engineer",
+      "electrical-engineer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-computer-information-technology",
+    "name": "Computer Information Technology",
+    "credential": "A.S.",
+    "plan_code": "25055",
+    "cip_code": "11.0103",
+    "soc_code": "151211",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "it-consultant"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-computer-programming-and-analysis-business-app-programming",
+    "name": "Computer Programming and Analysis - Business App. Programming",
+    "credential": "A.S.",
+    "plan_code": "25065",
+    "cip_code": "11.0201",
+    "soc_code": "151131",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "software-developer",
+      "business-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-computer-programming-and-analysis-internet-of-things-iot-applications",
+    "name": "Computer Programming and Analysis - Internet of Things (IoT) Applications",
+    "credential": "A.S.",
+    "plan_code": "25076",
+    "cip_code": "11.0201",
+    "soc_code": "151131",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "software-developer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-computer-programming-and-analysis-mobile-applications-development",
+    "name": "Computer Programming and Analysis - Mobile Applications Development",
+    "credential": "A.S.",
+    "plan_code": "25070",
+    "cip_code": "11.0201",
+    "soc_code": "151131",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "software-developer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-crime-scene-technology-crime-scene-investigation",
+    "name": "Crime Scene Technology - Crime Scene Investigation",
+    "credential": "A.S.",
+    "plan_code": "27026",
+    "cip_code": "43.0406",
+    "soc_code": "194092",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "crime-scene"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-crime-scene-technology-forensic-science",
+    "name": "Crime Scene Technology - Forensic Science",
+    "credential": "A.S.",
+    "plan_code": "27027",
+    "cip_code": "43.0406",
+    "soc_code": "194092",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "crime-scene"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-criminal-justice-technology",
+    "name": "Criminal Justice Technology",
+    "credential": "A.S.",
+    "plan_code": "27012",
+    "cip_code": "43.0103",
+    "soc_code": "331012",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "police-officer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-culinary-arts-management",
+    "name": "Culinary Arts Management",
+    "credential": "A.S.",
+    "plan_code": "22031",
+    "cip_code": "12.0504",
+    "soc_code": "119051",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "chef"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-cybersecurity",
+    "name": "Cybersecurity",
+    "credential": "A.S.",
+    "plan_code": "25079",
+    "cip_code": "11.1003",
+    "soc_code": "151212",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "cybersecurity"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-database-technology-oracle-database-administration",
+    "name": "Database Technology - Oracle Database Administration",
+    "credential": "A.S.",
+    "plan_code": "25058",
+    "cip_code": "11.0802",
+    "soc_code": "151141",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "data-analyst"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-dental-hygiene",
+    "name": "Dental Hygiene",
+    "credential": "A.S.",
+    "plan_code": "23021",
+    "cip_code": "51.0602",
+    "soc_code": "292021",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "dental-hygienist"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-diagnostic-medical-sonography-specialist",
+    "name": "Diagnostic Medical Sonography Specialist",
+    "credential": "A.S.",
+    "plan_code": "23038",
+    "cip_code": "51.0910",
+    "soc_code": "292032",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "medical-imaging"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-early-childhood-education",
+    "name": "Early Childhood Education",
+    "credential": "A.S.",
+    "plan_code": "27014",
+    "cip_code": "13.1210",
+    "soc_code": "252011",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "teacher"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-early-childhood-education-administrators",
+    "name": "Early Childhood Education - Administrators",
+    "credential": "A.S.",
+    "plan_code": "27033",
+    "cip_code": "13.1210",
+    "soc_code": "252011",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "teacher"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-early-childhood-education-infant-toddler",
+    "name": "Early Childhood Education - Infant Toddler",
+    "credential": "A.S.",
+    "plan_code": "27032",
+    "cip_code": "13.1210",
+    "soc_code": "252011",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "teacher"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-early-childhood-education-preschool",
+    "name": "Early Childhood Education - Preschool",
+    "credential": "A.S.",
+    "plan_code": "27031",
+    "cip_code": "13.1210",
+    "soc_code": "252011",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "teacher"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-electronics-engineering-technology",
+    "name": "Electronics Engineering Technology",
+    "credential": "A.S.",
+    "plan_code": "26039",
+    "cip_code": "15.0303",
+    "soc_code": "173023",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "mechanical-engineer",
+      "electrical-engineer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-emergency-medical-services",
+    "name": "Emergency Medical Services",
+    "credential": "A.S.",
+    "plan_code": "23047",
+    "cip_code": "51.0904",
+    "soc_code": "292041",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "paramedic"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-entrepreneurship",
+    "name": "Entrepreneurship",
+    "credential": "A.S.",
+    "plan_code": "20002",
+    "cip_code": "52.0703",
+    "soc_code": "112011",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "business-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-fashion-design",
+    "name": "Fashion Design",
+    "credential": "A.S.",
+    "plan_code": "22005",
+    "cip_code": "50.0407",
+    "soc_code": "271022",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "fashion-designer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-fashion-merchandising",
+    "name": "Fashion Merchandising",
+    "credential": "A.S.",
+    "plan_code": "22020",
+    "cip_code": "52.1902",
+    "soc_code": "414012",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "marketing"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-film-production-technology",
+    "name": "Film Production Technology",
+    "credential": "A.S.",
+    "plan_code": "26044",
+    "cip_code": "50.0602",
+    "soc_code": "274032",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "film-media"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-financial-services-banking",
+    "name": "Financial Services - Banking",
+    "credential": "A.S.",
+    "plan_code": "22026",
+    "cip_code": "52.0801",
+    "soc_code": "113031",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "finance"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-financial-services-wealth-management",
+    "name": "Financial Services - Wealth Management",
+    "credential": "A.S.",
+    "plan_code": "22024",
+    "cip_code": "52.0801",
+    "soc_code": "113031",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "finance"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-fire-science-technology",
+    "name": "Fire Science Technology",
+    "credential": "A.S.",
+    "plan_code": "27018",
+    "cip_code": "43.0201",
+    "soc_code": "331021",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "firefighter"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-funeral-services",
+    "name": "Funeral Services",
+    "credential": "A.S.",
+    "plan_code": "23049",
+    "cip_code": "12.0301",
+    "soc_code": "119171",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "funeral-director"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-game-development-design",
+    "name": "Game Development & Design",
+    "credential": "A.S.",
+    "plan_code": "25075",
+    "cip_code": "50.0411",
+    "soc_code": "151132",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "game-designer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-graphic-design-technology",
+    "name": "Graphic Design Technology",
+    "credential": "A.S.",
+    "plan_code": "26031",
+    "cip_code": "11.0803",
+    "soc_code": "271024",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "graphic-designer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-graphic-internet-technology",
+    "name": "Graphic Internet Technology",
+    "credential": "A.S.",
+    "plan_code": "26050",
+    "cip_code": "11.0801",
+    "soc_code": "151134",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "graphic-designer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-health-information-technology",
+    "name": "Health Information Technology",
+    "credential": "A.S.",
+    "plan_code": "23052",
+    "cip_code": "51.0707",
+    "soc_code": "292071",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "it-consultant",
+      "health-admin"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-health-sciences",
+    "name": "Health Sciences",
+    "credential": "A.S.",
+    "plan_code": "23081",
+    "cip_code": "51.0701",
+    "soc_code": "119111",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "health-admin"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-health-sciences-health-services-management",
+    "name": "Health Sciences - Health Services Management",
+    "credential": "A.S.",
+    "plan_code": "23082",
+    "cip_code": "51.0701",
+    "soc_code": "119111",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "health-admin"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-histologic-technology",
+    "name": "Histologic Technology",
+    "credential": "A.S.",
+    "plan_code": "23064",
+    "cip_code": "51.1008",
+    "soc_code": "292011",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "lab-scientist"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-hospitality-tourism-management",
+    "name": "Hospitality & Tourism Management",
+    "credential": "A.S.",
+    "plan_code": "22016",
+    "cip_code": "52.0901",
+    "soc_code": "119081",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "hospitality-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-interior-design-technology",
+    "name": "Interior Design Technology",
+    "credential": "A.S.",
+    "plan_code": "26030",
+    "cip_code": "50.0408",
+    "soc_code": "271029",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "architect"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-landscape-horticulture-technology",
+    "name": "Landscape & Horticulture Technology",
+    "credential": "A.S.",
+    "plan_code": "21005",
+    "cip_code": "01.0605",
+    "soc_code": "371012",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "horticulturist"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-marketing",
+    "name": "Marketing",
+    "credential": "A.S.",
+    "plan_code": "25047",
+    "cip_code": "52.1401",
+    "soc_code": "112021",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "marketing"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-music-business-business-management",
+    "name": "Music Business - Business Management",
+    "credential": "A.S.",
+    "plan_code": "25019",
+    "cip_code": "50.0913",
+    "soc_code": "272041",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "business-manager",
+      "film-media"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-music-business-performance-and-production",
+    "name": "Music Business - Performance and Production",
+    "credential": "A.S.",
+    "plan_code": "25044",
+    "cip_code": "50.0913",
+    "soc_code": "272041",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "business-manager",
+      "film-media"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-networking-services-technology-enterprise-cloud-computing",
+    "name": "Networking Services Technology - Enterprise Cloud Computing",
+    "credential": "A.S.",
+    "plan_code": "25077",
+    "cip_code": "11.1001",
+    "soc_code": "151152",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "network-engineer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-networking-services-technology-network-infrastructure",
+    "name": "Networking Services Technology - Network Infrastructure",
+    "credential": "A.S.",
+    "plan_code": "25062",
+    "cip_code": "11.1001",
+    "soc_code": "151152",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "network-engineer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-nuclear-medicine-technology",
+    "name": "Nuclear Medicine Technology",
+    "credential": "A.S.",
+    "plan_code": "23068",
+    "cip_code": "51.0905",
+    "soc_code": "292033",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "medical-imaging"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-nursing-r-n-accelerated",
+    "name": "Nursing - R.N. (Accelerated)",
+    "credential": "A.S.",
+    "plan_code": "23031",
+    "cip_code": "51.3801",
+    "soc_code": "291141",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "nurse"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-nursing-r-n-generic-full-time",
+    "name": "Nursing - R.N. (Generic Full-Time)",
+    "credential": "A.S.",
+    "plan_code": "23028",
+    "cip_code": "51.3801",
+    "soc_code": "291141",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "nurse"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-nursing-r-n-generic-part-time",
+    "name": "Nursing - R.N. (Generic Part-Time)",
+    "credential": "A.S.",
+    "plan_code": "23027",
+    "cip_code": "51.3801",
+    "soc_code": "291141",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "nurse"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-nursing-r-n-transitional-full-time",
+    "name": "Nursing - R.N. (Transitional Full-Time)",
+    "credential": "A.S.",
+    "plan_code": "23025",
+    "cip_code": "51.3801",
+    "soc_code": "291141",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "nurse"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-nursing-r-n-transitional-part-time",
+    "name": "Nursing - R.N. (Transitional Part-Time)",
+    "credential": "A.S.",
+    "plan_code": "23026",
+    "cip_code": "51.3801",
+    "soc_code": "291141",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "nurse"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-opticianry",
+    "name": "Opticianry",
+    "credential": "A.S.",
+    "plan_code": "23041",
+    "cip_code": "51.1801",
+    "soc_code": "292081",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "allied-health"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-paralegal-studies-aba-approved",
+    "name": "Paralegal Studies - ABA Approved",
+    "credential": "A.S.",
+    "plan_code": "27013",
+    "cip_code": "22.0302",
+    "soc_code": "232011",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "paralegal"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-photographic-technology",
+    "name": "Photographic Technology",
+    "credential": "A.S.",
+    "plan_code": "26032",
+    "cip_code": "50.0605",
+    "soc_code": "274021",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "graphic-designer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-physical-therapist-assistant",
+    "name": "Physical Therapist Assistant",
+    "credential": "A.S.",
+    "plan_code": "23034",
+    "cip_code": "51.0806",
+    "soc_code": "312021",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "therapist"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-professional-pilot-technology",
+    "name": "Professional Pilot Technology",
+    "credential": "A.S.",
+    "plan_code": "26029",
+    "cip_code": "49.0102",
+    "soc_code": "532011",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "pilot"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-radiation-therapy",
+    "name": "Radiation Therapy",
+    "credential": "A.S.",
+    "plan_code": "23058",
+    "cip_code": "51.0907",
+    "soc_code": "291124",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "medical-imaging"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-radio-television-broadcast-programming",
+    "name": "Radio & Television Broadcast Programming",
+    "credential": "A.S.",
+    "plan_code": "26043",
+    "cip_code": "10.0202",
+    "soc_code": "274032",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "software-developer",
+      "film-media"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-radiography",
+    "name": "Radiography",
+    "credential": "A.S.",
+    "plan_code": "23037",
+    "cip_code": "51.0911",
+    "soc_code": "292034",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "medical-imaging",
+      "film-media"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-respiratory-care",
+    "name": "Respiratory Care",
+    "credential": "A.S.",
+    "plan_code": "23046",
+    "cip_code": "51.0908",
+    "soc_code": "291126",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "therapist"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-respiratory-care-accelerated",
+    "name": "Respiratory Care (Accelerated)",
+    "credential": "A.S.",
+    "plan_code": "23067",
+    "cip_code": "51.0908",
+    "soc_code": "291126",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "therapist"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-sign-language-interpretation",
+    "name": "Sign Language Interpretation",
+    "credential": "A.S.",
+    "plan_code": "23033",
+    "cip_code": "13.1003",
+    "soc_code": "273091",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "interpreter"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-social-and-human-services-addictions-studies",
+    "name": "Social and Human Services - Addictions Studies",
+    "credential": "A.S.",
+    "plan_code": "25067",
+    "cip_code": "51.1599",
+    "soc_code": "211093",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "social-worker"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-social-and-human-services-generalist",
+    "name": "Social and Human Services - Generalist",
+    "credential": "A.S.",
+    "plan_code": "25026",
+    "cip_code": "51.1599",
+    "soc_code": "211093",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "social-worker"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-surgical-technology",
+    "name": "Surgical Technology",
+    "credential": "A.S.",
+    "plan_code": "23077",
+    "cip_code": "51.0909",
+    "soc_code": "292055",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "allied-health"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-translation-interpretation-studies",
+    "name": "Translation/Interpretation Studies",
+    "credential": "A.S.",
+    "plan_code": "24050",
+    "cip_code": "13.1003",
+    "soc_code": "273091",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "interpreter"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-sport-management",
+    "name": "Sport Management",
+    "credential": "A.S.",
+    "plan_code": "28010",
+    "cip_code": "31.0504",
+    "soc_code": "119072",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "sport-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-transportation-and-logistics",
+    "name": "Transportation and Logistics",
+    "credential": "A.S.",
+    "plan_code": "28000",
+    "cip_code": "52.0203",
+    "soc_code": "113071",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "logistics"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-as-veterinary-technology",
+    "name": "Veterinary Technology",
+    "credential": "A.S.",
+    "plan_code": "23065",
+    "cip_code": "01.8301",
+    "soc_code": "292056",
+    "school": null,
+    "credits": 60,
+    "typical_months_full_time": 24,
+    "careers": [
+      "vet-tech"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-atc-museum-studies",
+    "name": "Museum Studies",
+    "credential": "Advanced Technical Certificate",
+    "plan_code": "C6050",
+    "cip_code": "50.0102",
+    "soc_code": "254013",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "museum-curator"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-atc-certified-flight-instructor",
+    "name": "Certified Flight Instructor",
+    "credential": "Advanced Technical Certificate",
+    "plan_code": "C6027",
+    "cip_code": "49.0102",
+    "soc_code": "532011",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "pilot"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-atc-compensation-and-benefits",
+    "name": "Compensation and Benefits",
+    "credential": "Advanced Technical Certificate",
+    "plan_code": "C6002",
+    "cip_code": "52.0201",
+    "soc_code": "113111",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "business-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-atc-hospitality-management",
+    "name": "Hospitality Management",
+    "credential": "Advanced Technical Certificate",
+    "plan_code": "C6000",
+    "cip_code": "52.0901",
+    "soc_code": "119081",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "hospitality-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-atc-human-resources-management",
+    "name": "Human Resources Management",
+    "credential": "Advanced Technical Certificate",
+    "plan_code": "C6001",
+    "cip_code": "52.0201",
+    "soc_code": "113121",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "business-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-atc-procurement-management",
+    "name": "Procurement Management",
+    "credential": "Advanced Technical Certificate",
+    "plan_code": "C6003",
+    "cip_code": "52.0209",
+    "soc_code": "113071",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "business-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-atc-project-management",
+    "name": "Project Management",
+    "credential": "Advanced Technical Certificate",
+    "plan_code": "C6004",
+    "cip_code": "52.0209",
+    "soc_code": "113071",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "business-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-atc-supply-chain-analytics",
+    "name": "Supply Chain Analytics",
+    "credential": "Advanced Technical Certificate",
+    "plan_code": "C6005",
+    "cip_code": "52.0203",
+    "soc_code": "113071",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "logistics"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-atc-computed-tomography",
+    "name": "Computed Tomography",
+    "credential": "Advanced Technical Certificate",
+    "plan_code": "C6037",
+    "cip_code": "61.2612",
+    "soc_code": "292034",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "medical-imaging"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-atc-magnetic-resonance-imaging",
+    "name": "Magnetic Resonance Imaging",
+    "credential": "Advanced Technical Certificate",
+    "plan_code": "C6036",
+    "cip_code": "51.0920",
+    "soc_code": "293025",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "medical-imaging"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-atc-biotechnology",
+    "name": "Biotechnology",
+    "credential": "Advanced Technical Certificate",
+    "plan_code": "C6028",
+    "cip_code": "41.0101",
+    "soc_code": "194021",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "lab-scientist"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-atc-biotechnology-bioinformatics",
+    "name": "Biotechnology - Bioinformatics",
+    "credential": "Advanced Technical Certificate",
+    "plan_code": "C6029",
+    "cip_code": "41.0101",
+    "soc_code": "194021",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "lab-scientist"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-atc-biotechnology-chemical-technology",
+    "name": "Biotechnology - Chemical Technology",
+    "credential": "Advanced Technical Certificate",
+    "plan_code": "C6030",
+    "cip_code": "41.0101",
+    "soc_code": "194021",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "lab-scientist"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-bas-leadership-and-management-innovation",
+    "name": "Leadership and Management Innovation",
+    "credential": "B.A.S.",
+    "plan_code": "P9200",
+    "cip_code": "52.0299",
+    "soc_code": "111021",
+    "school": null,
+    "credits": 120,
+    "typical_months_full_time": 48,
+    "careers": [
+      "business-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-bas-leadership-and-management-innovation-accounting",
+    "name": "Leadership and Management Innovation - Accounting",
+    "credential": "B.A.S.",
+    "plan_code": "P9203",
+    "cip_code": "52.0299",
+    "soc_code": "111021",
+    "school": null,
+    "credits": 120,
+    "typical_months_full_time": 48,
+    "careers": [
+      "accountant",
+      "business-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-bas-leadership-and-management-innovation-digital-marketing-concentration",
+    "name": "Leadership and Management Innovation - Digital Marketing Concentration",
+    "credential": "B.A.S.",
+    "plan_code": "P9204",
+    "cip_code": "52.0299",
+    "soc_code": "111021",
+    "school": null,
+    "credits": 120,
+    "typical_months_full_time": 48,
+    "careers": [
+      "business-manager",
+      "marketing"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-bas-leadership-and-management-innovation-hospitality-management",
+    "name": "Leadership and Management Innovation - Hospitality Management",
+    "credential": "B.A.S.",
+    "plan_code": "P9201",
+    "cip_code": "52.0299",
+    "soc_code": "111021",
+    "school": null,
+    "credits": 120,
+    "typical_months_full_time": 48,
+    "careers": [
+      "hospitality-manager",
+      "business-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-bas-leadership-and-management-innovation-human-resource-management",
+    "name": "Leadership and Management Innovation - Human Resource Management",
+    "credential": "B.A.S.",
+    "plan_code": "P9202",
+    "cip_code": "52.0299",
+    "soc_code": "111021",
+    "school": null,
+    "credits": 120,
+    "typical_months_full_time": 48,
+    "careers": [
+      "business-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-bas-supply-chain-management",
+    "name": "Supply Chain Management",
+    "credential": "B.A.S.",
+    "plan_code": "P9300",
+    "cip_code": "52.0203",
+    "soc_code": "113071",
+    "school": null,
+    "credits": 120,
+    "typical_months_full_time": 48,
+    "careers": [
+      "logistics"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-bas-supply-chain-management-procurement-management",
+    "name": "Supply Chain Management - Procurement Management",
+    "credential": "B.A.S.",
+    "plan_code": "P9301",
+    "cip_code": "52.0203",
+    "soc_code": "113071",
+    "school": null,
+    "credits": 120,
+    "typical_months_full_time": 48,
+    "careers": [
+      "business-manager",
+      "logistics"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-bas-supply-chain-management-project-management",
+    "name": "Supply Chain Management - Project Management",
+    "credential": "B.A.S.",
+    "plan_code": "P9302",
+    "cip_code": "52.0203",
+    "soc_code": "113071",
+    "school": null,
+    "credits": 120,
+    "typical_months_full_time": 48,
+    "careers": [
+      "business-manager",
+      "logistics"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-bas-supply-chain-management-supply-chain-analytics",
+    "name": "Supply Chain Management - Supply Chain Analytics",
+    "credential": "B.A.S.",
+    "plan_code": "P9303",
+    "cip_code": "52.0203",
+    "soc_code": "113071",
+    "school": null,
+    "credits": 120,
+    "typical_months_full_time": 48,
+    "careers": [
+      "logistics"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-bas-film-television-digital-production",
+    "name": "Film, Television & Digital Production",
+    "credential": "B.A.S.",
+    "plan_code": "P9220",
+    "cip_code": "50.0602",
+    "soc_code": "272012",
+    "school": null,
+    "credits": 120,
+    "typical_months_full_time": 48,
+    "careers": [
+      "film-media"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-bas-clinical-laboratory-science",
+    "name": "Clinical Laboratory Science",
+    "credential": "B.A.S.",
+    "plan_code": "P9211",
+    "cip_code": "51.0000",
+    "soc_code": "292011",
+    "school": null,
+    "credits": 120,
+    "typical_months_full_time": 48,
+    "careers": [
+      "lab-scientist"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-bas-health-science-histotechnology-concentration",
+    "name": "Health Science - Histotechnology Concentration",
+    "credential": "B.A.S.",
+    "plan_code": "P9212",
+    "cip_code": "51.0000",
+    "soc_code": "292011",
+    "school": null,
+    "credits": 120,
+    "typical_months_full_time": 48,
+    "careers": [
+      "lab-scientist"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-bas-health-science-physician-assistant-studies-concentration",
+    "name": "Health Science - Physician Assistant Studies Concentration",
+    "credential": "B.A.S.",
+    "plan_code": "P9210",
+    "cip_code": "51.0000",
+    "soc_code": "291071",
+    "school": null,
+    "credits": 120,
+    "typical_months_full_time": 48,
+    "careers": [
+      "physician-assistant"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-bas-public-safety-management-crime-scene-investigation-option",
+    "name": "Public Safety Management - Crime Scene Investigation Option",
+    "credential": "B.A.S.",
+    "plan_code": "P9106",
+    "cip_code": "43.9999",
+    "soc_code": "999999",
+    "school": null,
+    "credits": 120,
+    "typical_months_full_time": 48,
+    "careers": [
+      "police-officer",
+      "crime-scene"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-bas-public-safety-management-criminal-justice-option",
+    "name": "Public Safety Management - Criminal Justice Option",
+    "credential": "B.A.S.",
+    "plan_code": "P9110",
+    "cip_code": "43.9999",
+    "soc_code": "999999",
+    "school": null,
+    "credits": 120,
+    "typical_months_full_time": 48,
+    "careers": [
+      "police-officer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-bas-public-safety-management-emergency-management-option",
+    "name": "Public Safety Management - Emergency Management Option",
+    "credential": "B.A.S.",
+    "plan_code": "P9105",
+    "cip_code": "43.9999",
+    "soc_code": "999999",
+    "school": null,
+    "credits": 120,
+    "typical_months_full_time": 48,
+    "careers": [
+      "police-officer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-bs-bachelor-of-science-in-nursing-rn-to-bsn",
+    "name": "Bachelor of Science in Nursing (RN to BSN)",
+    "credential": "B.S.",
+    "plan_code": "N9100",
+    "cip_code": "51.3801",
+    "soc_code": "291141",
+    "school": null,
+    "credits": 120,
+    "typical_months_full_time": 48,
+    "careers": [
+      "nurse"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-bs-early-childhood-education",
+    "name": "Early Childhood Education",
+    "credential": "B.S.",
+    "plan_code": "S9270",
+    "cip_code": "13.1210",
+    "soc_code": "252011",
+    "school": null,
+    "credits": 120,
+    "typical_months_full_time": 48,
+    "careers": [
+      "teacher"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-bs-exceptional-student-education-k-12",
+    "name": "Exceptional Student Education (K-12)",
+    "credential": "B.S.",
+    "plan_code": "S9260",
+    "cip_code": "13.1001",
+    "soc_code": "252059",
+    "school": null,
+    "credits": 120,
+    "typical_months_full_time": 48,
+    "careers": [
+      "teacher"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-bs-secondary-mathematics-education",
+    "name": "Secondary Mathematics Education",
+    "credential": "B.S.",
+    "plan_code": "S9250",
+    "cip_code": "13.1311",
+    "soc_code": "251022",
+    "school": null,
+    "credits": 120,
+    "typical_months_full_time": 48,
+    "careers": [
+      "teacher"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-bs-secondary-science-education-biology",
+    "name": "Secondary Science Education - Biology",
+    "credential": "B.S.",
+    "plan_code": "S9210",
+    "cip_code": "13.1322",
+    "soc_code": "251042",
+    "school": null,
+    "credits": 120,
+    "typical_months_full_time": 48,
+    "careers": [
+      "teacher"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-bs-applied-artificial-intelligence",
+    "name": "Applied Artificial Intelligence",
+    "credential": "B.S.",
+    "plan_code": "S9520",
+    "cip_code": "11.0102",
+    "soc_code": "151256",
+    "school": null,
+    "credits": 120,
+    "typical_months_full_time": 48,
+    "careers": [
+      "ai-engineer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-bs-cybersecurity",
+    "name": "Cybersecurity",
+    "credential": "B.S.",
+    "plan_code": "S9515",
+    "cip_code": "11.1003",
+    "soc_code": "151212",
+    "school": null,
+    "credits": 120,
+    "typical_months_full_time": 48,
+    "careers": [
+      "cybersecurity"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-bs-data-analytics",
+    "name": "Data Analytics",
+    "credential": "B.S.",
+    "plan_code": "S9510",
+    "cip_code": "30.7101",
+    "soc_code": "152051",
+    "school": null,
+    "credits": 120,
+    "typical_months_full_time": 48,
+    "careers": [
+      "data-analyst"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-bs-electrical-and-computer-engineering-technology",
+    "name": "Electrical and Computer Engineering Technology",
+    "credential": "B.S.",
+    "plan_code": "S9100",
+    "cip_code": "15.0303",
+    "soc_code": "173023",
+    "school": null,
+    "credits": 120,
+    "typical_months_full_time": 48,
+    "careers": [
+      "mechanical-engineer",
+      "electrical-engineer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-bs-information-systems-technology-networking-concentration",
+    "name": "Information Systems Technology - Networking Concentration",
+    "credential": "B.S.",
+    "plan_code": "S9500",
+    "cip_code": "11.0103",
+    "soc_code": "113021",
+    "school": null,
+    "credits": 120,
+    "typical_months_full_time": 48,
+    "careers": [
+      "it-consultant",
+      "network-engineer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-bs-information-systems-technology-software-engineering-concentration",
+    "name": "Information Systems Technology - Software Engineering Concentration",
+    "credential": "B.S.",
+    "plan_code": "S9501",
+    "cip_code": "11.0103",
+    "soc_code": "113021",
+    "school": null,
+    "credits": 120,
+    "typical_months_full_time": 48,
+    "careers": [
+      "software-developer",
+      "it-consultant"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-bs-biological-sciences-biopharmaceutical-sciences-concentration",
+    "name": "Biological Sciences - Biopharmaceutical Sciences Concentration",
+    "credential": "B.S.",
+    "plan_code": "S9121",
+    "cip_code": "26.0101",
+    "soc_code": "191029",
+    "school": null,
+    "credits": 120,
+    "typical_months_full_time": 48,
+    "careers": [
+      "lab-scientist"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-bs-biological-sciences-biotechnology-concentration",
+    "name": "Biological Sciences - Biotechnology Concentration",
+    "credential": "B.S.",
+    "plan_code": "S9120",
+    "cip_code": "26.0101",
+    "soc_code": "191029",
+    "school": null,
+    "credits": 120,
+    "typical_months_full_time": 48,
+    "careers": [
+      "lab-scientist"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-bs-biological-sciences-science-education",
+    "name": "Biological Sciences - Science Education",
+    "credential": "B.S.",
+    "plan_code": "S9122",
+    "cip_code": "26.0101",
+    "soc_code": "191029",
+    "school": null,
+    "credits": 120,
+    "typical_months_full_time": 48,
+    "careers": [
+      "lab-scientist",
+      "teacher"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf",
+    "estimate": true,
+    "estimate_note": "credits/months are the typical total for this award type, not this exact program"
+  },
+  {
+    "id": "mdc-ccc-accounting-and-budgeting",
+    "name": "Accounting and Budgeting",
+    "credential": "College Credit Certificate",
+    "plan_code": "65075",
+    "cip_code": "52.0302",
+    "soc_code": "433031",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "accountant"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-accounting-technology-management",
+    "name": "Accounting Technology Management",
+    "credential": "College Credit Certificate",
+    "plan_code": "65077",
+    "cip_code": "52.0302",
+    "soc_code": "433031",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "accountant"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-addiction-studies",
+    "name": "Addiction Studies",
+    "credential": "College Credit Certificate",
+    "plan_code": "65078",
+    "cip_code": "15.1501",
+    "soc_code": "211093",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "social-worker"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-air-cargo-management",
+    "name": "Air Cargo Management",
+    "credential": "College Credit Certificate",
+    "plan_code": "66030",
+    "cip_code": "49.0104",
+    "soc_code": "531011",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "logistics"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-airline-maintenance-procedures-and-records-management",
+    "name": "Airline Maintenance Procedures and Records Management",
+    "credential": "College Credit Certificate",
+    "plan_code": "63018",
+    "cip_code": "49.0104",
+    "soc_code": "491011",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "aviation"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-airline-aviation-management",
+    "name": "Airline/Aviation Management",
+    "credential": "College Credit Certificate",
+    "plan_code": "63012",
+    "cip_code": "49.0104",
+    "soc_code": "532021",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "aviation"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-airport-management",
+    "name": "Airport Management",
+    "credential": "College Credit Certificate",
+    "plan_code": "63017",
+    "cip_code": "49.0104",
+    "soc_code": "532021",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "aviation"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-american-sign-language",
+    "name": "American Sign Language",
+    "credential": "College Credit Certificate",
+    "plan_code": "64053",
+    "cip_code": "13.1003",
+    "soc_code": "211093",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "interpreter"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-artificial-intelligence-awareness",
+    "name": "Artificial Intelligence Awareness",
+    "credential": "College Credit Certificate",
+    "plan_code": "66040",
+    "cip_code": "11.0201",
+    "soc_code": "151251",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "ai-engineer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-artificial-intelligence-practitioner",
+    "name": "Artificial Intelligence Practitioner",
+    "credential": "College Credit Certificate",
+    "plan_code": "66041",
+    "cip_code": "11.0102",
+    "soc_code": "151252",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "ai-engineer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-audio-technology",
+    "name": "Audio Technology",
+    "credential": "College Credit Certificate",
+    "plan_code": "61000",
+    "cip_code": "10.0203",
+    "soc_code": "274011",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "film-media"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-automation",
+    "name": "Automation",
+    "credential": "College Credit Certificate",
+    "plan_code": "68000",
+    "cip_code": "15.0406",
+    "soc_code": "173027",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "mechanical-engineer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-biotechnology",
+    "name": "Biotechnology",
+    "credential": "College Credit Certificate",
+    "plan_code": "60002",
+    "cip_code": "41.0101",
+    "soc_code": "194021",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "lab-scientist"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-building-construction-specialist",
+    "name": "Building Construction Specialist",
+    "credential": "College Credit Certificate",
+    "plan_code": "66025",
+    "cip_code": "15.1001",
+    "soc_code": "119021",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "civil-engineer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-business-entrepreneurship-operations-family-owned-business",
+    "name": "Business Entrepreneurship Operations - Family-Owned Business",
+    "credential": "College Credit Certificate",
+    "plan_code": "65109",
+    "cip_code": "52.0703",
+    "soc_code": "119179",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "business-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-business-entrepreneurship-operations-social-venture",
+    "name": "Business Entrepreneurship Operations - Social Venture",
+    "credential": "College Credit Certificate",
+    "plan_code": "65111",
+    "cip_code": "52.0703",
+    "soc_code": "119179",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "business-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-business-entrepreneurship-operations-start-up-venture",
+    "name": "Business Entrepreneurship Operations - Start-Up Venture",
+    "credential": "College Credit Certificate",
+    "plan_code": "65110",
+    "cip_code": "52.0703",
+    "soc_code": "119179",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "business-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-business-entrepreneurship-specialist-family-owned-business",
+    "name": "Business Entrepreneurship Specialist - Family-Owned Business",
+    "credential": "College Credit Certificate",
+    "plan_code": "65098",
+    "cip_code": "52.0703",
+    "soc_code": "119179",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "business-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-business-entrepreneurship-specialist-social-venture",
+    "name": "Business Entrepreneurship Specialist - Social Venture",
+    "credential": "College Credit Certificate",
+    "plan_code": "65097",
+    "cip_code": "52.0703",
+    "soc_code": "119179",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "business-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-business-entrepreneurship-specialist-start-up-venture",
+    "name": "Business Entrepreneurship Specialist - Start-Up Venture",
+    "credential": "College Credit Certificate",
+    "plan_code": "65101",
+    "cip_code": "52.0703",
+    "soc_code": "119179",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "business-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-business-industry-operations",
+    "name": "Business Industry Operations",
+    "credential": "College Credit Certificate",
+    "plan_code": "65061",
+    "cip_code": "52.0205",
+    "soc_code": "111021",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "business-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-business-intelligence-professional",
+    "name": "Business Intelligence Professional",
+    "credential": "College Credit Certificate",
+    "plan_code": "66038",
+    "cip_code": "52.1301",
+    "soc_code": "151199",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "data-analyst",
+      "business-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-business-operations-business-management",
+    "name": "Business Operations - Business Management",
+    "credential": "College Credit Certificate",
+    "plan_code": "65022",
+    "cip_code": "52.0201",
+    "soc_code": "111021",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "business-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-business-operations-human-resources",
+    "name": "Business Operations - Human Resources",
+    "credential": "College Credit Certificate",
+    "plan_code": "65025",
+    "cip_code": "52.0201",
+    "soc_code": "111021",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "business-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-business-operations-marketing",
+    "name": "Business Operations - Marketing",
+    "credential": "College Credit Certificate",
+    "plan_code": "65027",
+    "cip_code": "52.0201",
+    "soc_code": "111021",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "business-manager",
+      "marketing"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-business-operations-small-business",
+    "name": "Business Operations - Small Business",
+    "credential": "College Credit Certificate",
+    "plan_code": "65031",
+    "cip_code": "52.0201",
+    "soc_code": "111021",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "business-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-business-specialist-business-management",
+    "name": "Business Specialist - Business Management",
+    "credential": "College Credit Certificate",
+    "plan_code": "65011",
+    "cip_code": "52.0201",
+    "soc_code": "111021",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "business-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-business-specialist-general-business",
+    "name": "Business Specialist - General Business",
+    "credential": "College Credit Certificate",
+    "plan_code": "65100",
+    "cip_code": "52.0201",
+    "soc_code": "111021",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "business-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-business-specialist-human-resources",
+    "name": "Business Specialist - Human Resources",
+    "credential": "College Credit Certificate",
+    "plan_code": "65014",
+    "cip_code": "52.0201",
+    "soc_code": "111021",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "business-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-business-specialist-international-business",
+    "name": "Business Specialist - International Business",
+    "credential": "College Credit Certificate",
+    "plan_code": "65015",
+    "cip_code": "52.0201",
+    "soc_code": "111021",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "business-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-business-specialist-marketing",
+    "name": "Business Specialist - Marketing",
+    "credential": "College Credit Certificate",
+    "plan_code": "65016",
+    "cip_code": "52.0201",
+    "soc_code": "111021",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "business-manager",
+      "marketing"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-business-specialist-small-business",
+    "name": "Business Specialist - Small Business",
+    "credential": "College Credit Certificate",
+    "plan_code": "65020",
+    "cip_code": "52.0201",
+    "soc_code": "111021",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "business-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-chef-apprentice",
+    "name": "Chef Apprentice",
+    "credential": "College Credit Certificate",
+    "plan_code": "65059",
+    "cip_code": "12.0503",
+    "soc_code": "352014",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "chef"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-cisco-certified-network-associate-ccna",
+    "name": "Cisco Certified Network Associate (CCNA)",
+    "credential": "College Credit Certificate",
+    "plan_code": "66050",
+    "cip_code": "11.1001",
+    "soc_code": "151152",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "network-engineer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-commercial-transport-pilot",
+    "name": "Commercial Transport Pilot",
+    "credential": "College Credit Certificate",
+    "plan_code": "68012",
+    "cip_code": "49.0102",
+    "soc_code": "532012",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "pilot"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-computer-aided-design-assistant",
+    "name": "Computer Aided Design Assistant",
+    "credential": "College Credit Certificate",
+    "plan_code": "66070",
+    "cip_code": "15.1303",
+    "soc_code": "173026",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "mechanical-engineer",
+      "architect"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-computer-aided-design-operator",
+    "name": "Computer Aided Design Operator",
+    "credential": "College Credit Certificate",
+    "plan_code": "66071",
+    "cip_code": "15.1302",
+    "soc_code": "173011",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "mechanical-engineer",
+      "architect"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-computer-programmer-business-applications",
+    "name": "Computer Programmer - Business Applications",
+    "credential": "College Credit Certificate",
+    "plan_code": "66045",
+    "cip_code": "11.0202",
+    "soc_code": "151131",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "software-developer",
+      "business-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-computer-programmer-mobile-applications-development",
+    "name": "Computer Programmer - Mobile Applications Development",
+    "credential": "College Credit Certificate",
+    "plan_code": "66036",
+    "cip_code": "11.0202",
+    "soc_code": "151131",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "software-developer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-crime-scene-technician",
+    "name": "Crime Scene Technician",
+    "credential": "College Credit Certificate",
+    "plan_code": "66072",
+    "cip_code": "43.0406",
+    "soc_code": "194092",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "crime-scene"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-cruise-line-operations",
+    "name": "Cruise Line Operations",
+    "credential": "College Credit Certificate",
+    "plan_code": "65053",
+    "cip_code": "52.0901",
+    "soc_code": "119081",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "hospitality-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-culinary-arts-management-operations",
+    "name": "Culinary Arts Management Operations",
+    "credential": "College Credit Certificate",
+    "plan_code": "65060",
+    "cip_code": "12.0504",
+    "soc_code": "352014",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "chef"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-cybersecurity-analyst",
+    "name": "Cybersecurity Analyst",
+    "credential": "College Credit Certificate",
+    "plan_code": "66061",
+    "cip_code": "11.1003",
+    "soc_code": "151212",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "cybersecurity"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-digital-marketing-specialist",
+    "name": "Digital Marketing Specialist",
+    "credential": "College Credit Certificate",
+    "plan_code": "65096",
+    "cip_code": "52.1401",
+    "soc_code": "112021",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "marketing"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-digital-marketing-strategy",
+    "name": "Digital Marketing Strategy",
+    "credential": "College Credit Certificate",
+    "plan_code": "65102",
+    "cip_code": "52.1404",
+    "soc_code": "112021",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "marketing"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-early-childhood-education-administrator",
+    "name": "Early Childhood Education - Administrator",
+    "credential": "College Credit Certificate",
+    "plan_code": "60004",
+    "cip_code": "19.0709",
+    "soc_code": "119031",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "teacher"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-early-childhood-education-child-development-early-intervention-specialization",
+    "name": "Early Childhood Education - Child Development Early Intervention Specialization",
+    "credential": "College Credit Certificate",
+    "plan_code": "60007",
+    "cip_code": "19.0709",
+    "soc_code": "252011",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "teacher"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-early-childhood-education-early-childhood-education-inclusion-specialization",
+    "name": "Early Childhood Education - Early Childhood Education Inclusion Specialization",
+    "credential": "College Credit Certificate",
+    "plan_code": "60006",
+    "cip_code": "13.1210",
+    "soc_code": "252051",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "teacher"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-early-childhood-education-preschool",
+    "name": "Early Childhood Education - Preschool",
+    "credential": "College Credit Certificate",
+    "plan_code": "60003",
+    "cip_code": "19.0709",
+    "soc_code": "252011",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "teacher"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-emergency-medical-technician",
+    "name": "Emergency Medical Technician",
+    "credential": "College Credit Certificate",
+    "plan_code": "63013",
+    "cip_code": "51.0904",
+    "soc_code": "292041",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "paramedic"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-endoscopic-technician",
+    "name": "Endoscopic Technician",
+    "credential": "College Credit Certificate",
+    "plan_code": "63030",
+    "cip_code": "51.0999",
+    "soc_code": "319099",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "allied-health"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-engineering-technology-support-specialist",
+    "name": "Engineering Technology Support Specialist",
+    "credential": "College Credit Certificate",
+    "plan_code": "66052",
+    "cip_code": "15.0000",
+    "soc_code": "173029",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "mechanical-engineer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-enterprise-cloud-computing",
+    "name": "Enterprise Cloud Computing",
+    "credential": "College Credit Certificate",
+    "plan_code": "66058",
+    "cip_code": "11.1001",
+    "soc_code": "151142",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "network-engineer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-film-production-fundamentals",
+    "name": "Film Production Fundamentals",
+    "credential": "College Credit Certificate",
+    "plan_code": "61001",
+    "cip_code": "50.0602",
+    "soc_code": "274099",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "film-media"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-florida-funeral-director",
+    "name": "Florida Funeral Director",
+    "credential": "College Credit Certificate",
+    "plan_code": "63024",
+    "cip_code": "12.0301",
+    "soc_code": "394031",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "funeral-director"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-food-and-beverage-management",
+    "name": "Food and Beverage Management",
+    "credential": "College Credit Certificate",
+    "plan_code": "65051",
+    "cip_code": "52.0905",
+    "soc_code": "119051",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "chef",
+      "hospitality-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-food-and-beverage-operations",
+    "name": "Food and Beverage Operations",
+    "credential": "College Credit Certificate",
+    "plan_code": "65058",
+    "cip_code": "52.0905",
+    "soc_code": "119051",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "chef",
+      "hospitality-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-food-and-beverage-specialist",
+    "name": "Food and Beverage Specialist",
+    "credential": "College Credit Certificate",
+    "plan_code": "65057",
+    "cip_code": "52.0905",
+    "soc_code": "119051",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "chef",
+      "hospitality-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-geographic-information-systems-gis-technology",
+    "name": "Geographic Information Systems (GIS) Technology",
+    "credential": "College Credit Certificate",
+    "plan_code": "66080",
+    "cip_code": "45.0702",
+    "soc_code": "173031",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "it-consultant",
+      "civil-engineer",
+      "graphic-designer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-graphic-design-support",
+    "name": "Graphic Design Support",
+    "credential": "College Credit Certificate",
+    "plan_code": "61002",
+    "cip_code": "11.0803",
+    "soc_code": "271024",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "graphic-designer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-health-care-services-specialist",
+    "name": "Health Care Services Specialist",
+    "credential": "College Credit Certificate",
+    "plan_code": "63021",
+    "cip_code": "51.0701",
+    "soc_code": "119111",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "health-admin"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-healthcare-informatics-specialist",
+    "name": "Healthcare Informatics Specialist",
+    "credential": "College Credit Certificate",
+    "plan_code": "63014",
+    "cip_code": "51.0707",
+    "soc_code": "292072",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "health-admin"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-help-desk-support-technician",
+    "name": "Help Desk Support Technician",
+    "credential": "College Credit Certificate",
+    "plan_code": "66037",
+    "cip_code": "11.0103",
+    "soc_code": "151211",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "it-consultant"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-homeland-security",
+    "name": "Homeland Security",
+    "credential": "College Credit Certificate",
+    "plan_code": "66074",
+    "cip_code": "43.0103",
+    "soc_code": "331012",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "police-officer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-horticulture-professional",
+    "name": "Horticulture Professional",
+    "credential": "College Credit Certificate",
+    "plan_code": "63025",
+    "cip_code": "01.0605",
+    "soc_code": "371012",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "horticulturist"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-horticulture-specialist",
+    "name": "Horticulture Specialist",
+    "credential": "College Credit Certificate",
+    "plan_code": "63026",
+    "cip_code": "01.0605",
+    "soc_code": "373011",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "horticulturist"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-infant-toddler-specialization",
+    "name": "Infant/Toddler Specialization",
+    "credential": "College Credit Certificate",
+    "plan_code": "67014",
+    "cip_code": "19.0709",
+    "soc_code": "252011",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "teacher"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-information-technology-support",
+    "name": "Information Technology Support",
+    "credential": "College Credit Certificate",
+    "plan_code": "66044",
+    "cip_code": "11.0103",
+    "soc_code": "151212",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "it-consultant"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-intelligence-studies",
+    "name": "Intelligence Studies",
+    "credential": "College Credit Certificate",
+    "plan_code": "66075",
+    "cip_code": "43.0403",
+    "soc_code": "151212",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "cybersecurity"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-intermodal-freight-transportation",
+    "name": "Intermodal Freight Transportation",
+    "credential": "College Credit Certificate",
+    "plan_code": "68011",
+    "cip_code": "52.0203",
+    "soc_code": "113071",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "logistics"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-international-freight-transportation",
+    "name": "International Freight Transportation",
+    "credential": "College Credit Certificate",
+    "plan_code": "68010",
+    "cip_code": "52.0203",
+    "soc_code": "113071",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "logistics"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-internet-of-things-iot-applications",
+    "name": "Internet of Things (IoT) Applications",
+    "credential": "College Credit Certificate",
+    "plan_code": "66057",
+    "cip_code": "11.0201",
+    "soc_code": "151252",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "software-developer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-lean-manufacturing",
+    "name": "Lean Manufacturing",
+    "credential": "College Credit Certificate",
+    "plan_code": "68001",
+    "cip_code": "15.0613",
+    "soc_code": "173027",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "mechanical-engineer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-lending",
+    "name": "Lending",
+    "credential": "College Credit Certificate",
+    "plan_code": "65080",
+    "cip_code": "52.0801",
+    "soc_code": "132072",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "finance"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-logistics-and-transportation-specialist",
+    "name": "Logistics and Transportation Specialist",
+    "credential": "College Credit Certificate",
+    "plan_code": "63019",
+    "cip_code": "52.0209",
+    "soc_code": "113071",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "logistics"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-mechatronics",
+    "name": "Mechatronics",
+    "credential": "College Credit Certificate",
+    "plan_code": "66053",
+    "cip_code": "15.0000",
+    "soc_code": "173024",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "mechanical-engineer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-medical-coder-biller",
+    "name": "Medical Coder/Biller",
+    "credential": "College Credit Certificate",
+    "plan_code": "63020",
+    "cip_code": "51.0714",
+    "soc_code": "433021",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "health-admin"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-mental-health-neuroscience-and-aging",
+    "name": "Mental Health - Neuroscience and Aging",
+    "credential": "College Credit Certificate",
+    "plan_code": "65079",
+    "cip_code": "51.1599",
+    "soc_code": "211093",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "social-worker"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-microcomputer-repairer-installer",
+    "name": "Microcomputer Repairer/Installer",
+    "credential": "College Credit Certificate",
+    "plan_code": "66032",
+    "cip_code": "47.0104",
+    "soc_code": "151151",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "it-consultant"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-network-server-administration",
+    "name": "Network Server Administration",
+    "credential": "College Credit Certificate",
+    "plan_code": "66035",
+    "cip_code": "11.1001",
+    "soc_code": "151142",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "network-engineer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-network-systems-developer",
+    "name": "Network Systems Developer",
+    "credential": "College Credit Certificate",
+    "plan_code": "66034",
+    "cip_code": "11.1001",
+    "soc_code": "151231",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "network-engineer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-oracle-certified-database-administrator",
+    "name": "Oracle Certified Database Administrator",
+    "credential": "College Credit Certificate",
+    "plan_code": "66048",
+    "cip_code": "11.0203",
+    "soc_code": "151252",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "data-analyst"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-paramedic",
+    "name": "Paramedic",
+    "credential": "College Credit Certificate",
+    "plan_code": "63008",
+    "cip_code": "51.0904",
+    "soc_code": "292043",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "paramedic"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-passenger-service-agent",
+    "name": "Passenger Service Agent",
+    "credential": "College Credit Certificate",
+    "plan_code": "66028",
+    "cip_code": "49.0104",
+    "soc_code": "113071",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "aviation"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-patternmaking-and-construction",
+    "name": "Patternmaking and Construction",
+    "credential": "College Credit Certificate",
+    "plan_code": "64002",
+    "cip_code": "50.0407",
+    "soc_code": "271022",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "fashion-designer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-rapid-prototyping-specialist",
+    "name": "Rapid Prototyping Specialist",
+    "credential": "College Credit Certificate",
+    "plan_code": "66054",
+    "cip_code": "15.1302",
+    "soc_code": "173029",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "mechanical-engineer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-real-estate-legal-specialization-certificate",
+    "name": "Real Estate Legal Specialization Certificate",
+    "credential": "College Credit Certificate",
+    "plan_code": "67015",
+    "cip_code": "22.0302",
+    "soc_code": "232099",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "paralegal"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-rooms-division-management",
+    "name": "Rooms Division Management",
+    "credential": "College Credit Certificate",
+    "plan_code": "65048",
+    "cip_code": "52.0904",
+    "soc_code": "119081",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "hospitality-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-rooms-division-operations",
+    "name": "Rooms Division Operations",
+    "credential": "College Credit Certificate",
+    "plan_code": "65056",
+    "cip_code": "52.0904",
+    "soc_code": "119081",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "hospitality-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-rooms-division-specialist",
+    "name": "Rooms Division Specialist",
+    "credential": "College Credit Certificate",
+    "plan_code": "65055",
+    "cip_code": "52.0904",
+    "soc_code": "434081",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "hospitality-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-sales-and-customer-management",
+    "name": "Sales and Customer Management",
+    "credential": "College Credit Certificate",
+    "plan_code": "65107",
+    "cip_code": "52.1804",
+    "soc_code": "413091",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "marketing"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-solar-energy-systems-specialist",
+    "name": "Solar Energy Systems Specialist",
+    "credential": "College Credit Certificate",
+    "plan_code": "66056",
+    "cip_code": "15.1701",
+    "soc_code": "173029",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "electrical-engineer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-sport-management-operations",
+    "name": "Sport Management Operations",
+    "credential": "College Credit Certificate",
+    "plan_code": "65120",
+    "cip_code": "52.0201",
+    "soc_code": "391098",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "sport-manager"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-tax-specialist",
+    "name": "Tax Specialist",
+    "credential": "College Credit Certificate",
+    "plan_code": "65076",
+    "cip_code": "52.0302",
+    "soc_code": "433031",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "accountant"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-television-studio-production",
+    "name": "Television Studio Production",
+    "credential": "College Credit Certificate",
+    "plan_code": "61003",
+    "cip_code": "50.0602",
+    "soc_code": "274099",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "film-media"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-translation-and-interpretation",
+    "name": "Translation and Interpretation",
+    "credential": "College Credit Certificate",
+    "plan_code": "64052",
+    "cip_code": "13.1003",
+    "soc_code": "273091",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "interpreter"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ccc-virtual-and-augmented-reality-technologies",
+    "name": "Virtual and Augmented Reality Technologies",
+    "credential": "College Credit Certificate",
+    "plan_code": "66060",
+    "cip_code": "50.0411",
+    "soc_code": "271014",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "graphic-designer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-cpp-educator-preparation-institute",
+    "name": "Educator Preparation Institute",
+    "credential": "Post-Baccalaureate / Educator Preparation Certificate",
+    "plan_code": "CPP01",
+    "cip_code": "13.9999",
+    "soc_code": "251081",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "teacher"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-cpp-instructional-design-and-technology",
+    "name": "Instructional Design and Technology",
+    "credential": "Post-Baccalaureate / Educator Preparation Certificate",
+    "plan_code": "PBC03",
+    "cip_code": "13.0301",
+    "soc_code": "259031",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "teacher"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-cpp-reading-endorsement",
+    "name": "Reading Endorsement",
+    "credential": "Post-Baccalaureate / Educator Preparation Certificate",
+    "plan_code": "PBC02",
+    "cip_code": "13.1315",
+    "soc_code": "251081",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "teacher"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-cpp-cyber-defense",
+    "name": "Cyber Defense",
+    "credential": "Post-Baccalaureate / Educator Preparation Certificate",
+    "plan_code": "PBC04",
+    "cip_code": "43.0403",
+    "soc_code": "151212",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "cybersecurity"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-cpp-networking",
+    "name": "Networking",
+    "credential": "Post-Baccalaureate / Educator Preparation Certificate",
+    "plan_code": "PBC05",
+    "cip_code": "11.1001",
+    "soc_code": "151244",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "network-engineer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-cpp-software-engineering",
+    "name": "Software Engineering",
+    "credential": "Post-Baccalaureate / Educator Preparation Certificate",
+    "plan_code": "PBC06",
+    "cip_code": "11.0201",
+    "soc_code": "151252",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "software-developer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-cpp-vulnerability-assessment",
+    "name": "Vulnerability Assessment",
+    "credential": "Post-Baccalaureate / Educator Preparation Certificate",
+    "plan_code": "PBC07",
+    "cip_code": "11.1003",
+    "soc_code": "151212",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "cybersecurity"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ctc-advanced-automotive-service-technology-tesla-technician",
+    "name": "Advanced Automotive Service Technology - Tesla Technician",
+    "credential": "Career Technical Certificate",
+    "plan_code": "51000",
+    "cip_code": "47.0604",
+    "soc_code": "493023",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "automotive-transport"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ctc-central-sterile-processing-technician",
+    "name": "Central Sterile Processing Technician",
+    "credential": "Career Technical Certificate",
+    "plan_code": "53014",
+    "cip_code": "51.1012",
+    "soc_code": "319093",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "allied-health"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ctc-commercial-class-b-driving",
+    "name": "Commercial Class \"B\" Driving",
+    "credential": "Career Technical Certificate",
+    "plan_code": "56016",
+    "cip_code": "49.0205",
+    "soc_code": "533032",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "automotive-transport"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ctc-commercial-vehicle-driving",
+    "name": "Commercial Vehicle Driving",
+    "credential": "Career Technical Certificate",
+    "plan_code": "56015",
+    "cip_code": "49.0205",
+    "soc_code": "533032",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "automotive-transport"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ctc-correctional-officer-state",
+    "name": "Correctional Officer - State",
+    "credential": "Career Technical Certificate",
+    "plan_code": "57021",
+    "cip_code": "43.0102",
+    "soc_code": "333012",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "police-officer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ctc-dental-assisting-technology-and-management",
+    "name": "Dental Assisting Technology and Management",
+    "credential": "Career Technical Certificate",
+    "plan_code": "53015",
+    "cip_code": "51.0601",
+    "soc_code": "319091",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "dental-hygienist"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ctc-fire-fighter-minimum-standards",
+    "name": "Fire Fighter Minimum Standards",
+    "credential": "Career Technical Certificate",
+    "plan_code": "57004",
+    "cip_code": "43.0203",
+    "soc_code": "332011",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "firefighter"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ctc-fire-fighter-emergency-medical-technician-combined",
+    "name": "Fire Fighter/Emergency Medical Technician - Combined",
+    "credential": "Career Technical Certificate",
+    "plan_code": "58000",
+    "cip_code": "43.0203",
+    "soc_code": "332011",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "paramedic",
+      "firefighter"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ctc-florida-law-enforcement-academy",
+    "name": "Florida Law Enforcement Academy",
+    "credential": "Career Technical Certificate",
+    "plan_code": "57022",
+    "cip_code": "43.0107",
+    "soc_code": "333051",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "police-officer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ctc-licensed-practical-nursing",
+    "name": "Licensed Practical Nursing",
+    "credential": "Career Technical Certificate",
+    "plan_code": "53020",
+    "cip_code": "51.3901",
+    "soc_code": "292061",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "nurse"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ctc-low-voltage",
+    "name": "Low Voltage",
+    "credential": "Career Technical Certificate",
+    "plan_code": "56010",
+    "cip_code": "47.0101",
+    "soc_code": "492097",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "electrical-engineer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ctc-massage-therapy-accelerated-option",
+    "name": "Massage Therapy - Accelerated Option",
+    "credential": "Career Technical Certificate",
+    "plan_code": "53022",
+    "cip_code": "51.3501",
+    "soc_code": "319011",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "therapist"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ctc-massage-therapy-generic-option",
+    "name": "Massage Therapy - Generic Option",
+    "credential": "Career Technical Certificate",
+    "plan_code": "53021",
+    "cip_code": "51.3501",
+    "soc_code": "319011",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "therapist"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ctc-massage-therapy-transitional-option",
+    "name": "Massage Therapy - Transitional Option",
+    "credential": "Career Technical Certificate",
+    "plan_code": "53023",
+    "cip_code": "51.3501",
+    "soc_code": "319011",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "therapist"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ctc-medical-assisting",
+    "name": "Medical Assisting",
+    "credential": "Career Technical Certificate",
+    "plan_code": "53007",
+    "cip_code": "51.0801",
+    "soc_code": "319092",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "allied-health"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ctc-pharmacy-technician",
+    "name": "Pharmacy Technician",
+    "credential": "Career Technical Certificate",
+    "plan_code": "53004",
+    "cip_code": "51.0805",
+    "soc_code": "292052",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "allied-health"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ctc-phlebotomy-technician",
+    "name": "Phlebotomy Technician",
+    "credential": "Career Technical Certificate",
+    "plan_code": "53003",
+    "cip_code": "51.1009",
+    "soc_code": "319097",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "lab-scientist"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ctc-private-investigator-intern",
+    "name": "Private Investigator Intern",
+    "credential": "Career Technical Certificate",
+    "plan_code": "57023",
+    "cip_code": "43.0109",
+    "soc_code": "339021",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "police-officer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ctc-private-security-officer",
+    "name": "Private Security Officer",
+    "credential": "Career Technical Certificate",
+    "plan_code": "57006",
+    "cip_code": "43.0109",
+    "soc_code": "339032",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "police-officer"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
+  },
+  {
+    "id": "mdc-ctc-professional-nursing-lpn-rn",
+    "name": "Professional Nursing (LPN-RN)",
+    "credential": "Career Technical Certificate",
+    "plan_code": "53018",
+    "cip_code": "51.3801",
+    "soc_code": "291141",
+    "school": null,
+    "credits": null,
+    "typical_months_full_time": null,
+    "careers": [
+      "nurse"
+    ],
+    "key_courses": [],
+    "stackable_into": [],
+    "source_url": "https://www.mdc.edu/academics/documents/academic-programs-cip.pdf"
   }
 ]
