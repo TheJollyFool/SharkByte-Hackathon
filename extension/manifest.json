@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Shark Advisor",
+  "version": "0.1.0",
+  "permissions": ["storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.mdc.edu/*"],
+      "js": ["config.js", "content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["shark.svg"],
+      "matches": ["*://*.mdc.edu/*"]
+    }
+  ]
+}

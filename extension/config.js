@@ -1,0 +1,1 @@
+const PANEL_ORIGIN = "http://localhost:3000";

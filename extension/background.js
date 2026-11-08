@@ -1,0 +1,1 @@
+// The service worker will manage the guide state.
