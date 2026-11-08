@@ -29,13 +29,20 @@ async def reply(req: ChatReplyRequest) -> Message:
     if s.demo_mode:
         raise ApiError("upstream_failed", "DEMO_MODE on and no cached answer for this turn")
 
-    resp = await get_swarms().agent_completion(
-        agent_name=req.advisor_id,
-        system_prompt=system_prompt(req.advisor_id),
-        task=chat_task(req.advisor_id, req.group, req.language, req.history),
-        model_name=s.model_for(req.advisor_id),
-        max_tokens=s.max_tokens_chat,
-    )
+    async def call(model: str) -> dict:
+        return await get_swarms().agent_completion(
+            agent_name=req.advisor_id,
+            system_prompt=system_prompt(req.advisor_id),
+            task=chat_task(req.advisor_id, req.group, req.language, req.history),
+            model_name=model,
+            max_tokens=s.max_tokens_chat,
+        )
+
+    try:
+        resp = await call(s.model_for(req.advisor_id))
+    except ApiError:
+        # The advisor's own model failed (provider quota / outage): retry once on the backup model
+        resp = await call(s.model_fallback)
 
     msg = Message(
         role="advisor",

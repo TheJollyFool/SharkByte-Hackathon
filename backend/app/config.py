@@ -31,6 +31,8 @@ class Settings(BaseSettings):
     model_aggregator: str = "gpt-5.4-mini"
     model_writer: str = "gpt-5.4-mini"
     model_navigator: str = "gpt-5.4-mini"
+    # Used when an advisor's own model fails (e.g. a provider 429 / quota) so the chat never dies
+    model_fallback: str = "gpt-5.4-mini"
 
     max_tokens_chat: int = 300
     max_tokens_aggregator: int = 600
