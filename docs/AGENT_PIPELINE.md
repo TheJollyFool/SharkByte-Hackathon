@@ -79,7 +79,8 @@ Prompt rules:
 - Output **only** a JSON object matching the schema. No prose, no markdown fences.
 - 2–4 routes (`short`, `medium`, `long`). **First step of every route = an MDC program from MDC DATA**
   (`kind: "mdc_program"`, `program_id` from the list, its `source_url`).
-- Step `id` = `"{route.id}-{index}"`. Fill `kind` for every step.
+- `route.id` = its `type` (`short` | `medium` | `long`). Step `id` = `"{route.id}-{index}"`. Fill `kind` for every step.
+- MDC steps copy `source_url` exactly from MDC DATA (the extension matches pre-recorded guides by this URL).
 - Any number not taken from MDC DATA → `"estimate": true`.
 - Add `warnings` for limited-access majors (e.g. Architecture and Nursing at FIU are not guaranteed by
   Connect4Success) and when data is missing.

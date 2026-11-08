@@ -8,7 +8,7 @@
 
 | Rol | Persona | Dueño de | Brief |
 |---|---|---|---|
-| **1. Extensión + guía en la página** | **Adrian** | `extension/`, `shared/guides/` | [roles/rol1-adrian-extension.md](roles/rol1-adrian-extension.md) |
+| **1. Extensión + guía en la página** | **Adrian** | `extension/` (incl. `extension/guides/`) | [roles/rol1-adrian-extension.md](roles/rol1-adrian-extension.md) |
 | **2. Panel app (frontend)** | **Robert** | `frontend/` | [roles/rol2-robert-panel.md](roles/rol2-robert-panel.md) |
 | **3. Backend + Swarms** | **Piero** | `backend/`, `docs/AGENT_PIPELINE.md`, deploy backend | [roles/rol3-piero-backend.md](roles/rol3-piero-backend.md) |
 | **4. Datos MDC + agentes + pitch** | **Diego** | `data/*.json`, `docs/agents/` (prompts), `docs/DEMO.md`, slides, Devpost | [roles/rol4-diego-data-pitch.md](roles/rol4-diego-data-pitch.md) |

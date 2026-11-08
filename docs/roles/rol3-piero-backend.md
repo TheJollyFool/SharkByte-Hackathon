@@ -27,7 +27,7 @@ el producto real depende de ti.
 | 4 | Modelos Pydantic: `Usage`, `Message`, `Roadmap` (espejo del schema) | 9:15 PM |
 | 5 | `POST /chat/reply`: prompt del asesor (de `docs/agents/`, Diego los entrega 9:30; antes placeholders) + historial + datos MDC → `Message` con `usage` | 10:00 PM |
 | 6 | Cache en disco + `DEMO_MODE` para `/chat/reply` | 10:30 PM |
-| 7 | **Deploy** (Render/Railway) con `/advisors` + `/chat/reply` → URL a Robert | **11:00 PM** |
+| 7 | **Deploy** (Render/Railway) con `/advisors` + `/chat/reply` → URL a Robert. Root directory = **raíz del repo** (el backend lee `data/`, `shared/`, `docs/agents/`); start `cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT` | **11:00 PM** |
 | 8 | `POST /roadmap`: Roadmap Writer → validar → 1 repair → fixture `fallback`; primera caja = programa MDC de `data/` (Diego entrega datos 10:30) | **11:45 PM** |
 | 9 | `POST /mixture` (`swarm/completions`, `MixtureOfAgents`) + cache — después de que `/roadmap` funcione | 12:30 AM |
 | 10 | Correr el guion del demo en vivo para llenar el cache; probar `DEMO_MODE=true`; **pushear a `master`** | 1:30 AM |
@@ -70,15 +70,19 @@ Then follow the task table in my role doc in order. Work only inside backend/ an
 Requirements:
 - Python 3.11, FastAPI, Pydantic v2, httpx.AsyncClient, pydantic-settings reading .env. Layout from
   docs/ARCHITECTURE.md. ruff format + ruff check. Type hints everywhere.
-- CORS for http://localhost:3000, the Vercel origin from CORS_ORIGINS, and chrome-extension://*.
+- CORS: allow_origins from CORS_ORIGINS (http://localhost:3000 + the Vercel URL) and
+  allow_origin_regex r"chrome-extension://.*".
+- Resolve data/, shared/ and docs/agents/ paths from REPO_ROOT = Path(__file__).resolve().parents[2], never from
+  the current directory. Deploy with the repo root as root directory (see docs/ARCHITECTURE.md "Deploy").
 - Endpoints exactly as docs/CONTRACTS.md section B: GET /health, GET /advisors, POST /chat/reply, POST /mixture,
   POST /roadmap, GET /roadmap/{id}, POST /navigate. Same error shape. If a cached/fixture answer exists, return
   200 with source "fallback" instead of an error.
 - Swarms: POST /v1/agent/completions for chat replies, Roadmap Writer, Navigator and JSON repair;
   POST /v1/swarm/completions with swarm_type "MixtureOfAgents" for /mixture. Header x-api-key. Map Swarms
   usage (input_tokens, output_tokens, total_tokens, total_cost) to our Usage (cost_usd).
-- System prompts: one constant per agent in backend/app/swarm/prompts.py. Load advisor prompts from
-  docs/agents/<id>.md (section "System prompt") if present, else use short placeholders.
+- System prompts: one constant per agent in backend/app/swarm/prompts.py. Load prompts from docs/agents/<id>.md
+  (advisors: career, pathway, cost, finaid, prodev, alternatives; plus aggregator.md, roadmap-writer.md, navigator.md)
+  — the text inside the ```text block under "## System prompt" — if present, else use short placeholders.
 - Task strings follow the templates in docs/AGENT_PIPELINE.md. Inject only MDC programs relevant to the career.
 - /roadmap: validate the Writer output with the Pydantic Roadmap model; one repair call; else the closest fixture
   from shared/fixtures with source "fallback". First step of every route must be an MDC program from data/.

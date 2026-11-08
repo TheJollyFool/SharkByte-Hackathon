@@ -14,7 +14,8 @@ flowchart LR
     B -- "agent / swarm completions" --> S[Swarms API]
     B -. reads .-> D[(data/*.json<br/>advisors, MDC programs,<br/>costs, transfer, aid)]
     B -. read/write .-> C[(disk cache)]
-    B -. fallback .-> X[(shared/fixtures<br/>shared/guides)]
+    B -. fallback .-> X[(shared/fixtures)]
+    CS -. reads .-> GD[(extension/guides<br/>pre-recorded guides)]
     P -. deployed on .-> V[Vercel]
 ```
 
@@ -79,7 +80,8 @@ sequenceDiagram
     end
     CS->>P: shark:guide_finished
 ```
-If `/navigate` fails → pre-recorded guide from `shared/guides/` → else "Open page directly".
+MVP (1:30 AM freeze): the guide runs from a pre-recorded guide in `extension/guides/`. `/navigate` is optional;
+if it is off or fails → pre-recorded guide → else "Open page directly".
 
 ## Backend module layout (planned)
 ```
@@ -119,7 +121,11 @@ extension/
 ## Deploy
 - Panel: Vercel (`frontend/` root). Env: `NEXT_PUBLIC_API_URL`, `NEXT_PUBLIC_USE_MOCK`.
   Must allow being framed by mdc.edu: header `Content-Security-Policy: frame-ancestors https://*.mdc.edu`.
-- Backend: Render/Railway, `uvicorn app.main:app --host 0.0.0.0 --port $PORT`.
+- Backend: Render/Railway with the **repo root** as root directory (the backend reads `data/`, `shared/` and
+  `docs/agents/` at runtime). Build `pip install -r backend/requirements.txt`, start
+  `cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT`. Resolve paths from `REPO_ROOT`
+  (`Path(__file__).resolve().parents[2]`), never from the current directory. Env vars from `.env.example`.
+- CORS: `CORSMiddleware(allow_origins=[...CORS_ORIGINS], allow_origin_regex=r"chrome-extension://.*")`.
 - Extension: `chrome://extensions` → Developer mode → Load unpacked → `extension/` (or its `dist/`).
 
 ## Known risks

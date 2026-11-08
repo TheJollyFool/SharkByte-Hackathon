@@ -6,7 +6,7 @@ estudiante sea **guiado paso a paso sobre la página real de mdc.edu** (highligh
 programa/curso/certificado. Este es el momento "wow" del demo.
 
 ## Tus archivos
-- Tuyos: `extension/` (todo), `shared/guides/*.json`
+- Tuyos: `extension/` (todo, incluidas las guías grabadas en `extension/guides/`)
 - No tocas: `frontend/`, `backend/`, `data/`. Si necesitas un cambio en un contrato, avisa a Robert (panel) o Piero (backend).
 
 ## Lee primero
@@ -25,8 +25,8 @@ programa/curso/certificado. Este es el momento "wow" del demo.
 | 4 | Puente postMessage: recibir `shark:ready`, `shark:close`, `shark:start_guide`, `shark:open_url`; enviar `shark:guide_finished`. Verificar `event.origin` | 9:30 PM |
 | 5 | Overlay de guía: anillo de highlight sobre un elemento (sigue scroll/resize), burbuja con texto, botón "Stop guide", scroll automático | 10:15 PM |
 | 6 | Estado de la guía en `chrome.storage.session` (sobrevive cambios de página): en cada carga, si hay guía activa, mostrar el paso que toca | 10:45 PM |
-| 7 | **Guía grabada** de la ruta de Diego (llega 8:30): visitar mdc.edu, sacar selectores, llenar `shared/guides/<id>.json`; el runner elige el paso por `url_pattern` y resalta `selector` | 11:15 PM |
-| 8 | `shark:start_guide` desde el panel → cierra panel → arranca la guía que coincide con `goal.step_id`; si no hay guía → `open_url` | 11:30 PM |
+| 7 | **Guía grabada** de la ruta de Diego (llega 8:30): visitar mdc.edu, sacar selectores, llenar `extension/guides/<id>.json` (con `match.goal_urls` = URL del programa); el runner elige el paso por `url_pattern` y resalta `selector` | 11:15 PM |
+| 8 | `shark:start_guide` desde el panel → cierra panel → arranca la guía cuyo `match.goal_urls` coincide con `goal.url`; si no hay guía → `open_url` | 11:30 PM |
 | 9 | Cargar el panel desplegado de Vercel (URL de Robert 12:15) en vez de localhost | 12:30 AM |
 | 10 | Demo completo en mdc.edu con todo el equipo; arreglar solo lo que lo rompa; **pushear a `master`** | 1:30 AM |
 | extra | Solo si sobra tiempo: snapshot de la página (máx 150 elementos, `data-shark-id`) + llamar `POST /navigate` desde el service worker, con la guía grabada como respaldo | — |
@@ -63,7 +63,8 @@ docs/CONTRACTS.md (section A "Extension <-> Panel messages" and "POST /navigate"
 ("In-page guide", "Extension layout", "Known risks").
 
 Then build extension/ as a Chrome Manifest V3 extension, following the task table in my role doc in order.
-Work only inside extension/ and shared/guides/. Do not touch frontend/, backend/ or data/.
+Work only inside extension/. Do not touch frontend/, backend/ or data/. Chrome loads only the extension/ folder,
+so everything the extension needs (guides, mock JSON, icons) must live inside extension/.
 
 Requirements:
 - Content script on *://*.mdc.edu/* injects a floating shark button (bottom-right) and a ~400px right-side iframe
@@ -74,11 +75,13 @@ Requirements:
   auto-scroll to the element. The extension NEVER clicks or types for the student.
 - Guide state in chrome.storage.session so it survives page navigations; on every load, if a guide is active,
   show the step that matches the current URL.
-- Guides come from pre-recorded files in shared/guides/ (match goal.step_id; each step has url_pattern, selector,
-  action, bubble). If there is no guide for the box, open goal.url. Code freeze is 1:30 AM, so the live Navigator
+- Guides come from pre-recorded files in extension/guides/ (see extension/guides/example.json and CONTRACTS.md:
+  pick the guide whose match.goal_urls prefix-matches goal.url, else match.step_ids; each step has url_pattern,
+  selector, action, bubble). Expose them via web_accessible_resources or bundle them. If there is no guide for the box, open goal.url. Code freeze is 1:30 AM, so the live Navigator
   (page snapshot + POST {API_URL}/navigate from the service worker) is OPTIONAL and comes only after everything
   else works.
-- Plain TypeScript (or JS) is fine; no React. Keep a short extension/README.md section on how to load and configure it.
+- Prefer plain JavaScript (no build step, Chrome loads it directly). If you use TypeScript, add a minimal esbuild
+  build to extension/dist/ and load that folder. No React. Keep a short extension/README.md section on how to load and configure it.
 
 Start with tasks 1-4 (manifest, shark button, iframe panel, postMessage bridge), make it loadable unpacked,
 and tell me how to test it on www.mdc.edu. Commit on branch feat/ext-shell with small commits. Ask me before

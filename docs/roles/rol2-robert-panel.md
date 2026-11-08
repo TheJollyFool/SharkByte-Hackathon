@@ -28,7 +28,7 @@ descarga en **PDF**. Eres la cara del producto.
 | 6 | Flowchart con React Flow (`@xyflow/react`) usando el fixture: carril por ruta, caja por paso coloreada por `kind`, duración, costo, badge "estimado", puntos de entrada al trabajo, warnings, tarjeta de carrera | 11:00 PM |
 | 7 | Conectar el chat al backend real de Piero (URL a las 11:00) | **11:15 PM** |
 | 8 | Botón "Estoy listo para profundizar" → `POST /roadmap` real → flowchart. Clic en caja → `shark:start_guide`; botón "Abrir página" → `shark:open_url` | 12:00 AM |
-| 9 | **Deploy en Vercel** + header `frame-ancestors https://*.mdc.edu http://localhost:*`; URL a Adrian y Piero | **12:15 AM** |
+| 9 | **Deploy en Vercel** (Root Directory = `frontend`, env `NEXT_PUBLIC_API_URL` = URL de Piero, `NEXT_PUBLIC_USE_MOCK=false`) + header `frame-ancestors https://*.mdc.edu http://localhost:*`; URL a Adrian y Piero | **12:15 AM** |
 | 10 | PDF: botón que llama `window.print()` con CSS de impresión que muestra solo el flowchart | 12:30 AM |
 | 11 | Vista Mixture (respuesta única, "construida por", costo total) — solo si el chat ya funciona | 12:45 AM |
 | 12 | Demo completo con el equipo; arreglar solo lo que lo rompa; **pushear a `master`** | 1:30 AM |
@@ -74,8 +74,9 @@ Requirements:
 - lib/types.ts mirrors the TypeScript types in docs/CONTRACTS.md and the Roadmap in shared/roadmap.schema.json exactly.
 - lib/api.ts: getAdvisors(), chatReply(req), mixture(req), createRoadmap(req), getRoadmap(id). When
   NEXT_PUBLIC_USE_MOCK=true, return data/advisors.json and shared/fixtures/* (vary the mock chat reply per advisor_id
-  so the chat looks real); otherwise call NEXT_PUBLIC_API_URL. If Next.js refuses imports from outside frontend/,
-  add a small "predev"/"prebuild" script that copies data/advisors.json and shared/fixtures/ into frontend/mock/.
+  so the chat looks real); otherwise call NEXT_PUBLIC_API_URL. Mock data lives in frontend/mock/: copy
+  data/advisors.json and shared/fixtures/*.json there and COMMIT the copies (Vercel builds only frontend/, so it
+  cannot read files outside it). Re-copy if those files change.
 - lib/shark-bridge.ts: send/receive the postMessage messages from CONTRACTS.md section A (source: "shark"),
   checking event.origin; no-op safely when not inside an iframe.
 - English UI for now; send `language: "en"` in every request. (Spanish toggle is optional, only if time remains.)

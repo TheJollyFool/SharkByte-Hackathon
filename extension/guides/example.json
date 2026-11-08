@@ -1,0 +1,26 @@
+{
+  "id": "example",
+  "_note": "Template for a pre-recorded guide. Lives inside extension/ so Chrome can load it (web_accessible_resources or import). Fill selectors by visiting mdc.edu. See docs/CONTRACTS.md section A.",
+  "match": {
+    "goal_urls": [
+      "https://www.mdc.edu/TODO-program-page"
+    ],
+    "step_ids": [
+      "short-0"
+    ]
+  },
+  "steps": [
+    {
+      "url_pattern": "https://www.mdc.edu/",
+      "selector": "TODO",
+      "action": "click",
+      "bubble": "Click Academics"
+    },
+    {
+      "url_pattern": "https://www.mdc.edu/academics/*",
+      "selector": "TODO",
+      "action": "click",
+      "bubble": "Open the program page"
+    }
+  ]
+}

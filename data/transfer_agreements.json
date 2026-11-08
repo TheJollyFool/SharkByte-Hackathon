@@ -6,6 +6,8 @@
     "to_program": "TODO",
     "type": "2+2 | articulation | guaranteed admission",
     "notes": "",
-    "source_url": "TODO"
+    "source_url": "TODO",
+    "limited_access_not_guaranteed": [],
+    "_example_limited_access": "FIU Connect4Success does not guarantee limited-access majors such as Architecture and Nursing"
   }
 ]

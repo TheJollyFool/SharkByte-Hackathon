@@ -166,10 +166,11 @@ interface NavStep {
 Rule: if a cached/fixture answer exists, return `200` with `source: "fallback"` instead of an error.
 
 ### Frontend mock mode
-With `NEXT_PUBLIC_USE_MOCK=true`, `lib/api.ts` returns `shared/fixtures/*` for every call
-(`chat_reply.example.json`, `mixture.example.json`, roadmap fixtures) plus `data/advisors.json`, so the UI never
-waits for the backend. The extension has the same idea: `MOCK_NAVIGATE=true` uses
-`shared/fixtures/navigate.example.json` and pre-recorded guides.
+With `NEXT_PUBLIC_USE_MOCK=true`, `lib/api.ts` returns mock data for every call, so the UI never waits for the
+backend. Source of the mocks: `shared/fixtures/*` (`chat_reply.example.json`, `mixture.example.json`, roadmap
+fixtures) and `data/advisors.json`, **copied into `frontend/mock/` and committed** (Vercel builds only
+`frontend/`, so it can't read files outside it). The extension has the same idea: `MOCK_NAVIGATE=true` uses a
+copy of `navigate.example.json` inside `extension/`, plus the pre-recorded guides in `extension/guides/`.
 
 ---
 
@@ -202,14 +203,18 @@ A click on mdc.edu reloads the page and the content script. The active guide liv
 script checks it, snapshots the page and calls `/navigate`. "Stop guide" clears it.
 
 ### Pre-recorded guides (fallback)
-`shared/guides/<id>.json`, used when `/navigate` fails or for the scripted demo:
+`extension/guides/<id>.json` (inside `extension/` so Chrome can load it — an unpacked extension can't read
+files outside its folder). Used for the scripted demo and when `/navigate` is off or fails:
 ```json
 {
   "id": "cybersecurity-as",
-  "goal_step_ids": ["short-0"],
+  "match": { "goal_urls": ["https://www.mdc.edu/<program-page>"], "step_ids": ["short-0"] },
   "steps": [
     { "url_pattern": "https://www.mdc.edu/", "selector": "a[href*='academics']", "action": "click", "bubble": "Click Academics" }
   ]
 }
 ```
+Matching: a guide is used when `goal.url` starts with one of `match.goal_urls` (primary — the URL comes from
+`data/mdc_programs.json` `source_url`, so it is stable), or `goal.step_id` is in `match.step_ids`.
+Each step applies when the current URL matches `url_pattern` (`*` = wildcard).
 Selectors are filled in by hand by visiting mdc.edu (they break if MDC changes its site — check on demo morning).

@@ -86,7 +86,9 @@ docs/       Product, requirements, contracts, architecture, agents, team plan, d
 
 ### Extension (`extension/`)
 - Manifest V3. Content script on `*://*.mdc.edu/*`. Service worker makes backend calls.
-- Plain TypeScript (or JS) — no React needed. One floating button, one iframe, one overlay layer.
+- Plain JavaScript preferred (no build step); TypeScript only with a minimal esbuild build to `extension/dist/`.
+  No React. One floating button, one iframe, one overlay layer. Pre-recorded guides in `extension/guides/`
+  (Chrome loads only files inside `extension/`).
 - `config.ts`: `PANEL_ORIGIN`, `API_URL`, `MOCK_NAVIGATE`. Check `event.origin` on every message.
 - Guide state in `chrome.storage.session` so it survives page loads.
 

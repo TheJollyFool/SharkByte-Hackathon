@@ -37,7 +37,7 @@
 | ID | Requirement | Covers |
 |---|---|---|
 | FR-17 | Clicking a box closes the panel and starts a step-by-step guide on mdc.edu: highlight + bubble on the element to click / field to type | Actionable, wow |
-| FR-18 | Guide works from a **pre-recorded guide** for the demo path (`shared/guides/`), persists across page loads, "Stop guide" always available | Demo safety |
+| FR-18 | Guide works from a **pre-recorded guide** for the demo path (`extension/guides/`), persists across page loads, "Stop guide" always available | Demo safety |
 | FR-19 | Fallback for boxes without a guide: "Open page directly" (box `source_url`) | Actionable |
 
 ### Demo safety
