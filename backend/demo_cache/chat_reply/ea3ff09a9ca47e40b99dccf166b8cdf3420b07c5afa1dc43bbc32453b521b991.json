@@ -1,0 +1,15 @@
+{
+  "id": "msg-27d87a7a7e54",
+  "role": "advisor",
+  "advisor_id": "career",
+  "contributors": null,
+  "text": "¡Buen objetivo! En ciberseguridad, el trabajo diario suele ser vigilar redes y sistemas, revisar alertas, buscar fallas, responder a incidentes y ayudar a evitar ataques.\n\n- **Responsabilidades:** monitorear seguridad, investigar actividad sospechosa, documentar riesgos, apoyar respuestas a incidentes y pruebas básicas de seguridad.\n- **Habilidades clave:** redes, Linux, scripting básico, pensamiento analítico, atención al detalle y buena comunicación.\n- **Sueldo y demanda:** en Miami/Florida, un rol de entrada suele pagar **about $55k–$75k al año**; la demanda es **alta** y sigue creciendo.\n- **Carreras relacionadas:** analista de seguridad, analista SOC, respuesta a incidentes, analista de vulnerabilidades.\n\nSi quieres, mis compañeros te dirán la ruta más económica para llegar ahí.",
+  "usage": {
+    "input_tokens": 1412,
+    "output_tokens": 180,
+    "total_tokens": 1592,
+    "cost_usd": 0.002149
+  },
+  "source": "live",
+  "created_at": "2026-11-08T03:41:59.545992+00:00"
+}

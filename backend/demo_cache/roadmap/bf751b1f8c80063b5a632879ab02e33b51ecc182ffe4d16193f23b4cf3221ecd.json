@@ -1,0 +1,264 @@
+{
+  "id": "rm-5ab3cf1e3bf4",
+  "source": "live",
+  "mode": "group_chat",
+  "language": "en",
+  "career": {
+    "title": "Cybersecurity",
+    "overview": "Cybersecurity professionals help protect systems, networks, and data from attacks. They monitor alerts, look for suspicious activity, fix security weaknesses, help users stay safe, and respond quickly to incidents. This field fits students who like problem-solving, technology, and hands-on labs.",
+    "responsibilities": [
+      "Monitor security alerts and investigate suspicious activity",
+      "Help protect networks, systems, and data",
+      "Find and fix security weaknesses",
+      "Support users and teams with safe technology practices",
+      "Respond to incidents and document what happened"
+    ],
+    "qualifications": [
+      "Basic networking knowledge",
+      "Linux skills",
+      "Scripting or programming basics",
+      "Attention to detail",
+      "Clear communication and calm problem-solving",
+      "Hands-on lab practice and security training"
+    ],
+    "median_salary_usd": null,
+    "outlook": "Strong demand in Florida and nationwide as organizations need better protection for their systems and data.",
+    "related_careers": [
+      "Network analyst",
+      "IT support specialist",
+      "Digital forensics analyst"
+    ]
+  },
+  "routes": [
+    {
+      "id": "short",
+      "name": "Cybersecurity Analyst CCC",
+      "type": "short",
+      "summary": "Fastest route to a first cybersecurity job. Good for a part-time student who wants a shorter, workforce-focused program.",
+      "total_months": 12.0,
+      "total_cost_usd": 2839.68,
+      "steps": [
+        {
+          "id": "short-0",
+          "order": 0,
+          "kind": "mdc_program",
+          "institution": "Miami Dade College",
+          "credential": "College Credit Certificate",
+          "duration_months": 12.0,
+          "cost_usd": 2839.68,
+          "program_id": "mdc-college-credit-certificate-cybersecurity-analyst",
+          "program_name": "Cybersecurity Analyst",
+          "estimate": true,
+          "transfer_agreement": null,
+          "key_courses": [
+            "CTS1111 Linux +",
+            "CTS1120 Cybersecurity Fundamentals",
+            "CTS1134 Networking Technologies",
+            "CIS1531 Introduction to Secure Scripting"
+          ],
+          "source_url": "https://mdc.curricunet.com/catalog/iq/9132/9244"
+        }
+      ],
+      "workforce_entry_points": [
+        {
+          "after_step": 0,
+          "job_title": "Junior cybersecurity analyst",
+          "salary_range_usd": "$55,000-$75,000 per year (estimate)"
+        }
+      ],
+      "credentials": [
+        {
+          "name": "College Credit Certificate in Cybersecurity Analyst",
+          "type": "other",
+          "required": true
+        }
+      ],
+      "experience": [],
+      "exams": [],
+      "net_cost_after_aid_usd": null
+    },
+    {
+      "id": "medium",
+      "name": "A.S. in Cybersecurity",
+      "type": "medium",
+      "summary": "A broader technical degree that can help you qualify for more roles and gives you a stronger foundation for the field.",
+      "total_months": 42.0,
+      "total_cost_usd": 9915.84,
+      "steps": [
+        {
+          "id": "medium-0",
+          "order": 0,
+          "kind": "mdc_program",
+          "institution": "Miami Dade College",
+          "credential": "A.S.",
+          "duration_months": 30.0,
+          "cost_usd": 7093.2,
+          "program_id": "mdc-a-s-cybersecurity",
+          "program_name": "Cybersecurity",
+          "estimate": true,
+          "transfer_agreement": null,
+          "key_courses": [
+            "CTS1134 Networking Technologies",
+            "CGS1700 Introduction to Operating Systems",
+            "CIS1531 Introduction to Secure Scripting",
+            "CTS1120 Cybersecurity Fundamentals"
+          ],
+          "source_url": "https://mdc.curricunet.com/catalog/iq/9132/9319"
+        },
+        {
+          "id": "medium-1",
+          "order": 1,
+          "kind": "other",
+          "institution": "Miami Dade College",
+          "credential": "Career progression",
+          "duration_months": 12.0,
+          "cost_usd": 0.0,
+          "program_id": null,
+          "program_name": "Part-time study adjustment",
+          "estimate": true,
+          "transfer_agreement": null,
+          "key_courses": [],
+          "source_url": null
+        }
+      ],
+      "workforce_entry_points": [
+        {
+          "after_step": 0,
+          "job_title": "Cybersecurity support technician",
+          "salary_range_usd": "$55,000-$75,000 per year (estimate)"
+        }
+      ],
+      "credentials": [
+        {
+          "name": "Associate in Science in Cybersecurity",
+          "type": "degree",
+          "required": true
+        }
+      ],
+      "experience": [],
+      "exams": [],
+      "net_cost_after_aid_usd": null
+    },
+    {
+      "id": "long",
+      "name": "A.S. to B.S. in Cybersecurity at MDC",
+      "type": "long",
+      "summary": "Stay at MDC for a bachelor's degree after the associate degree. This is the longest route and can build toward more advanced cybersecurity roles.",
+      "total_months": 72.0,
+      "total_cost_usd": 18942.48,
+      "steps": [
+        {
+          "id": "long-0",
+          "order": 0,
+          "kind": "mdc_program",
+          "institution": "Miami Dade College",
+          "credential": "A.S.",
+          "duration_months": 30.0,
+          "cost_usd": 7093.2,
+          "program_id": "mdc-a-s-cybersecurity",
+          "program_name": "Cybersecurity",
+          "estimate": true,
+          "transfer_agreement": null,
+          "key_courses": [
+            "CTS1134 Networking Technologies",
+            "CGS1700 Introduction to Operating Systems",
+            "CIS1531 Introduction to Secure Scripting",
+            "CTS1120 Cybersecurity Fundamentals"
+          ],
+          "source_url": "https://mdc.curricunet.com/catalog/iq/9132/9319"
+        },
+        {
+          "id": "long-1",
+          "order": 1,
+          "kind": "mdc_program",
+          "institution": "Miami Dade College",
+          "credential": "B.S.",
+          "duration_months": 30.0,
+          "cost_usd": 15586.8,
+          "program_id": "mdc-b-s-cybersecurity",
+          "program_name": "Cybersecurity",
+          "estimate": true,
+          "transfer_agreement": null,
+          "key_courses": [
+            "CIS3215 Ethics in CyberSecurity",
+            "CIS3360 Principles of Information Security",
+            "CIS3361 Information Security Management",
+            "CIS4204 Ethical Hacking I"
+          ],
+          "source_url": "https://mdc.curricunet.com/catalog/iq/9132/9151"
+        }
+      ],
+      "workforce_entry_points": [
+        {
+          "after_step": 0,
+          "job_title": "Entry-level cybersecurity analyst",
+          "salary_range_usd": "$55,000-$75,000 per year (estimate)"
+        },
+        {
+          "after_step": 1,
+          "job_title": "Cybersecurity specialist",
+          "salary_range_usd": "$70,000-$95,000 per year (estimate)"
+        }
+      ],
+      "credentials": [
+        {
+          "name": "Associate in Science in Cybersecurity",
+          "type": "degree",
+          "required": true
+        },
+        {
+          "name": "Bachelor of Science in Cybersecurity",
+          "type": "degree",
+          "required": true
+        }
+      ],
+      "experience": [],
+      "exams": [],
+      "net_cost_after_aid_usd": null
+    }
+  ],
+  "alternative_mdc_programs": [
+    {
+      "name": "Cyber Defense",
+      "program_id": "mdc-certificate-of-professional-preparation-cyber-defense",
+      "why": "A good cybersecurity-focused certificate if you want more defense and incident response training."
+    },
+    {
+      "name": "Vulnerability Assessment",
+      "program_id": "mdc-certificate-of-professional-preparation-vulnerability-assessment",
+      "why": "Useful if you want to focus on ethical hacking and finding security weaknesses."
+    },
+    {
+      "name": "Intelligence Studies",
+      "program_id": "mdc-college-credit-certificate-intelligence-studies",
+      "why": "A shorter option that can support security-related work with analysis and investigation skills."
+    }
+  ],
+  "resources": [
+    {
+      "title": "FAFSA",
+      "url": "https://studentaid.gov/h/apply-for-aid/fafsa",
+      "kind": "financial_aid"
+    },
+    {
+      "title": "MDC Financial Aid",
+      "url": "https://www.mdc.edu/financialaid/",
+      "kind": "financial_aid"
+    },
+    {
+      "title": "MDC Scholarships",
+      "url": "https://www.mdc.edu/financialaid/scholarships/",
+      "kind": "financial_aid"
+    }
+  ],
+  "usage": {
+    "total_tokens": 6344,
+    "total_cost_usd": 0.012091
+  },
+  "warnings": [
+    "Costs are tuition and fees only, without books.",
+    "Part-time study usually takes about 1.8 times longer than full-time.",
+    "Limited-access or specialized admission programs are not guaranteed through transfer agreements.",
+    "Some cost and salary figures are estimates because not all data was available."
+  ]
+}

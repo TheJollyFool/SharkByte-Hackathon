@@ -1,0 +1,244 @@
+{
+  "id": "rm-9363d527778e",
+  "source": "live",
+  "mode": "group_chat",
+  "language": "es",
+  "career": {
+    "title": "Ciberseguridad",
+    "overview": "La ciberseguridad protege redes, sistemas y datos contra ataques y accesos no autorizados. En un trabajo de entrada, normalmente vigilarás alertas, investigarás actividad sospechosa, documentarás riesgos y ayudarás a responder incidentes.",
+    "responsibilities": [
+      "Monitorear redes y sistemas para detectar amenazas.",
+      "Investigar alertas y actividad sospechosa.",
+      "Documentar riesgos y hallazgos de seguridad.",
+      "Apoyar la respuesta a incidentes.",
+      "Realizar pruebas básicas de seguridad y análisis de vulnerabilidades."
+    ],
+    "qualifications": [
+      "Conocimientos de redes y Linux.",
+      "Scripting básico.",
+      "Pensamiento analítico y atención al detalle.",
+      "Buena comunicación.",
+      "Se valora experiencia práctica y certificaciones."
+    ],
+    "median_salary_usd": 65000.0,
+    "outlook": "Alta demanda y crecimiento continuo en Florida y en todo el país.",
+    "related_careers": [
+      "Analista de seguridad",
+      "Analista SOC",
+      "Respuesta a incidentes",
+      "Analista de vulnerabilidades"
+    ]
+  },
+  "routes": [
+    {
+      "id": "short",
+      "name": "Ruta rápida: certificado para empezar a trabajar",
+      "type": "short",
+      "summary": "Empieza con un CCC para entrar más rápido al campo y buscar un puesto de nivel inicial mientras sigues estudiando si quieres.",
+      "total_months": 12.0,
+      "total_cost_usd": 2843.52,
+      "steps": [
+        {
+          "id": "short-0",
+          "order": 0,
+          "kind": "mdc_program",
+          "institution": "Miami Dade College",
+          "credential": "College Credit Certificate",
+          "duration_months": 12.0,
+          "cost_usd": 2843.52,
+          "program_id": "mdc-college-credit-certificate-cybersecurity-analyst",
+          "program_name": "Cybersecurity Analyst",
+          "estimate": true,
+          "transfer_agreement": null,
+          "key_courses": [
+            "CTS1111 Linux +",
+            "CTS1120 Cybersecurity Fundamentals",
+            "CTS1134 Networking Technologies",
+            "CIS1531 Introduction to Secure Scripting"
+          ],
+          "source_url": "https://mdc.curricunet.com/catalog/iq/9132/9244"
+        }
+      ],
+      "workforce_entry_points": [
+        {
+          "after_step": 0,
+          "job_title": "Analista de seguridad de nivel inicial",
+          "salary_range_usd": "55000-75000"
+        }
+      ],
+      "credentials": [
+        {
+          "name": "College Credit Certificate in Cybersecurity Analyst",
+          "type": "other",
+          "required": true
+        }
+      ],
+      "experience": [],
+      "exams": [],
+      "net_cost_after_aid_usd": null
+    },
+    {
+      "id": "medium",
+      "name": "Ruta de grado: A.S. para avanzar más",
+      "type": "medium",
+      "summary": "Haz el A.S. en Ciberseguridad para una preparación más completa y mejores opciones de crecimiento laboral.",
+      "total_months": 30.0,
+      "total_cost_usd": 7101.6,
+      "steps": [
+        {
+          "id": "medium-0",
+          "order": 0,
+          "kind": "mdc_program",
+          "institution": "Miami Dade College",
+          "credential": "A.S.",
+          "duration_months": 30.0,
+          "cost_usd": 7101.6,
+          "program_id": "mdc-a-s-cybersecurity",
+          "program_name": "Cybersecurity",
+          "estimate": true,
+          "transfer_agreement": null,
+          "key_courses": [
+            "CTS1134 Networking Technologies",
+            "CGS1700 Introduction to Operating Systems",
+            "CIS1531 Introduction to Secure Scripting",
+            "CTS1120 Cybersecurity Fundamentals"
+          ],
+          "source_url": "https://mdc.curricunet.com/catalog/iq/9132/9319"
+        }
+      ],
+      "workforce_entry_points": [
+        {
+          "after_step": 0,
+          "job_title": "Analista de ciberseguridad de nivel inicial",
+          "salary_range_usd": "55000-75000"
+        }
+      ],
+      "credentials": [
+        {
+          "name": "Associate in Science in Cybersecurity",
+          "type": "degree",
+          "required": true
+        }
+      ],
+      "experience": [],
+      "exams": [],
+      "net_cost_after_aid_usd": null
+    },
+    {
+      "id": "long",
+      "name": "Ruta universitaria: transferir después de MDC",
+      "type": "long",
+      "summary": "Termina un A.S. en MDC y luego transfiere a una universidad para seguir hacia una licenciatura en ciberseguridad o un área relacionada.",
+      "total_months": 60.0,
+      "total_cost_usd": 14103.2,
+      "steps": [
+        {
+          "id": "long-0",
+          "order": 0,
+          "kind": "mdc_program",
+          "institution": "Miami Dade College",
+          "credential": "A.S.",
+          "duration_months": 30.0,
+          "cost_usd": 7101.6,
+          "program_id": "mdc-a-s-cybersecurity",
+          "program_name": "Cybersecurity",
+          "estimate": true,
+          "transfer_agreement": null,
+          "key_courses": [
+            "CTS1134 Networking Technologies",
+            "CGS1700 Introduction to Operating Systems",
+            "CIS1531 Introduction to Secure Scripting",
+            "CTS1120 Cybersecurity Fundamentals"
+          ],
+          "source_url": "https://mdc.curricunet.com/catalog/iq/9132/9319"
+        },
+        {
+          "id": "long-1",
+          "order": 1,
+          "kind": "transfer",
+          "institution": "Any of Florida's 12 state universities",
+          "credential": "Bachelor's degree (junior year)",
+          "duration_months": 30.0,
+          "cost_usd": 7001.6,
+          "program_id": null,
+          "program_name": "Bachelor's degree (junior year)",
+          "estimate": true,
+          "transfer_agreement": "Statewide 2+2 agreement: the 60 credits of the MDC A.A. transfer as a block. Some A.S. degrees transfer to specific bachelor's degrees (Career Ladder agreements). Does NOT guarantee admission to a particular university or to limited/specialized access programs.",
+          "key_courses": [],
+          "source_url": "https://www.mdc.edu/transfer-information/florida2-2/"
+        }
+      ],
+      "workforce_entry_points": [
+        {
+          "after_step": 0,
+          "job_title": "Analista de seguridad de nivel inicial",
+          "salary_range_usd": "55000-75000"
+        },
+        {
+          "after_step": 1,
+          "job_title": "Analista de ciberseguridad con licenciatura",
+          "salary_range_usd": "70000-95000"
+        }
+      ],
+      "credentials": [
+        {
+          "name": "Associate in Science in Cybersecurity",
+          "type": "degree",
+          "required": true
+        },
+        {
+          "name": "Bachelor's degree",
+          "type": "degree",
+          "required": false
+        }
+      ],
+      "experience": [],
+      "exams": [],
+      "net_cost_after_aid_usd": null
+    }
+  ],
+  "alternative_mdc_programs": [
+    {
+      "name": "Intelligence Studies",
+      "program_id": "mdc-college-credit-certificate-intelligence-studies",
+      "why": "Es una opción corta relacionada con ciberseguridad y análisis de información, útil si te interesa investigación y análisis de amenazas."
+    },
+    {
+      "name": "Cyber Defense",
+      "program_id": "mdc-certificate-of-professional-preparation-cyber-defense",
+      "why": "Te da formación práctica en defensa de redes, seguridad de la información y forense digital."
+    },
+    {
+      "name": "Vulnerability Assessment",
+      "program_id": "mdc-certificate-of-professional-preparation-vulnerability-assessment",
+      "why": "Se enfoca en evaluación de vulnerabilidades, ética, redes y defensa de sistemas."
+    }
+  ],
+  "resources": [
+    {
+      "title": "FAFSA",
+      "url": "https://studentaid.gov/h/apply-for-aid/fafsa",
+      "kind": "financial_aid"
+    },
+    {
+      "title": "Ayuda financiera de MDC",
+      "url": "https://www.mdc.edu/financialaid/",
+      "kind": "financial_aid"
+    },
+    {
+      "title": "Becas de MDC",
+      "url": "https://www.mdc.edu/financialaid/scholarships/",
+      "kind": "financial_aid"
+    }
+  ],
+  "usage": {
+    "total_tokens": 9592,
+    "total_cost_usd": 0.021598
+  },
+  "warnings": [
+    "Los costos son solo matrícula y fees; no incluyen libros.",
+    "Como trabajas medio tiempo, una carga part-time puede tardar aproximadamente 1.8 veces más de lo indicado.",
+    "Para la transferencia a una universidad, los programas de acceso limitado o especializado no están garantizados.",
+    "Faltan datos exactos de costos netos con ayuda financiera; el monto depende de tu elegibilidad y FAFSA."
+  ]
+}

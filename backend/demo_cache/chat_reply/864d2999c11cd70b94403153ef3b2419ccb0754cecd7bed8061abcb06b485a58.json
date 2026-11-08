@@ -1,0 +1,15 @@
+{
+  "id": "msg-7732d0d5addc",
+  "role": "advisor",
+  "advisor_id": "pathway",
+  "contributors": null,
+  "text": "1. Start at MDC with the **College Credit Certificate in Cybersecurity Analyst**. It’s a shorter, workforce-focused option and fits a part-time schedule better than the full A.S.  \n\n2. If you want a broader next step, move into the **A.S. in Cybersecurity** at MDC. **A.S. = workforce degree that transfers only to specific bachelor’s programs**; **A.A. = transfer degree**.  \n\n3. After the A.S., you can continue to the **MDC B.S. in Cybersecurity** if you want to stay at MDC for the bachelor’s.  \n\n4. If later you transfer, a cybersecurity bachelor’s at a university is the next step; from there, a master’s is optional unless your target role requires it.",
+  "usage": {
+    "input_tokens": 1625,
+    "output_tokens": 162,
+    "total_tokens": 1787,
+    "cost_usd": 0.00224
+  },
+  "source": "live",
+  "created_at": "2026-11-08T03:42:31.176026+00:00"
+}
