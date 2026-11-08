@@ -1,0 +1,15 @@
+{
+  "id": "msg-95bf5a9d48ed",
+  "role": "advisor",
+  "advisor_id": "finaid",
+  "contributors": null,
+  "text": "Primero: completa la **FAFSA** en **studentaid.gov**; eso abre la puerta a casi toda la ayuda.\n\nCon tu FAFSA, **podrías calificar** para:\n- **Federal Pell Grant**\n- **Florida Bright Futures**\n- **FSAG**\n- **Federal Work-Study**\n- **Becas de MDC**\n\nLas **becas y grants no se devuelven**; los **préstamos sí**.  \nComo trabajas medio tiempo y tienes poco dinero, estas ayudas pueden bajar mucho tu costo; el monto exacto **depende de tu elegibilidad**. Con ayuda típica, tu costo **podría bajar bastante**, pero **no tengo el precio por crédito** para calcular una cifra precisa.\n\n**Siguiente paso:** envía la FAFSA y luego visita **MDC Financial Aid** para revisar tus opciones.",
+  "usage": {
+    "input_tokens": 1935,
+    "output_tokens": 178,
+    "total_tokens": 2113,
+    "cost_usd": 0.00259
+  },
+  "source": "live",
+  "created_at": "2026-11-08T03:42:07.429608+00:00"
+}

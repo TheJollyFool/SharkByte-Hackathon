@@ -1,0 +1,15 @@
+{
+  "id": "msg-2f290ecfabad",
+  "role": "advisor",
+  "advisor_id": "cost",
+  "contributors": null,
+  "text": "- **Best low-cost start: Cybersecurity Analyst CCC**\n  - **24 credits x $? = I don’t have the MDC price-per-credit data here**, so I can’t calculate an exact cost.\n  - **Full-time:** 12 months\n  - **Part-time:** about **18–24 months** (roughly 1.5–2x longer)\n\n- **Next step: A.S. in Cybersecurity**\n  - **60 credits x $? = I don’t have the price-per-credit data here**\n  - **Full-time:** 30 months\n  - **Part-time:** about **45–60 months**\n\n- **Costs included in MDC pricing:** tuition + fees only, **not books**.\n\n- **Total time for CCC + A.S.:**\n  - **Full-time:** 42 months\n  - **Part-time:** about **63–84 months**",
+  "usage": {
+    "input_tokens": 1786,
+    "output_tokens": 187,
+    "total_tokens": 1973,
+    "cost_usd": 0.002508
+  },
+  "source": "live",
+  "created_at": "2026-11-08T03:42:33.221556+00:00"
+}

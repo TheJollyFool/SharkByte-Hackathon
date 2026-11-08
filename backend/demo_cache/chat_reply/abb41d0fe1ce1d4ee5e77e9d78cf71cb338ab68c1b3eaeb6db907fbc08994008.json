@@ -1,0 +1,15 @@
+{
+  "id": "msg-a989d04496c1",
+  "role": "advisor",
+  "advisor_id": "cost",
+  "contributors": null,
+  "text": "- **CCC Cybersecurity Analyst**: 24 créditos × **[no tengo el precio por crédito en estos datos]** = **costo no verificable**. Duración **full-time: 12 meses**; **part-time: ~18–24 meses** por trabajar medio tiempo.\n- **A.S. Cybersecurity**: 60 créditos × **[no tengo el precio por crédito]** = **costo no verificable**. Duración **full-time: 30 meses**; **part-time: ~45–60 meses**.\n- **Total si haces CCC + A.S.**: 84 créditos, **costo total no verificable** con estos datos. Tiempo **full-time: 42 meses**; **part-time: ~63–84 meses**.\n\n**Incluye** matrícula + fees; **no incluye** libros.",
+  "usage": {
+    "input_tokens": 1789,
+    "output_tokens": 180,
+    "total_tokens": 1969,
+    "cost_usd": 0.002475
+  },
+  "source": "live",
+  "created_at": "2026-11-08T03:42:04.364279+00:00"
+}

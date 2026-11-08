@@ -1,0 +1,15 @@
+{
+  "id": "msg-fa285aab418e",
+  "role": "advisor",
+  "advisor_id": "career",
+  "contributors": null,
+  "text": "Cybersecurity can be a great fit if you like solving problems and protecting people’s data.\n\n- **Day to day:** watch alerts, check for suspicious activity, fix weak spots, help users stay safe, and respond fast if there’s an incident.\n- **Main skills:** networking basics, Linux, scripting, attention to detail, calm thinking under pressure, and clear communication. Entry-level roles often like hands-on lab practice and some cert knowledge.\n- **Pay & demand:** in Miami/Florida, entry-level cybersecurity jobs often pay about **$55k–$75k/year**; experienced roles can go much higher. Demand is **strong** as companies need more protection.\n- **Related careers:** network analyst, IT support specialist, and digital forensics analyst.\n\nMy teammates will cover how to get there affordably with your schedule.",
+  "usage": {
+    "input_tokens": 1412,
+    "output_tokens": 171,
+    "total_tokens": 1583,
+    "cost_usd": 0.002103
+  },
+  "source": "live",
+  "created_at": "2026-11-08T03:42:28.903400+00:00"
+}

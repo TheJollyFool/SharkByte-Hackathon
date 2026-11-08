@@ -1,0 +1,23 @@
+{
+  "message": {
+    "id": "msg-fbaddfe320d6",
+    "role": "aggregator",
+    "advisor_id": null,
+    "contributors": [
+      "career",
+      "pathway",
+      "cost",
+      "finaid"
+    ],
+    "text": "You can start affordably at MDC with a short cybersecurity certificate while you work part time, then move into the A.S. and, if you want, the B.S. later.\n\n**Your path**\n- **Cybersecurity Analyst, College Credit Certificate** — 24 credits, about **12 months full-time**; part-time is an **estimate** at about **18–24 months**. Lowest-cost quick start.\n- **Cybersecurity, A.S.** — 60 credits, about **30 months full-time**; part-time is an **estimate** at about **45–60 months**. Good broader path for cybersecurity jobs.\n- **Cybersecurity, B.S.** — 120 credits, about **30 months full-time**. This is the bachelor’s option at MDC.  \n  *Note: specialized cybersecurity admissions are not guaranteed; check program requirements first.*\n\n**Money**\n- **Estimate:** cost = credits × MDC per-credit tuition/fees, and I don’t have the exact MDC price here.\n- Aid that may fit you: **Pell Grant**, **Florida Bright Futures**, **FSAG**. These grants/scholarships do not need to be repaid.\n\n**Next step**\n- **File the FAFSA today** at **studentaid.gov**, then talk with an **MDC advisor/Financial Aid** office about the best part-time plan.",
+    "usage": {
+      "input_tokens": 7835,
+      "output_tokens": 1006,
+      "total_tokens": 8841,
+      "cost_usd": 0.061964
+    },
+    "source": "live",
+    "created_at": "2026-11-08T03:42:47.608596+00:00"
+  },
+  "per_agent_usage": {}
+}

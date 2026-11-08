@@ -1,0 +1,15 @@
+{
+  "id": "msg-7fb6e8906eb7",
+  "role": "advisor",
+  "advisor_id": "pathway",
+  "contributors": null,
+  "text": "1. Empieza en MDC con **College Credit Certificate en Cybersecurity Analyst**.  \n2. Luego continúa al **A.S. in Cybersecurity** en MDC si quieres una ruta más completa; el A.S. es un grado laboral que solo transfiere a algunas licenciaturas, mientras que un A.A. es más de transferencia general.  \n3. Si después quieres universidad, busca una **licenciatura** en una universidad como **FIU, FAU o UCF** en ciberseguridad o un área afín; desde ahí, podrías seguir a **maestría** si tu meta profesional lo requiere.  \n\nSi necesitas empezar con menos carga, el CCC te deja entrar rápido y luego avanzar al A.S. en MDC.",
+  "usage": {
+    "input_tokens": 2018,
+    "output_tokens": 156,
+    "total_tokens": 2174,
+    "cost_usd": 0.002548
+  },
+  "source": "live",
+  "created_at": "2026-11-08T03:42:01.892929+00:00"
+}

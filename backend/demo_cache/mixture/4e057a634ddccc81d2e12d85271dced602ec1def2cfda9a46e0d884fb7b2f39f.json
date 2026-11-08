@@ -1,0 +1,23 @@
+{
+  "message": {
+    "id": "msg-a9734933d48c",
+    "role": "aggregator",
+    "advisor_id": null,
+    "contributors": [
+      "career",
+      "pathway",
+      "cost",
+      "finaid"
+    ],
+    "text": "- Sí puedes entrar a ciberseguridad en MDC con poco dinero y trabajo medio tiempo; la ruta más corta y barata que tengo es un CCC, y luego puedes seguir a un grado más largo.\n\n**Your path**\n- **Cybersecurity Analyst — College Credit Certificate**: 24 créditos, aprox. **12 meses** full-time; costo estimado **$2,837.28**.\n- **Intelligence Studies — College Credit Certificate**: 16 créditos, aprox. **6 meses** full-time; costo estimado **$1,891.52**.\n- **Cybersecurity — A.S.**: 60 créditos, aprox. **30 meses** full-time; costo estimado **$7,093.20**.  \n  *Nota:* los programas especializados pueden requerir admisión específica; no garantizan acceso automático.\n\n**Money**\n- **Pell Grant**: posible ayuda si calificas.\n- **Florida Bright Futures**: posible si cumples requisitos.\n- **FSAG**: posible si cumples requisitos de Florida.  \n  *Estimado:* el costo puede bajar mucho con ayuda; depende de tu elegibilidad.\n\n**Next step**\n- Completa hoy la **FAFSA** en **studentaid.gov** y pide cita con un asesor de ayuda financiera de MDC.",
+    "usage": {
+      "input_tokens": 7897,
+      "output_tokens": 1059,
+      "total_tokens": 8956,
+      "cost_usd": 0.062291
+    },
+    "source": "live",
+    "created_at": "2026-11-08T03:42:26.458046+00:00"
+  },
+  "per_agent_usage": {}
+}
