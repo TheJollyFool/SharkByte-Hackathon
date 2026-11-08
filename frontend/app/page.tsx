@@ -4,14 +4,15 @@ import AdvisorPicker from "@/components/AdvisorPicker";
 import Chat from "@/components/Chat";
 import ErrorBox from "@/components/ErrorBox";
 import Flowchart from "@/components/Flowchart";
+import ProgramPlan from "@/components/ProgramPlan";
 import ModePicker from "@/components/ModePicker";
-import { createRoadmap, getAdvisors } from "@/lib/api";
+import { createRoadmap, getAdvisors, isMock, wakeBackend } from "@/lib/api";
 import { errorMessage } from "@/lib/errors";
 import { t } from "@/lib/i18n";
 import { bridge, onHostMessage } from "@/lib/shark-bridge";
-import type { Advisor, AdvisorId, GuideStatus, Language, Message, Mode, Roadmap } from "@/lib/types";
+import type { Advisor, AdvisorId, GuideStatus, Language, Message, Mode, Roadmap, Step } from "@/lib/types";
 
-type Screen = "mode" | "group" | "chat" | "building" | "roadmap";
+type Screen = "mode" | "group" | "chat" | "building" | "roadmap" | "plan";
 
 export default function Home() {
   const [lang, setLang] = useState<Language>("en");
@@ -21,8 +22,10 @@ export default function Home() {
   const [selected, setSelected] = useState<AdvisorId[]>([]);
   const [messages, setMessages] = useState<Message[]>([]); // frontend owns the conversation
   const [roadmap, setRoadmap] = useState<Roadmap | null>(null);
+  const [planStep, setPlanStep] = useState<Step | null>(null);
   const [guideStatus, setGuideStatus] = useState<Record<string, GuideStatus>>({});
   const [error, setError] = useState<string | null>(null);
+  const [waking, setWaking] = useState(!isMock); // free backend may be asleep
 
   const loadAdvisors = useCallback(() => {
     setError(null);
@@ -33,6 +36,7 @@ export default function Home() {
 
   useEffect(() => {
     bridge.ready();
+    void wakeBackend().finally(() => setWaking(false));
     loadAdvisors();
     // Task 10: the extension tells us when an in-page guide ended
     return onHostMessage((msg) => {
@@ -73,6 +77,11 @@ export default function Home() {
 
   return (
     <div className="flex min-h-0 flex-1 flex-col" style={{ height: "100vh" }}>
+      {waking && (
+        <div role="status" className="bg-amber-50 p-2 text-center text-xs text-amber-900">
+          {t(lang, "wakingUp")}
+        </div>
+      )}
       {error && screen !== "building" && <ErrorBox lang={lang} message={error} onRetry={loadAdvisors} />}
 
       {screen === "mode" && <ModePicker lang={lang} onLang={setLang} onPick={pickMode} />}
@@ -120,8 +129,19 @@ export default function Home() {
       )}
 
       {screen === "roadmap" && roadmap && (
-        <Flowchart roadmap={roadmap} lang={lang} guideStatus={guideStatus} onBack={() => setScreen("chat")} />
+        <Flowchart
+          roadmap={roadmap}
+          lang={lang}
+          guideStatus={guideStatus}
+          onBack={() => setScreen("chat")}
+          onOpenProgram={(step) => {
+            setPlanStep(step);
+            setScreen("plan");
+          }}
+        />
       )}
+
+      {screen === "plan" && planStep && <ProgramPlan step={planStep} lang={lang} onBack={() => setScreen("roadmap")} />}
     </div>
   );
 }

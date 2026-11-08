@@ -168,3 +168,35 @@ export type OutgoingSharkMessage =
 export type IncomingSharkMessage =
   | { type: "shark:guide_finished"; step_id: string; status: GuideStatus }
   | { type: "shark:page_context"; url: string; title: string };
+
+// ---- Program plan by semester (design C · Courses) ----
+// ASSUMED shape until Diego's data lands in data/. lib/plan.ts normalizePlan() adapts small differences.
+export type CourseKind = "program" | "gen_ed"; // blue = program course, gray = general education
+
+export interface PlanCourse {
+  code: string; // small official code, e.g. "COP 2000"
+  name: string; // simple course name
+  credits?: number;
+  kind: CourseKind;
+  prerequisites?: string[]; // course codes -> rendered as "First you need: …" (orange), no arrows
+}
+
+export interface PickGroup {
+  id?: string;
+  pick: number; // "pick 1"
+  options: PlanCourse[];
+}
+
+export interface PlanSemester {
+  courses: PlanCourse[];
+  pick_groups?: PickGroup[];
+}
+
+export interface ProgramPlan {
+  program_id: string;
+  program_name: string;
+  credential?: string;
+  official_url: string;
+  total_credits?: number;
+  semesters: PlanSemester[];
+}

@@ -1,6 +1,8 @@
 // All backend calls. NEXT_PUBLIC_USE_MOCK=true => fixtures, no network.
 import advisorsMock from "@/mock/advisors.json";
 import roadmapMock from "@/mock/roadmap.json";
+import planMock from "@/mock/program-plan.sample.json";
+import { normalizePlan } from "./plan";
 import type {
   Advisor,
   ApiErrorBody,
@@ -8,12 +10,14 @@ import type {
   Message,
   MixtureRequest,
   MixtureResponse,
+  ProgramPlan,
   Roadmap,
   RoadmapRequest,
   Usage,
 } from "./types";
 
 const USE_MOCK = process.env.NEXT_PUBLIC_USE_MOCK !== "false";
+export const isMock = USE_MOCK;
 const API_URL = (process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000").replace(/\/$/, "");
 
 export class ApiError extends Error {
@@ -26,21 +30,42 @@ const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 const now = () => new Date().toISOString();
 const uid = () => Math.random().toString(36).slice(2, 10);
 
-async function http<T>(path: string, init?: RequestInit): Promise<T> {
-  let res: Response;
-  try {
-    res = await fetch(`${API_URL}${path}`, {
-      ...init,
-      headers: { "Content-Type": "application/json", ...(init?.headers ?? {}) },
-    });
-  } catch {
-    throw new ApiError("network", "Could not reach the server");
+type HttpOpts = RequestInit & { timeoutMs?: number; retries?: number };
+
+// Render's free tier sleeps when idle: the first request can take ~50 s and may return 502/503
+// while it wakes. GET calls pass `retries`; POSTs are never retried (they cost tokens).
+async function http<T>(path: string, init: HttpOpts = {}): Promise<T> {
+  const { timeoutMs = 90_000, retries = 0, ...rest } = init;
+  for (let attempt = 0; ; attempt++) {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+    try {
+      const res = await fetch(`${API_URL}${path}`, {
+        ...rest,
+        signal: ctrl.signal,
+        headers: { "Content-Type": "application/json", ...(rest.headers ?? {}) },
+      });
+      if (!res.ok) {
+        if (attempt < retries && res.status >= 502 && res.status <= 504) {
+          await sleep(4000);
+          continue;
+        }
+        const body = (await res.json().catch(() => null)) as ApiErrorBody | null;
+        throw new ApiError(body?.error.code ?? "upstream_failed", body?.error.message ?? res.statusText, res.status);
+      }
+      return (await res.json()) as T;
+    } catch (e) {
+      if (e instanceof ApiError) throw e;
+      const aborted = e instanceof DOMException && e.name === "AbortError";
+      if (attempt < retries && !aborted) {
+        await sleep(4000);
+        continue;
+      }
+      throw new ApiError(aborted ? "timeout" : "network", aborted ? "Request timed out" : "Could not reach the server");
+    } finally {
+      clearTimeout(timer);
+    }
   }
-  if (!res.ok) {
-    const body = (await res.json().catch(() => null)) as ApiErrorBody | null;
-    throw new ApiError(body?.error.code ?? "upstream_failed", body?.error.message ?? res.statusText, res.status);
-  }
-  return (await res.json()) as T;
 }
 
 const fakeUsage = (): Usage => {
@@ -87,7 +112,7 @@ export async function getAdvisors(): Promise<Advisor[]> {
     await sleep(100);
     return [...(advisorsMock as Advisor[])].sort((a, b) => a.order - b.order);
   }
-  return http<Advisor[]>("/advisors");
+  return http<Advisor[]>("/advisors", { retries: 4 });
 }
 
 export async function chatReply(req: ChatReplyRequest): Promise<Message> {
@@ -135,15 +160,39 @@ export async function createRoadmap(req: RoadmapRequest): Promise<Roadmap> {
     await sleep(2500);
     return { ...(roadmapMock as Roadmap), mode: req.mode, language: req.language };
   }
-  return http<Roadmap>("/roadmap", { method: "POST", body: JSON.stringify(req) });
+  return http<Roadmap>("/roadmap", { method: "POST", body: JSON.stringify(req), timeoutMs: 120_000 }); // ~20 s live
 }
 
 export async function getRoadmap(id: string): Promise<Roadmap> {
   if (USE_MOCK) return roadmapMock as Roadmap;
-  return http<Roadmap>(`/roadmap/${encodeURIComponent(id)}`);
+  return http<Roadmap>(`/roadmap/${encodeURIComponent(id)}`, { retries: 2 });
 }
 
 export async function getHealth(): Promise<{ status: string; demo_mode: boolean }> {
   if (USE_MOCK) return { status: "ok", demo_mode: true };
-  return http<{ status: string; demo_mode: boolean }>("/health");
+  return http<{ status: string; demo_mode: boolean }>("/health", { retries: 2 });
+}
+
+/** Pings /health to wake the sleeping free server. Never throws; no-op in mock mode. */
+export async function wakeBackend(): Promise<void> {
+  if (USE_MOCK) return;
+  try {
+    await http("/health", { timeoutMs: 120_000, retries: 6 });
+  } catch {
+    /* the real calls will surface a friendly error */
+  }
+}
+
+/**
+ * Course plan by semester for one MDC program.
+ * ASSUMPTION: backend exposes GET /programs/{program_id}/plan (confirm with Piero/Diego).
+ * A 404 (ApiError code "not_found") means "no plan for this program yet".
+ */
+export async function getProgramPlan(programId: string): Promise<ProgramPlan> {
+  if (USE_MOCK) {
+    await sleep(300);
+    return normalizePlan({ ...(planMock as object), program_id: programId });
+  }
+  const raw = await http<unknown>(`/programs/${encodeURIComponent(programId)}/plan`, { retries: 2 });
+  return normalizePlan(raw);
 }

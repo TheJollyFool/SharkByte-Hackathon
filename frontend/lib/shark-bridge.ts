@@ -1,6 +1,6 @@
 // postMessage wrapper for the Extension <-> Panel contract (CONTRACTS.md section A).
 // Safe to call anywhere: no-ops when not inside an iframe, and checks event.origin on receive.
-import type { IncomingSharkMessage, OutgoingSharkMessage } from "./types";
+import type { GuideGoal, IncomingSharkMessage, OutgoingSharkMessage } from "./types";
 
 // Origin of the page embedding us. Panel accepts only https://*.mdc.edu (+ localhost for dev).
 const HOST_ORIGIN = process.env.NEXT_PUBLIC_HOST_ORIGIN ?? "https://www.mdc.edu";
@@ -51,4 +51,16 @@ export function onHostMessage(handler: (msg: IncomingSharkMessage) => void): () 
   };
   window.addEventListener("message", listener);
   return () => window.removeEventListener("message", listener);
+}
+
+/** Open a URL: via the extension when embedded (shark:open_url), in a new tab when standalone. */
+export function openExternal(url: string): void {
+  if (inIframe()) bridge.openUrl(url);
+  else window.open(url, "_blank", "noopener,noreferrer");
+}
+
+/** Ask the shark to guide the student on mdc.edu; standalone, just open the page. */
+export function guideOrOpen(goal: GuideGoal, language: "en" | "es"): void {
+  if (inIframe()) bridge.startGuide(goal, language);
+  else window.open(goal.url, "_blank", "noopener,noreferrer");
 }

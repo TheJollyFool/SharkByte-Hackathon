@@ -1,0 +1,29 @@
+{
+  "_sample": true,
+  "program_id": "sample",
+  "program_name": "Sample Program (replace with real data)",
+  "credential": "Associate in Science",
+  "official_url": "https://www.mdc.edu/",
+  "total_credits": 60,
+  "semesters": [
+    {"courses": [
+      {"code": "ENC 1101", "name": "English Composition I", "credits": 3, "kind": "gen_ed"},
+      {"code": "MAC 1105", "name": "College Algebra", "credits": 3, "kind": "gen_ed"},
+      {"code": "CGS 1060C", "name": "Computer Basics", "credits": 3, "kind": "program"},
+      {"code": "COP 1000", "name": "Intro to Programming", "credits": 3, "kind": "program"}
+    ]},
+    {"courses": [
+      {"code": "ENC 1102", "name": "English Composition II", "credits": 3, "kind": "gen_ed", "prerequisites": ["ENC 1101"]},
+      {"code": "COP 2250", "name": "Java Programming", "credits": 3, "kind": "program", "prerequisites": ["COP 1000"]}
+    ],
+    "pick_groups": [
+      {"id": "humanities", "pick": 1, "options": [
+        {"code": "PHI 2010", "name": "Intro to Philosophy", "credits": 3, "kind": "gen_ed"},
+        {"code": "HUM 2020", "name": "Humanities", "credits": 3, "kind": "gen_ed"}
+      ]}
+    ]},
+    {"courses": [
+      {"code": "COP 2800", "name": "Web Programming", "credits": 3, "kind": "program", "prerequisites": ["COP 2250", "CGS 1060C"]}
+    ]}
+  ]
+}
