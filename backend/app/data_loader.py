@@ -1,5 +1,6 @@
 """Loads data/*.json once. Diego owns data/ — we only read it."""
 
+import difflib
 import json
 import re
 from functools import lru_cache
@@ -41,17 +42,44 @@ _SLIM = (
 _RANK = {"A.S.": 0, "College Credit Certificate": 1, "A.A.": 2, "B.S.": 3, "B.A.S.": 3}
 
 
-def _hits(term: str, text: str) -> bool:
-    return bool(term) and re.search(rf"(?<![a-z]){re.escape(term.lower())}", text) is not None
+_ALIASES = {  # common student shorthand -> words the career keywords know
+    r"\bcs\b": "computer science",
+    r"\bcomp sci\b": "computer science",
+    r"\bit\b": "information technology",
+    r"\bai\b": "artificial intelligence",
+    r"\bcyber\b": "cybersecurity",
+    r"\brn\b": "nurse",
+}
+
+
+def _normalize(text: str) -> str:
+    text = text.lower()
+    for pat, repl in _ALIASES.items():
+        text = re.sub(pat, repl, text)
+    return text
+
+
+def _hits(term: str, text: str, words: list[str]) -> bool:
+    """Exact (word-prefix) match, or a close match for single long words (typos like
+    'sybersecurity' -> 'cybersecurity')."""
+    term = term.lower()
+    if not term:
+        return False
+    if re.search(rf"(?<![a-z]){re.escape(term)}", text):
+        return True
+    if " " not in term and len(term) >= 6:
+        return bool(difflib.get_close_matches(term, words, n=1, cutoff=0.82))
+    return False
 
 
 def matched_careers(text: str) -> set[str]:
     """Career ids whose keywords appear in the text; only the best-scoring ones are kept."""
-    text = text.lower()
+    text = _normalize(text)
+    words = [w for w in re.findall(r"[a-záéíóúñ]+", text) if len(w) >= 5]
     scores: dict[str, int] = {}
     for c in data("careers") or []:
         terms = [*c.get("keywords", []), c.get("title", ""), c.get("id", "").replace("-", " ")]
-        n = sum(1 for t in terms if _hits(t, text))
+        n = sum(1 for t in terms if _hits(t, text, words))
         if n:
             scores[c["id"]] = n
     if not scores:
