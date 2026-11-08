@@ -28,3 +28,29 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 chrome.tabs.onRemoved.addListener((tabId) => {
   chrome.storage.session.remove(`shark-guide-${tabId}`);
 });
+
+importScripts("config.js");
+
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message?.type !== "shark:navigate" || sender.tab?.id == null) {
+    return;
+  }
+
+  fetch(NAVIGATE_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(message.request),
+  })
+    .then(async (response) => {
+      if (!response.ok) {
+        throw new Error(`Navigator returned HTTP ${response.status}`);
+      }
+
+      sendResponse({ ok: true, step: await response.json() });
+    })
+    .catch((error) => {
+      sendResponse({ ok: false, error: error.message });
+    });
+
+  return true;
+});

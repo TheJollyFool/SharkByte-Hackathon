@@ -175,9 +175,16 @@ window.addEventListener("message", (event) => {
     }
 
     if (message.type === "shark:start_guide") {
-      startRecordedGuide(message.goal).catch((error) => {
-        console.error("[Shark Advisor] Could not start the guide", error);
-      });
+      const language = message.language === "es" ? "es" : "en";
+
+      startLiveNavigator(message.goal, language)
+        .catch((error) => {
+          console.warn("[Shark Advisor] Live Navigator unavailable", error);
+          return startRecordedGuide(message.goal);
+        })
+        .catch((error) => {
+          console.error("[Shark Advisor] Could not start the guide", error);
+        });
     }
     return;
   }
@@ -211,6 +218,8 @@ function highlightGuideTarget(target) {
   highlight.setAttribute("aria-hidden", "true");
   shadow.append(highlight);
 
+  let frameId;
+
   function updatePosition() {
     const bounds = target.getBoundingClientRect();
     Object.assign(highlight.style, {
@@ -219,17 +228,15 @@ function highlightGuideTarget(target) {
       width: `${bounds.width}px`,
       height: `${bounds.height}px`,
     });
-  }
 
-  window.addEventListener("scroll", updatePosition, true);
-  window.addEventListener("resize", updatePosition);
+    frameId = requestAnimationFrame(updatePosition);
+  }
 
   target.scrollIntoView({ block: "center", inline: "nearest" });
   updatePosition();
 
   return () => {
-    window.removeEventListener("scroll", updatePosition, true);
-    window.removeEventListener("resize", updatePosition);
+    cancelAnimationFrame(frameId);
     highlight.remove();
   };
 }
@@ -365,9 +372,13 @@ async function resumeGuide(state) {
 
 guideState("load")
   .then((state) => {
-    if (state) {
-      return resumeGuide(state);
+    if (!state) return;
+
+    if (state.mode === "live") {
+      return startLiveNavigator(state.goal, state.language);
     }
+
+    return resumeGuide(state);
   })
   .catch((error) => {
     console.error("[Shark Advisor] Could not resume the guide", error);
@@ -417,4 +428,121 @@ async function startRecordedGuide(goal) {
   const state = { goal, steps: guide.steps, stepIndex: 0 };
   await guideState("save", state);
   await resumeGuide(state);
+}
+
+function captureNavigatorPage() {
+  const targets = new Map();
+  const elements = [];
+  const candidates = document.querySelectorAll(
+    'a[href], button, input:not([type="hidden"]), textarea, select, [role="button"]',
+  );
+
+  for (const element of candidates) {
+    if (elements.length === 150) break;
+
+    if (
+      !element.getClientRects().length ||
+      getComputedStyle(element).visibility !== "visible" ||
+      element.matches(":disabled")
+    ) {
+      continue;
+    }
+
+    const id = `shark-target-${elements.length + 1}`;
+    const text = (
+      element.getAttribute("aria-label") ||
+      element.innerText ||
+      element.textContent ||
+      ""
+    ).replace(/\s+/g, " ").trim().slice(0, 80);
+
+    targets.set(id, element);
+    elements.push({
+      id,
+      tag: element.localName,
+      text,
+      href: element instanceof HTMLAnchorElement ? element.href : null,
+      type: element.getAttribute("type"),
+      placeholder: element.getAttribute("placeholder"),
+    });
+  }
+
+  return {
+    page: { url: location.href, title: document.title, elements },
+    targets,
+  };
+}
+
+async function requestNavigatorStep(goal, language, previousSteps = []) {
+  const { page, targets } = captureNavigatorPage();
+
+  const response = await chrome.runtime.sendMessage({
+    type: "shark:navigate",
+    request: {
+      goal,
+      language,
+      page,
+      previous_steps: previousSteps,
+    },
+  });
+
+  if (!response?.ok) {
+    throw new Error(response?.error ?? "Could not get the next guide step");
+  }
+
+  const step = response.step;
+  return {
+    step,
+    target: targets.get(step.element_id) ?? null,
+  };
+}
+
+function showNavigatorInstruction(step, target, onStop) {
+  const canHighlight = target?.isConnected;
+  const removeHighlight = canHighlight
+    ? highlightGuideTarget(target)
+    : null;
+
+  let instruction = step.bubble || "Follow the highlighted step.";
+
+  if (step.action === "type" && step.text_to_type) {
+    instruction += `\n“${step.text_to_type}”`;
+  }
+
+  const removeBubble = showGuideBubble(instruction, onStop);
+
+  return () => {
+    removeHighlight?.();
+    removeBubble();
+  };
+}
+
+async function startLiveNavigator(goal, language) {
+  await guideState("save", {
+    mode: "live",
+    goal,
+    language,
+  });
+
+  const { step, target } = await requestNavigatorStep(goal, language);
+    console.info("[Shark Advisor] Navigator action:", step.action);
+
+  if (step.action === "done") {
+    await finishGuide(goal.step_id, "done");
+    return;
+  }
+
+  if (step.action === "open_url") {
+    const destination = new URL(goal.url);
+    await guideState("clear");
+
+    if (destination.protocol === "https:") {
+      window.location.assign(destination.href);
+    }
+    return;
+  }
+
+  const removeInstruction = showNavigatorInstruction(step, target, () => {
+    finishGuide(goal.step_id, "stopped", removeInstruction).catch(console.error);
+  });
 }
