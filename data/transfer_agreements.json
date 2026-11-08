@@ -1,13 +1,46 @@
 [
   {
-    "id": "TODO",
-    "from_program_id": "TODO-program-id",
-    "to_institution": "TODO (e.g. FIU)",
-    "to_program": "TODO",
-    "type": "2+2 | articulation | guaranteed admission",
-    "notes": "",
-    "source_url": "TODO",
-    "limited_access_not_guaranteed": [],
-    "_example_limited_access": "FIU Connect4Success does not guarantee limited-access majors such as Architecture and Nursing"
+    "id": "florida-2plus2",
+    "from_program_id": null,
+    "from_credential": "A.A. (any MDC Associate in Arts pathway)",
+    "to_institution": "Any of Florida's 12 state universities",
+    "to_program": "Bachelor's degree (junior year)",
+    "type": "articulation",
+    "notes": "Statewide 2+2 agreement: the 60 credits of the MDC A.A. transfer as a block. Some A.S. degrees transfer to specific bachelor's degrees (Career Ladder agreements). Does NOT guarantee admission to a particular university or to limited/specialized access programs.",
+    "limited_access_not_guaranteed": ["Limited/specialized access programs at every university"],
+    "source_url": "https://www.mdc.edu/transfer-information/florida2-2/"
+  },
+  {
+    "id": "fiu-connect4success",
+    "from_program_id": null,
+    "from_credential": "A.A. (any MDC Associate in Arts pathway)",
+    "to_institution": "FIU",
+    "to_program": "Most FIU bachelor's programs",
+    "type": "guaranteed admission",
+    "notes": "FIU's 2+2 pathway. Earn the A.A. at MDC within 3 years to get guaranteed admission to most FIU programs. MDC students apply after earning 12-30 college credits and must declare a major at MDC. Meet with an FIU Bridge Advisor every term. FIU publishes 2026-2027 MDC transfer guides per major at tts.fiu.edu/guides/pdf/MDC/.",
+    "limited_access_not_guaranteed": ["FIU Specialized Admissions programs — more competitive criteria, admission not guaranteed (team notes list Architecture and Nursing; confirm on FIU's Specialized Admissions list)"],
+    "source_url": "https://admissions.fiu.edu/how-to-apply/connect4success/apply/"
+  },
+  {
+    "id": "fau-link2fau",
+    "from_program_id": null,
+    "from_credential": "A.A. (any MDC Associate in Arts pathway)",
+    "to_institution": "FAU",
+    "to_program": "FAU bachelor's programs",
+    "type": "guaranteed admission",
+    "notes": "Link2FAU: earn the A.A. at MDC, then guaranteed and priority admission to FAU if you meet FAU admission requirements.",
+    "limited_access_not_guaranteed": ["FAU limited access and restricted programs may require an additional admissions process"],
+    "source_url": "https://www.mdc.edu/transfer-information/florida2-2/"
+  },
+  {
+    "id": "ucf-transfer",
+    "from_program_id": null,
+    "from_credential": "A.A. (any MDC Associate in Arts pathway)",
+    "to_institution": "UCF",
+    "to_program": "UCF bachelor's programs",
+    "type": "articulation",
+    "notes": "MDC points A.A. students to UCF Transfer Connect. UCF lists program-to-program agreements with Miami Dade (e.g. A.A. to B.S. in Biology). Statewide 2+2 rules apply.",
+    "limited_access_not_guaranteed": ["UCF limited/specialized access programs"],
+    "source_url": "https://connect.ucf.edu/articulation-agreements/"
   }
 ]

@@ -1,13 +1,35 @@
 {
+  "_note": "Official MDC tuition & fees per credit hour, read from mdc.edu/tuition on 2026-11-07 (the page shows no year; it is the rate MDC publishes now). Totals include tuition + student services + financial aid + capital improvement + technology + $3 parking fee.",
   "mdc": {
-    "tuition_per_credit_in_state": null,
-    "tuition_per_credit_out_of_state": null,
-    "fees_per_term_estimate": null,
+    "associate_and_certificates": {
+      "applies_to": "A.A., A.S., College Credit Certificate (CCC), Advanced Technical Certificate (ATC), developmental education, Educator Preparation",
+      "tuition_per_credit_in_state": 118.22,
+      "tuition_per_credit_out_of_state": 402.51,
+      "cost_per_term_12_credits_in_state": 1418.64,
+      "cost_per_term_12_credits_out_of_state": 4830.12
+    },
+    "bachelor": {
+      "applies_to": "B.A.S., B.S., B.S.N.",
+      "tuition_per_credit_in_state": 129.89,
+      "tuition_per_credit_out_of_state": 535.97,
+      "cost_per_term_12_credits_in_state": 1558.68,
+      "cost_per_term_12_credits_out_of_state": 6431.64
+    },
+    "career_technical": {
+      "applies_to": "Career Technical Certificate (CTC / C.T.E. / V.C.C.)",
+      "tuition_per_credit_in_state": 91.08,
+      "tuition_per_credit_out_of_state": 355.31,
+      "cost_per_term_12_credits_in_state": 1092.96,
+      "cost_per_term_12_credits_out_of_state": 4263.72
+    },
+    "course_user_fees_note": "Some courses add a course user fee (e.g. $15-$18, listed per course in the 2026-2028 catalog).",
     "books_per_year_estimate": null,
-    "source_url": "TODO"
+    "source_url": "https://www.mdc.edu/tuition/"
   },
   "universities": [
-    { "name": "TODO (e.g. FIU)", "tuition_per_credit_in_state": null, "source_url": "TODO" }
+    { "name": "FIU", "tuition_per_credit_in_state": null, "source_url": "TODO — verify on fiu.edu" },
+    { "name": "FAU", "tuition_per_credit_in_state": null, "source_url": "TODO — verify on fau.edu" },
+    { "name": "UCF", "tuition_per_credit_in_state": null, "source_url": "TODO — verify on ucf.edu" }
   ],
   "part_time_multiplier": 1.8
 }

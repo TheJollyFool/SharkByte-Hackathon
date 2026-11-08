@@ -19,6 +19,7 @@
       "developer",
       "app",
       "coding",
+      "computer science",
       "programador"
     ]
   },
@@ -64,7 +65,7 @@
   },
   {
     "id": "mechanical-engineer",
-    "title": "Mechanical / Manufacturing Engineer",
+    "title": "Mechanical / Industrial Engineer",
     "keywords": [
       "mechanical",
       "engineering",
@@ -76,7 +77,7 @@
   },
   {
     "id": "electrical-engineer",
-    "title": "Electrical / Electronics Engineer",
+    "title": "Electrical / Computer Engineer",
     "keywords": [
       "electrical",
       "electronics",
@@ -92,16 +93,26 @@
       "civil",
       "construction",
       "construccion",
+      "surveying",
       "gis"
     ]
   },
   {
+    "id": "biomedical-engineer",
+    "title": "Biomedical / Chemical Engineer",
+    "keywords": [
+      "biomedical",
+      "chemical engineering",
+      "biomedica"
+    ]
+  },
+  {
     "id": "architect",
-    "title": "Architect",
+    "title": "Architect / Interior Designer",
     "keywords": [
       "architecture",
       "architect",
-      "design",
+      "interior design",
       "drafting",
       "arquitecto"
     ]
@@ -139,6 +150,28 @@
     ]
   },
   {
+    "id": "doctor",
+    "title": "Physician / Dentist / Optometrist (pre-med)",
+    "keywords": [
+      "doctor",
+      "physician",
+      "medicine",
+      "pre-med",
+      "dentist",
+      "optometrist",
+      "medico"
+    ]
+  },
+  {
+    "id": "pharmacist",
+    "title": "Pharmacist / Pharmacy Technician",
+    "keywords": [
+      "pharmacy",
+      "pharmacist",
+      "farmacia"
+    ]
+  },
+  {
     "id": "medical-imaging",
     "title": "Medical Imaging / Radiology Technologist",
     "keywords": [
@@ -157,9 +190,21 @@
       "lab",
       "laboratory",
       "biotech",
-      "biology",
-      "science",
       "laboratorio"
+    ]
+  },
+  {
+    "id": "scientist",
+    "title": "Scientist (biology, chemistry, physics, environment)",
+    "keywords": [
+      "science",
+      "scientist",
+      "biology",
+      "chemistry",
+      "physics",
+      "environment",
+      "meteorology",
+      "ciencia"
     ]
   },
   {
@@ -167,7 +212,6 @@
     "title": "Dental Hygienist / Dental Assistant",
     "keywords": [
       "dental",
-      "dentist",
       "dentista"
     ]
   },
@@ -176,10 +220,7 @@
     "title": "Physician Assistant",
     "keywords": [
       "physician assistant",
-      "pa",
-      "doctor",
-      "medicine",
-      "medico"
+      "pa"
     ]
   },
   {
@@ -194,13 +235,14 @@
   },
   {
     "id": "therapist",
-    "title": "Physical / Respiratory Therapy",
+    "title": "Physical / Occupational / Respiratory / Speech Therapy",
     "keywords": [
       "therapy",
       "therapist",
       "physical therapy",
       "respiratory",
-      "massage",
+      "speech",
+      "occupational",
       "terapia"
     ]
   },
@@ -216,18 +258,25 @@
   },
   {
     "id": "allied-health",
-    "title": "Medical Assistant / Pharmacy & Surgical Tech",
+    "title": "Medical Assistant / Surgical & Sterile Tech",
     "keywords": [
       "medical assistant",
-      "pharmacy",
       "surgical",
-      "optician",
-      "farmacia"
+      "optician"
+    ]
+  },
+  {
+    "id": "dietitian",
+    "title": "Dietitian / Nutritionist",
+    "keywords": [
+      "dietitian",
+      "nutrition",
+      "nutricion"
     ]
   },
   {
     "id": "vet-tech",
-    "title": "Veterinary Technician",
+    "title": "Veterinarian / Veterinary Technician",
     "keywords": [
       "veterinary",
       "vet",
@@ -266,13 +315,14 @@
     ]
   },
   {
-    "id": "paralegal",
-    "title": "Paralegal / Legal Assistant",
+    "id": "lawyer",
+    "title": "Lawyer / Paralegal",
     "keywords": [
+      "lawyer",
+      "law",
+      "attorney",
       "paralegal",
       "legal",
-      "law",
-      "lawyer",
       "abogado"
     ]
   },
@@ -323,12 +373,13 @@
   },
   {
     "id": "finance",
-    "title": "Banking & Finance Professional",
+    "title": "Banking, Finance & Economics",
     "keywords": [
       "finance",
       "banking",
       "bank",
       "financial",
+      "economics",
       "finanzas"
     ]
   },
@@ -375,6 +426,20 @@
     ]
   },
   {
+    "id": "artist",
+    "title": "Artist / Performer (art, music, dance, theater)",
+    "keywords": [
+      "art",
+      "artist",
+      "music",
+      "dance",
+      "theater",
+      "actor",
+      "arte",
+      "musica"
+    ]
+  },
+  {
     "id": "game-designer",
     "title": "Video Game Designer",
     "keywords": [
@@ -385,15 +450,25 @@
   },
   {
     "id": "film-media",
-    "title": "Film, TV & Music Production",
+    "title": "Film, TV & Media Production",
     "keywords": [
       "film",
       "movie",
       "television",
       "tv",
-      "music",
       "audio",
       "cine"
+    ]
+  },
+  {
+    "id": "journalist",
+    "title": "Journalist / Writer / Communications",
+    "keywords": [
+      "journalism",
+      "journalist",
+      "writer",
+      "communications",
+      "periodista"
     ]
   },
   {
@@ -405,14 +480,35 @@
     ]
   },
   {
+    "id": "psychologist",
+    "title": "Psychologist",
+    "keywords": [
+      "psychology",
+      "psychologist",
+      "psicologia"
+    ]
+  },
+  {
     "id": "social-worker",
     "title": "Social Worker / Counselor",
     "keywords": [
       "social work",
       "counselor",
-      "psychology",
       "mental health",
       "trabajo social"
+    ]
+  },
+  {
+    "id": "public-service",
+    "title": "Government, Public Policy & Social Sciences",
+    "keywords": [
+      "government",
+      "politics",
+      "public administration",
+      "history",
+      "sociology",
+      "international relations",
+      "gobierno"
     ]
   },
   {
@@ -427,10 +523,12 @@
   },
   {
     "id": "sport-manager",
-    "title": "Sports Manager",
+    "title": "Sports Manager / Fitness & Recreation",
     "keywords": [
       "sports",
       "sport",
+      "fitness",
+      "recreation",
       "deportes"
     ]
   },
@@ -444,7 +542,7 @@
   },
   {
     "id": "horticulturist",
-    "title": "Horticulture / Landscape Technician",
+    "title": "Horticulture / Landscape",
     "keywords": [
       "horticulture",
       "landscape",
@@ -461,6 +559,7 @@
       "car",
       "truck",
       "cdl",
+      "tesla",
       "mecanico"
     ]
   },
@@ -471,6 +570,17 @@
       "museum",
       "curator",
       "museo"
+    ]
+  },
+  {
+    "id": "undecided",
+    "title": "Not sure yet — explore with an A.A.",
+    "keywords": [
+      "not sure",
+      "undecided",
+      "don't know",
+      "no se",
+      "explore"
     ]
   }
 ]
