@@ -5,7 +5,7 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from app.api import advisors, chat, health, mixture, navigate, roadmap
+from app.api import advisors, chat, health, mixture, navigate, programs, roadmap
 from app.config import get_settings
 from app.models.errors import ApiError
 from app.swarm.client import get_swarms
@@ -51,6 +51,7 @@ for r in (
     chat.router,
     mixture.router,
     navigate.router,
+    programs.router,
     roadmap.router,
 ):
     app.include_router(r)
