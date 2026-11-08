@@ -1,94 +1,74 @@
 # Plan del equipo
 
-> 4 roles, una persona cada uno. Cada uno trabaja en su branch `feat/<area>-<cosa>` y abre PRs chiquitos
-> a `main`. Marquen `[x]` cuando terminen. Todos construyen contra los **mocks** de `shared/fixtures/`
-> desde el minuto 1 — nadie espera a nadie. Los contratos están en [CONTRACTS.md](CONTRACTS.md).
+> Cada uno trabaja en su branch `feat/<area>-<cosa>` y abre PRs chiquitos a `main`. Marquen `[x]` cuando
+> terminen. Todos construyen contra los **mocks** de `shared/fixtures/` desde el minuto 1 — nadie espera a
+> nadie. Contratos: [CONTRACTS.md](CONTRACTS.md). Brief detallado de cada rol: [roles/](roles/).
 
 ## Roles
 
-| Rol | Persona | Dueño de | Perfil ideal |
+| Rol | Persona | Dueño de | Brief |
 |---|---|---|---|
-| **1. Extensión + guía en la página** | _TBD_ | `extension/`, `shared/guides/` | JavaScript, paciencia para probar en el navegador |
-| **2. Panel app (frontend)** | _TBD_ | `frontend/` | UI/diseño, React/Next.js con Codex |
-| **3. Backend + Swarms** | _TBD_ | `backend/`, `docs/AGENT_PIPELINE.md`, deploy backend | Python, APIs |
-| **4. Datos MDC + cerebro de los agentes + pitch** | _TBD_ | `data/*.json`, prompts (contenido) en `backend/app/swarm/prompts.py` junto con Rol 3, `docs/DEMO.md`, slides, Devpost | Conoce MDC y financial aid, habla bien en público |
+| **1. Extensión + guía en la página** | **Adrian** | `extension/`, `shared/guides/` | [roles/rol1-adrian-extension.md](roles/rol1-adrian-extension.md) |
+| **2. Panel app (frontend)** | **Robert** | `frontend/` | [roles/rol2-robert-panel.md](roles/rol2-robert-panel.md) |
+| **3. Backend + Swarms** | **Piero** | `backend/`, `docs/AGENT_PIPELINE.md`, deploy backend | [roles/rol3-piero-backend.md](roles/rol3-piero-backend.md) |
+| **4. Datos MDC + agentes + pitch** | **Diego** | `data/*.json`, `docs/agents/` (prompts), `docs/DEMO.md`, slides, Devpost | [roles/rol4-diego-data-pitch.md](roles/rol4-diego-data-pitch.md) |
 
-Regla: los LLMs (Claude, Codex, Gemini) escriben el código leyendo `AGENTS.md`. Los humanos deciden,
-revisan y prueban. El que se quede sin tokens pasa su tarea a otro modelo, no se para.
+Regla: los LLMs (Claude, Codex, Gemini) escriben el código leyendo `AGENTS.md` + su brief. Los humanos
+deciden, revisan y prueban. El que se quede sin tokens pasa su tarea a otro modelo, no se para.
+Merge a `main`: cualquiera puede mergear su propio PR si no rompe nada; cambios a `docs/CONTRACTS.md`
+o al schema requieren OK de los dueños de ambos lados.
 
-## Horario (hacking termina dom 10:00 AM, Devpost 10–11 AM)
+## Horario (sáb 7 → dom 8 nov)
 
-| Hasta | Meta |
-|---|---|
-| **Fase 0** (30 min) | Todos: clonar, leer `AGENTS.md` + `docs/PRODUCT.md`, confirmar roles, aprobar `REQUIREMENTS.md` |
-| **Fase 1** (~2:00 AM) | Cada rol tiene su parte funcionando **con mocks** |
-| **Fase 2** (~5:00 AM) | Integración: panel ↔ backend real, extensión ↔ panel, guía ↔ `/navigate` |
-| **Fase 3** (~8:00 AM) | Cachear el guion de la demo, deploy, ensayar 3 veces. **Code freeze 8:00 AM** |
-| 8:00–10:00 AM | Video, Devpost, slides, último ensayo |
+| Hora | Fase | Meta |
+|---|---|---|
+| 7:45–8:15 PM | **0. Setup** | Mergear este spec a `main`, todos clonan, leen su brief, aprueban `REQUIREMENTS.md` |
+| 8:15 PM–1:00 AM | **1. Partes con mocks** | Cada rol funciona solo, contra fixtures |
+| 1:00–4:00 AM | **2. Integración** | Panel ↔ backend real, extensión ↔ panel desplegado, guía ↔ `/navigate` |
+| 4:00–8:00 AM | **3. Pulido + demo** | Cachear guion, ensayar 3 veces. **Code freeze 8:00 AM** |
+| 8:00–10:00 AM | Entrega | Video, Devpost (sube 10–11 AM, límite duro), slides |
+| 1:30 PM | Judging | |
 
-## Fase 0 — Setup (todos)
-- [ ] Clonar repo, `cp .env.example .env`
-- [ ] API key en cloud.swarms.world/api-keys (una del equipo, por DM, nunca en git) → solo Rol 3 la necesita
-- [ ] Leer `AGENTS.md`, `docs/PRODUCT.md`, `docs/CONTRACTS.md`
-- [ ] Poner nombres en la tabla de roles
-- [ ] Revisar `docs/REQUIREMENTS.md` y cambiar estado a **APPROVED v2**
+## Qué depende de qué (entregas entre personas)
 
-## Fase 1 — En paralelo, contra los mocks
+```mermaid
+flowchart LR
+    D1[Diego: ruta del demo<br/>9:00 PM] --> A3[Adrian: guía pregrabada]
+    D2[Diego: prompts asesores v1<br/>10:00 PM] --> P2[Piero: /chat/reply bueno]
+    D3[Diego: data MDC demo<br/>11:30 PM] --> P3[Piero: /roadmap]
+    R1[Robert: scaffold + bridge<br/>9:00 PM] --> A1[Adrian: iframe del panel]
+    P1[Piero: 1ra llamada real Swarms<br/>9:30 PM] --> P2
+    P2 --> I1[Integración chat<br/>1:00 AM]
+    R2[Robert: chat UI<br/>11:00 PM] --> I1
+    P4[Piero: backend desplegado<br/>1:00 AM] --> I1
+    R3[Robert: Vercel URL<br/>1:00 AM] --> A2[Adrian: extensión carga panel real]
+    R3 --> P5[Piero: CORS]
+    P6[Piero: /navigate<br/>2:00 AM] --> A4[Adrian: guía en vivo]
+```
 
-**Rol 1 — Extensión + guía**
-- [ ] `extension/manifest.json` (MV3), content script en `*://*.mdc.edu/*`, service worker
-- [ ] Botón tiburón 🦈 flotante abajo a la derecha (clases `shark-*`)
-- [ ] Panel: iframe con `PANEL_ORIGIN` (localhost:3000 en dev), abrir/cerrar sin perder estado
-- [ ] Puente `postMessage` (`shark:ready`, `shark:close`, `shark:start_guide`, `shark:open_url`, `shark:guide_finished`) con chequeo de `origin`
-- [ ] Snapshot de la página: elementos visibles interactivos, máx 150, `data-shark-id`
-- [ ] Overlay de guía: anillo de highlight + burbuja + botón "Stop guide"
-- [ ] Estado de la guía en `chrome.storage.session` (sobrevive cambios de página)
-- [ ] Modo mock (`MOCK_NAVIGATE=true`) con `shared/fixtures/navigate.example.json`
-- [ ] 2–3 guías pregrabadas reales en `shared/guides/` (visitar mdc.edu y sacar selectores)
+| Quién entrega | A quién | Qué | Para cuándo |
+|---|---|---|---|
+| Diego | Adrian | Ruta exacta del demo: carrera, programa MDC, URL de su página, qué caja se clickea | **9:00 PM** |
+| Robert | Adrian | `frontend/` corriendo en `localhost:3000` + `lib/shark-bridge.ts` pusheado | **9:00 PM** |
+| Piero | todos | Primera llamada real a Swarms + respuesta anotada en AGENT_PIPELINE.md | **9:30 PM** |
+| Diego | Piero | System prompts v1 de los 6 asesores (`docs/agents/`) | **10:00 PM** |
+| Diego | Piero | `data/` real para la carrera del demo (programas, costos, transfer) | **11:30 PM** |
+| Piero | Robert, Adrian | Backend desplegado (URL) con `/advisors` + `/chat/reply` | **1:00 AM** |
+| Robert | Adrian, Piero | Panel desplegado en Vercel (URL, para iframe y CORS) | **1:00 AM** |
+| Piero | Adrian | `/navigate` en vivo | **2:00 AM** |
+| Diego | todos | Guion del demo final | **4:00 AM** |
 
-**Rol 2 — Panel app**
-- [ ] Scaffold Next.js en `frontend/` (ver `frontend/README.md`)
-- [ ] `lib/types.ts` (tipos de CONTRACTS.md + schema), `lib/api.ts` (mock/real), `lib/shark-bridge.ts`, `lib/i18n.ts` (EN/ES)
-- [ ] Pantalla inicial: elegir modo (Group Chat / Mixture) + toggle de idioma
-- [ ] "Nuevo grupo": tarjetas de asesores (`data/advisors.json`) para agregarlos como amigos
-- [ ] Chat estilo WhatsApp: loop de turnos (un `POST /chat/reply` por asesor, en orden), typing indicator, `UsageBadge` (tokens + costo) bajo cada mensaje, total arriba
-- [ ] Vista Mixture: respuesta única, "construida por: …", costo total, se puede responder
-- [ ] Botón "Estoy listo para profundizar" → `POST /roadmap`
-- [ ] Flowchart con React Flow: un carril por ruta, una caja por paso (color por `kind`), puntos de entrada al trabajo, warnings arriba, "estimado" donde aplique
-- [ ] Clic en caja → `shark:start_guide`; botón secundario "Abrir página" → `shark:open_url`
-- [ ] Descargar PDF del flowchart
-- [ ] Header `frame-ancestors https://*.mdc.edu` en `next.config`
+## Prioridades (si vamos atrasados, se recorta de abajo hacia arriba)
 
-**Rol 3 — Backend + Swarms**
-- [ ] Scaffold FastAPI: `/health`, `/advisors`, config, CORS (panel + `chrome-extension://*`)
-- [ ] Modelos Pydantic: `Message`, `Usage`, `Roadmap` (espejo del schema), `NavStep`
-- [ ] Cliente Swarms (`httpx`), primer llamado real a `agent/completions` → anotar respuesta en AGENT_PIPELINE.md
-- [ ] `POST /chat/reply` (prompt del asesor + historial + datos MDC filtrados)
-- [ ] `POST /mixture` (`swarm/completions`, `MixtureOfAgents`) → anotar cómo elige el agregador
-- [ ] `POST /roadmap` (Roadmap Writer → validar → repair → fixture)
-- [ ] `POST /navigate` (Navigator, validar `element_id`)
-- [ ] Cache en disco + `DEMO_MODE` para todos los endpoints
-- [ ] Tests con Swarms mockeado
+1. **Group chat con tokens + costo** (panel + `/chat/reply`) — el corazón del Swarms challenge
+2. **Flowchart desde la conversación** (que la primera caja sea un programa real de MDC) — el corazón del MDC challenge
+3. **Extensión: tiburón + panel en mdc.edu**
+4. **Guía en la página con guía pregrabada** (la ruta del demo)
+5. Mixture mode
+6. PDF
+7. Guía en vivo con Navigator (`/navigate`)
+8. Español
+9. Costo después de ayuda financiera, modelos distintos por asesor
 
-**Rol 4 — Datos + agentes + pitch**
-- [ ] `data/mdc_programs.json`: programas reales de MDC para las carreras del demo (mínimo cybersecurity bien completo) con `source_url`
-- [ ] `data/costs.json`: costo por crédito MDC (verificar tarifa actual en mdc.edu/tuition), FIU/FAU/UCF
-- [ ] `data/transfer_agreements.json`: FIU Connect4Success (+ aviso limited-access: Architecture, Nursing), FAU, UCF
-- [ ] `data/financial_aid.json`: Pell, Bright Futures, FSAG, work-study, becas MDC
-- [ ] Escribir los system prompts de los 6 asesores (personalidad, qué cubre cada uno, reglas de honestidad) → pasarlos a Rol 3
-- [ ] Elegir la ruta exacta del demo (qué programa, qué caja se clickea) y pasarla a Rol 1 para la guía pregrabada
-- [ ] `docs/DEMO.md` final, slides (problema → demo → swarm → impacto), video, Devpost
-- [ ] Nombre del producto
-
-## Fase 2 — Integración
-- [ ] Panel apunta al backend real (`NEXT_PUBLIC_USE_MOCK=false`)
-- [ ] Extensión carga el panel desplegado (Vercel) en mdc.edu
-- [ ] Guía usa `/navigate` real; fallback a guía pregrabada funciona
-- [ ] Deploy backend (Render/Railway) + panel (Vercel)
-
-## Fase 3 — Pulido y demo
-- [ ] Correr el guion del demo en vivo y cachearlo (`DEMO_MODE` lo sirve)
-- [ ] Revisar selectores de guías pregrabadas en mdc.edu
-- [ ] Probar en español
-- [ ] Ensayar 3 veces, con y sin internet
-- [ ] Monitor del stand listo con Chrome + extensión cargada
+## Checklists por rol
+Están en cada brief de [roles/](roles/). Marquen ahí.
