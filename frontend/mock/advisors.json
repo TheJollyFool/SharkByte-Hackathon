@@ -1,0 +1,8 @@
+[
+  {"id":"career","name":"Career Explorer","role":"Finds careers that match your interests","mdc_section":"§1 Career exploration","emoji":"🧭","color":"#1d7fd6","order":1,"model_name":"placeholder"},
+  {"id":"pathway","name":"Pathway Planner","role":"Maps MDC programs and transfers","mdc_section":"§2 Pathways","emoji":"🗺️","color":"#7c3aed","order":2,"model_name":"placeholder"},
+  {"id":"cost","name":"Cost Analyst","role":"Estimates time and cost","mdc_section":"§3 Cost","emoji":"💵","color":"#059669","order":3,"model_name":"placeholder"},
+  {"id":"prodev","name":"Pro Dev Coach","role":"Certifications, exams, internships","mdc_section":"§4 Professional development","emoji":"🎓","color":"#d97706","order":4,"model_name":"placeholder"},
+  {"id":"alternatives","name":"Alternatives Scout","role":"Related programs and backup plans","mdc_section":"§5 Alternatives","emoji":"🔀","color":"#db2777","order":5,"model_name":"placeholder"},
+  {"id":"finaid","name":"Aid Advisor","role":"Pell, Bright Futures, scholarships","mdc_section":"§6 Financial aid","emoji":"🎁","color":"#0f766e","order":6,"model_name":"placeholder"}
+]
