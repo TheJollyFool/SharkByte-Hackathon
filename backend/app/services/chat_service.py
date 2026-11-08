@@ -1,5 +1,4 @@
 from app.config import get_settings
-from app.data_loader import fixture
 from app.models.errors import ApiError
 from app.models.messages import ChatReplyRequest, Message
 from app.services import cache
@@ -19,15 +18,6 @@ def _cache_key(req: ChatReplyRequest) -> dict:
     }
 
 
-def _fallback(req: ChatReplyRequest) -> Message | None:
-    fx = fixture("chat_reply.example.json")
-    if not fx:
-        return None
-    msg = Message.model_validate({**fx, "advisor_id": req.advisor_id})
-    msg.source = "fallback"
-    return msg
-
-
 async def reply(req: ChatReplyRequest) -> Message:
     key = _cache_key(req)
     if (hit := cache.get(ENDPOINT, key)) is not None:
@@ -37,22 +27,15 @@ async def reply(req: ChatReplyRequest) -> Message:
 
     s = get_settings()
     if s.demo_mode:
-        if fb := _fallback(req):
-            return fb
         raise ApiError("upstream_failed", "DEMO_MODE on and no cached answer for this turn")
 
-    try:
-        resp = await get_swarms().agent_completion(
-            agent_name=req.advisor_id,
-            system_prompt=system_prompt(req.advisor_id),
-            task=chat_task(req.advisor_id, req.group, req.language, req.history),
-            model_name=s.model_for(req.advisor_id),
-            max_tokens=s.max_tokens_chat,
-        )
-    except ApiError:
-        if fb := _fallback(req):
-            return fb
-        raise
+    resp = await get_swarms().agent_completion(
+        agent_name=req.advisor_id,
+        system_prompt=system_prompt(req.advisor_id),
+        task=chat_task(req.advisor_id, req.group, req.language, req.history),
+        model_name=s.model_for(req.advisor_id),
+        max_tokens=s.max_tokens_chat,
+    )
 
     msg = Message(
         role="advisor",
