@@ -1,7 +1,7 @@
 import type { Language } from "./types";
 
 const en = {
-  appName: "Shark Advisor",
+  appName: "AdByteSor",
   pickMode: "How do you want advice?",
   groupChat: "Group Chat",
   groupChatDesc: "Pick advisors like friends in a group. They answer one by one.",
@@ -71,7 +71,7 @@ const en = {
 };
 
 const es: typeof en = {
-  appName: "Shark Advisor",
+  appName: "AdByteSor",
   pickMode: "¿Cómo quieres recibir consejo?",
   groupChat: "Chat de grupo",
   groupChatDesc: "Elige asesores como amigos en un grupo. Responden uno por uno.",
