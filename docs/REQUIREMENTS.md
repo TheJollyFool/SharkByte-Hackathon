@@ -18,9 +18,8 @@
 | FR-3 | Mode picker: **Group Chat** or **Mixture of Agents** | Swarms |
 | FR-4 | Group Chat: "New group" screen where the student picks which advisors to add (6 available, default all) | Personalized |
 | FR-5 | Group Chat turns: after each student message, each selected advisor answers **once**, in a fixed order, seeing the previous answers; then all wait for the student | Swarms |
-| FR-6 | Mixture: all advisors run, an aggregator merges them into one answer; the student can reply to refine it | Swarms |
+| FR-6 | Mixture: all advisors run, an aggregator merges them into one answer; the student can reply to refine it. **Built after the group chat works end to end** | Swarms |
 | FR-7 | Every advisor message shows **tokens and cost (USD)** in small text; each conversation shows a running total | Swarms |
-| FR-8 | Advisors answer in the student's language (English / Spanish toggle) | Easy to use |
 
 ### Roadmap
 | ID | Requirement | Covers |
@@ -31,15 +30,15 @@
 | FR-12 | Each route shows total time and total cost; workforce entry points marked between steps | MDC §3, §5 |
 | FR-13 | Transfer steps name the agreement used; certifications/exams/internships appear as steps or tags | MDC §2, §4 |
 | FR-14 | Roadmap shown as a **flowchart**; every box is clickable | Actionable |
-| FR-15 | Flowchart can be **downloaded as PDF** | Actionable |
+| FR-15 | Flowchart can be **downloaded as PDF** (`window.print()` with a print stylesheet is enough) | Actionable |
 | FR-16 | Warnings shown when they apply (limited-access majors, estimated data) | Honest |
 
 ### In-page guide
 | ID | Requirement | Covers |
 |---|---|---|
 | FR-17 | Clicking a box closes the panel and starts a step-by-step guide on mdc.edu: highlight + bubble on the element to click / field to type | Actionable, wow |
-| FR-18 | Guide is driven by a **Navigator** agent that reads the current page's visible links/buttons/inputs; repeats after each page change; "Stop guide" always available | Designed to grow |
-| FR-19 | Fallbacks: pre-recorded guides for the demo path, and "Open page directly" (box `source_url`) | Demo safety |
+| FR-18 | Guide works from a **pre-recorded guide** for the demo path (`shared/guides/`), persists across page loads, "Stop guide" always available | Demo safety |
+| FR-19 | Fallback for boxes without a guide: "Open page directly" (box `source_url`) | Actionable |
 
 ### Demo safety
 | ID | Requirement | Covers |
@@ -53,7 +52,11 @@
 - NFR-4 No prior knowledge of college programs needed.
 - NFR-5 Adding a career/program = data changes in `data/*.json`, no code.
 
-## Should have (if time)
+## Should have (if time, in this order — only after the MVP demo runs)
+- Live **Navigator** agent (`POST /navigate`) that reads the page so the guide works on any box
+- English / Spanish toggle; advisors answer in the student's language
+- Estimated cost after financial aid on the flowchart (`net_cost_after_aid_usd`)
+- Per-agent usage in Mixture
 - Different model per advisor (shown on the advisor card)
 - Streaming text in chat
 - More pre-recorded guides
@@ -68,12 +71,12 @@
 
 ## Definition of done (MVP)
 On mdc.edu with the extension loaded: shark → Group Chat with ≥3 advisors (tokens + cost under each
-message) → "ready" → flowchart with a real MDC first step → PDF download works → clicking a box guides
-the student on mdc.edu to that page. Same flow works via Mixture. Whole demo runs with
-`DEMO_MODE=true` and with it off.
+message) → "ready" → flowchart with a real MDC first step → PDF download works → clicking the demo box
+guides the student on mdc.edu to that page (pre-recorded guide). Mixture reaches the flowchart too.
+Whole demo runs with `DEMO_MODE=true` and with it off. Everything pushed to `master` by **Sun 1:30 AM**.
 
 ## Approval
-- Status: **DRAFT v2** — 2026-11-07. Replaces APPROVED v1 (web app with career picker).
-  Written from Diego's description of the new idea (shark extension + group chat / mixture +
-  flowchart + in-page guide). **Needs team approval** — edit, then change status to APPROVED v2.
+- Status: **APPROVED v2** — 2026-11-07, idea agreed by the whole team (Adrian, Robert, Piero, Diego).
+  Replaces v1 (web app with career picker). Scope cut on 2026-11-07 8 PM for the **1:30 AM code freeze**:
+  live Navigator, Spanish and cost-after-aid moved to "Should have".
 - Challenges: **MDC North Campus Challenge** and **Swarms API Challenge**. Nothing else drives scope.

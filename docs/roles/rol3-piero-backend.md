@@ -17,30 +17,26 @@ el producto real depende de ti.
 4. `docs/ARCHITECTURE.md` → "Backend module layout", flujos
 5. `shared/roadmap.schema.json`, `data/advisors.json`
 
-## Tareas en orden (con hora meta)
+## Tareas en orden (con hora meta) — code freeze 1:30 AM
 
 | # | Tarea | Meta |
 |---|---|---|
-| 1 | Conseguir la API key (cloud.swarms.world/api-keys) en `.env`; `GET /v1/models/available` para confirmar nombres de modelos | 8:30 PM |
-| 2 | Scaffold FastAPI: `main.py`, `config.py` (pydantic-settings), CORS (localhost:3000, Vercel, `chrome-extension://*`), `/health`, `/advisors` (de `data/advisors.json`) | 9:00 PM |
-| 3 | Cliente Swarms (`httpx.AsyncClient`, timeout, 1 retry). **Primera llamada real** a `POST /v1/agent/completions` → pegar respuesta recortada en "Observed responses" de AGENT_PIPELINE.md y avisar al equipo | 9:30 PM |
-| 4 | Modelos Pydantic: `Usage`, `Message`, `Roadmap` (espejo del schema), `NavStep` | 10:00 PM |
-| 5 | `POST /chat/reply`: prompt del asesor (prompts de Diego en `docs/agents/`, placeholders hasta las 10 PM) + historial + datos MDC filtrados → `Message` con `usage` | 11:00 PM |
-| 6 | Cache en disco (`sha256(endpoint + request)`) + `DEMO_MODE` (solo cache/fixtures) para `/chat/reply` | 11:30 PM |
-| 7 | `POST /mixture`: `swarm/completions` con `swarm_type: "MixtureOfAgents"` → anotar cómo elige el agregador y si devuelve usage por agente | 12:30 AM |
-| 8 | **Deploy** (Render/Railway) con `/advisors` + `/chat/reply` + `/mixture` → URL a Robert y Adrian | 1:00 AM |
-| 9 | `POST /roadmap`: Roadmap Writer → validar con Pydantic → 1 repair → fixture `fallback`. Primera caja siempre programa MDC de `data/` | 1:45 AM |
-| 10 | `POST /navigate`: Navigator → validar que `element_id` esté en `page.elements` → retry → `open_url` | 2:30 AM |
-| 11 | Cache + `DEMO_MODE` para `/mixture`, `/roadmap`, `/navigate` | 3:00 AM |
-| 12 | Tests `pytest` con Swarms mockeado (mínimo: chat_reply, roadmap fallback) | 3:30 AM |
-| 13 | Correr el guion del demo en vivo para llenar el cache; probar `DEMO_MODE=true` | 5:00 AM |
-| 14 | Revisar gasto: `GET /v1/usage/costs`, `GET /v1/account/credits` | siempre |
+| 1 | API key (cloud.swarms.world/api-keys) en `.env`; `GET /v1/models/available` | 8:15 PM |
+| 2 | Scaffold FastAPI: `main.py`, `config.py`, CORS (localhost:3000, Vercel, `chrome-extension://*`), `/health`, `/advisors` | 8:30 PM |
+| 3 | Cliente Swarms + **primera llamada real** a `POST /v1/agent/completions` → pegar respuesta recortada en AGENT_PIPELINE.md y avisar al equipo | **8:45 PM** |
+| 4 | Modelos Pydantic: `Usage`, `Message`, `Roadmap` (espejo del schema) | 9:15 PM |
+| 5 | `POST /chat/reply`: prompt del asesor (de `docs/agents/`, Diego los entrega 9:30; antes placeholders) + historial + datos MDC → `Message` con `usage` | 10:00 PM |
+| 6 | Cache en disco + `DEMO_MODE` para `/chat/reply` | 10:30 PM |
+| 7 | **Deploy** (Render/Railway) con `/advisors` + `/chat/reply` → URL a Robert | **11:00 PM** |
+| 8 | `POST /roadmap`: Roadmap Writer → validar → 1 repair → fixture `fallback`; primera caja = programa MDC de `data/` (Diego entrega datos 10:30) | **11:45 PM** |
+| 9 | `POST /mixture` (`swarm/completions`, `MixtureOfAgents`) + cache — después de que `/roadmap` funcione | 12:30 AM |
+| 10 | Correr el guion del demo en vivo para llenar el cache; probar `DEMO_MODE=true`; **pushear a `master`** | 1:30 AM |
+| extra | Solo si sobra tiempo: `POST /navigate`, tests `pytest` con Swarms mockeado | — |
 
 ## Dependencias
-- **Recibes de Diego (10:00 PM):** system prompts v1 de los 6 asesores en `docs/agents/`. **(11:30 PM):** `data/` real para la carrera del demo. Antes, usa placeholders.
-- **Recibes de Robert (1:00 AM):** URL de Vercel (para CORS).
-- **Entregas a todos (9:30 PM):** forma real de la respuesta de Swarms.
-- **Entregas a Robert y Adrian (1:00 AM):** URL del backend. **(2:30 AM):** `/navigate` vivo para Adrian.
+- **Recibes de Diego:** prompts de los asesores (9:30 PM), datos del MDC del demo (10:30 PM). Antes, placeholders.
+- **Recibes de Robert (12:15 AM):** URL de Vercel para CORS.
+- **Entregas a todos (8:45 PM):** forma real de la respuesta de Swarms. **A Robert:** `/chat/reply` desplegado (11:00 PM), `/roadmap` (11:45 PM).
 
 ## Terminado cuando
 Backend desplegado; los 5 endpoints cumplen CONTRACTS.md; cada respuesta trae `usage` y `source`;
@@ -48,10 +44,9 @@ el roadmap pasa la validación del schema y su primera caja es un programa MDC r
 el guion del demo corre completo sin llamar a Swarms.
 
 ## Si vas atrasado (recorta en este orden)
-1. `per_agent_usage` en mixture (devuelve `{}`)
-2. `/navigate` en vivo (Adrian usa la guía pregrabada)
-3. Tests más allá de los mínimos
-4. Nunca recortes: `/chat/reply` con usage, `/roadmap` válido, `DEMO_MODE`
+1. `/navigate` y tests (ya son extra)
+2. `/mixture`
+3. Nunca recortes: `/chat/reply` con usage, `/roadmap` válido, `DEMO_MODE`
 
 ## Tips
 - `max_tokens` bajos: chat ≈ 300, agregador ≈ 600, writer ≈ 4000, navigator ≈ 200.
@@ -66,7 +61,7 @@ el guion del demo corre completo sin llamar a Swarms.
 You are working in the SharkByte-Hackathon repo. I am Piero, owner of Role 3: the FastAPI backend that calls
 the Swarms API.
 
-First read, in this order: AGENTS.md, docs/roles/rol3-piero-backend.md, docs/CONTRACTS.md (section B and
+First read, in this order: AGENTS.md, docs/CONTEXT.md, docs/roles/rol3-piero-backend.md, docs/CONTRACTS.md (section B and
 "Shared types"), docs/AGENT_PIPELINE.md, docs/ARCHITECTURE.md ("Backend module layout" and flows),
 shared/roadmap.schema.json, data/advisors.json, .env.example.
 
@@ -87,9 +82,10 @@ Requirements:
 - Task strings follow the templates in docs/AGENT_PIPELINE.md. Inject only MDC programs relevant to the career.
 - /roadmap: validate the Writer output with the Pydantic Roadmap model; one repair call; else the closest fixture
   from shared/fixtures with source "fallback". First step of every route must be an MDC program from data/.
-- /navigate: element_id must exist in page.elements; retry once; else action open_url with goal.url.
+- /navigate is OPTIONAL (only if time remains before the 1:30 AM freeze): element_id must exist in page.elements;
+  retry once; else action open_url with goal.url.
 - Disk cache keyed by sha256(endpoint + normalized request). DEMO_MODE=true never calls Swarms.
-- pytest with the Swarms HTTP call mocked; tests never spend credits.
+- Order of work: /chat/reply deployed first, then /roadmap, then /mixture. Tests (pytest, Swarms mocked) only if time.
 
 Start with tasks 2-3: scaffold + Swarms client, then make ONE real call to /v1/agent/completions with a cheap model
 and paste the trimmed real response into docs/AGENT_PIPELINE.md "Observed responses". Use branch

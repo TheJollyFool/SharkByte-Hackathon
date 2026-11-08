@@ -112,7 +112,7 @@ Agent details, prompts and Swarms calls: [AGENT_PIPELINE.md](AGENT_PIPELINE.md).
 - A different model per advisor is possible (Swarms picks the model per agent).
 - Navigator agent turns the roadmap into actions on a real website.
 
-## Extras (all in MVP, small)
+## Extras (see REQUIREMENTS.md for which ship by the 1:30 AM freeze and which are "if time")
 - **English / Spanish** toggle; advisors answer in the student's language.
 - **Financial Aid Advisor** (team's own expertise — strong pitch point).
 - **Honest warnings**: limited-access majors, estimates labeled as estimates, data gaps flagged

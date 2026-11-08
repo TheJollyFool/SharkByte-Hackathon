@@ -16,62 +16,27 @@ video, Devpost). Tu experiencia en Financial Aid es la ventaja que nadie más ti
 4. `data/README.md` y los JSON de `data/`
 5. `docs/DEMO.md`
 
-## Tareas en orden (con hora meta)
+## Tareas en orden (con hora meta) — code freeze 1:30 AM
 
 | # | Tarea | Meta |
 |---|---|---|
-| 1 | **Elegir la ruta del demo** y mandarla a Adrian: carrera (recomendado: Cybersecurity), programa MDC exacto, URL de su página en mdc.edu, qué caja se clickea, y cómo se llega desde la home de mdc.edu (los clics) | **9:00 PM** |
-| 2 | Crear `docs/agents/` con un archivo por asesor (`career.md`, `pathway.md`, `cost.md`, `finaid.md`, `prodev.md`, `alternatives.md`) usando el formato de abajo. Pásale el aviso a Piero | **10:00 PM** |
-| 3 | `data/mdc_programs.json`: programas reales de MDC para la carrera del demo (certificado, A.S., A.A., B.A.S. si hay), con créditos, duración, `source_url` | 11:00 PM |
-| 4 | `data/costs.json`: costo por crédito MDC (verifica en mdc.edu/tuition: hay versiones con $118.22 y $129.89), out-of-state, FIU/FAU/UCF | 11:30 PM |
-| 5 | `data/transfer_agreements.json`: FIU Connect4Success (A.A. en 3 años, aplicar tras 12–30 créditos, **no garantiza** Architecture ni Nursing), FAU, UCF | 11:30 PM |
-| 6 | `data/financial_aid.json`: Pell (monto máx actual), Bright Futures (por crédito en MDC), FSAG, work-study, becas MDC, URL de financial aid de MDC | 12:30 AM |
-| 7 | Prompts del **Aggregator**, **Roadmap Writer** y **Navigator** (revisar los de AGENT_PIPELINE.md y mejorarlos) en `docs/agents/` | 1:00 AM |
-| 8 | Datos de 2–4 carreras más (Mechanical Engineer, Architect, Chef, IT Consultant), aunque sea menos completo | 2:30 AM |
-| 9 | Probar el chat real con Piero: ¿los asesores repiten? ¿inventan? Ajustar prompts | 3:30 AM |
-| 10 | `docs/DEMO.md` final (3 min) con el guion exacto que se va a escribir en el chat | **4:00 AM** |
-| 11 | Slides: problema → demo → cómo funciona el swarm → impacto/escala. Nombre del producto | 6:00 AM |
-| 12 | Video de demo (grabar la pantalla del flujo completo) | 9:00 AM |
-| 13 | Devpost: descripción, tecnologías, challenges (MDC + Swarms), video, link al repo | **10:00–11:00 AM** |
-
-## Formato de cada `docs/agents/<id>.md`
-
-~~~markdown
-# Career Explorer (career)
-
-## Personalidad
-Amigable, directo, como un amigo que ya trabaja en la industria.
-
-## Cubre
-- Qué hace la carrera, responsabilidades, requisitos, salario en Miami, demanda, carreras relacionadas
-
-## NO cubre (lo dicen otros)
-- Programas de MDC (pathway), costos (cost), ayuda financiera (finaid)...
-
-## Datos que recibe
-- (ninguno de data/) | mdc_programs | costs | transfer_agreements | financial_aid
-
-## Reglas de honestidad
-- Si no tiene el dato, lo dice. Números que no vienen de los datos = "estimado".
-
-## System prompt
-```text
-You are Career Explorer, one advisor in a group chat that helps a student ...
-Answer in the student's language. Max 120 words. ...
-```
-
-## Ejemplo de respuesta
-"Un especialista en ciberseguridad protege ... En Miami gana cerca de $X (estimado)..."
-~~~
-
-Piero lee la sección **"System prompt"** de cada archivo. El prompt va en inglés (los modelos lo siguen mejor), pero
-le dice al agente que responda en el idioma del estudiante.
+| 1 | **Elegir la ruta del demo** y mandarla a Adrian: carrera (recomendado: Cybersecurity), programa MDC exacto, URL de su página en mdc.edu, qué caja se clickea, y los clics desde la home de mdc.edu | **8:30 PM** |
+| 2 | Crear `docs/agents/` con un archivo por asesor (`career.md`, `pathway.md`, `cost.md`, `finaid.md`, `prodev.md`, `alternatives.md`) con el formato de abajo; avisar a Piero | **9:30 PM** |
+| 3 | `data/mdc_programs.json`: programas reales de MDC para la carrera del demo (certificado, A.S., A.A., B.A.S. si hay), créditos, duración, `source_url` | 10:00 PM |
+| 4 | `data/costs.json` (costo por crédito MDC — verificar en mdc.edu/tuition: hay versiones con $118.22 y $129.89 — out-of-state, FIU/FAU/UCF) y `data/transfer_agreements.json` (FIU Connect4Success: A.A. en 3 años, aplicar tras 12–30 créditos, **no garantiza** Architecture ni Nursing; FAU; UCF). Avisar a Piero | **10:30 PM** |
+| 5 | `data/financial_aid.json`: Pell (monto máx actual), Bright Futures (por crédito en MDC), FSAG, work-study, becas MDC | 11:00 PM |
+| 6 | Revisar el prompt del **Roadmap Writer** y del **Aggregator** (`docs/agents/roadmap-writer.md`, `aggregator.md`) | 11:30 PM |
+| 7 | Probar el chat real (desde 11:15): ¿los asesores repiten? ¿inventan? Ajustar prompts con Piero | 12:15 AM |
+| 8 | `docs/DEMO.md` final con el guion exacto que se escribe en el chat | **12:30 AM** |
+| 9 | Correr el demo completo con el equipo; **pushear a `master`** | 1:30 AM |
+| mañana | Nombre del producto, slides (problema → demo → swarm → impacto), video de 1–2 min, Devpost (10–11 AM) | 10:00 AM |
+| extra | Solo si sobra tiempo: datos de otras carreras, prompt del Navigator | — |
 
 ## Dependencias
-- **Entregas a Adrian (9:00 PM):** ruta del demo.
-- **Entregas a Piero (10:00 PM):** prompts v1. **(11:30 PM):** datos del demo.
-- **Entregas a todos (4:00 AM):** guion final.
-- **Recibes de Piero (~11 PM):** chat real funcionando para probar tus prompts.
+- **Entregas a Adrian (8:30 PM):** ruta del demo.
+- **Entregas a Piero:** prompts (9:30 PM), datos del demo (10:30 PM).
+- **Entregas a todos (12:30 AM):** guion del demo.
+- **Recibes de Piero/Robert (~11:15 PM):** chat real para probar tus prompts.
 
 ## Terminado cuando
 Cada entrada de `data/` tiene `source_url` (y `estimate: true` donde es aproximado); los 9 archivos de
@@ -79,9 +44,9 @@ Cada entrada de `data/` tiene `source_url` (y `estimate: true` donde es aproxima
 antes de las 11:00 AM.
 
 ## Si vas atrasado (recorta en este orden)
-1. Carreras extra (quédate con una bien hecha)
-2. Video largo → video de 1 min
-3. Nunca recortes: ruta del demo, prompts de los asesores, datos de la carrera del demo, Devpost a tiempo
+1. Carreras extra (ya es extra; quédate con una bien hecha)
+2. `financial_aid.json` completo (el asesor puede hablar en general, marcado como estimado)
+3. Nunca recortes: ruta del demo, prompts de los asesores, datos de la carrera del demo, guion
 
 ## Tips
 - No necesitas programar: tu agente convierte tus notas a JSON. Tú verificas que el dato y el link sean reales.
@@ -96,7 +61,7 @@ antes de las 11:00 AM.
 You are working in the SharkByte-Hackathon repo. I am Diego, owner of Role 4: MDC data, the advisor agents'
 prompts, and the pitch. I am not writing app code; you help me research, write and structure content.
 
-First read, in this order: AGENTS.md, docs/roles/rol4-diego-data-pitch.md, docs/PRODUCT.md, docs/AGENT_PIPELINE.md,
+First read, in this order: AGENTS.md, docs/CONTEXT.md, docs/roles/rol4-diego-data-pitch.md, docs/PRODUCT.md, docs/AGENT_PIPELINE.md,
 data/README.md and every file in data/, docs/DEMO.md.
 
 Then help me with the task table in my role doc, in order. Work only inside data/, docs/agents/ and docs/DEMO.md.
@@ -115,6 +80,6 @@ Rules:
 - The finaid advisor covers Pell, Bright Futures, FSAG, FAFSA, work-study and estimated cost after aid (always
   labeled estimate) — I work at FIU Financial Aid, so ask me when unsure.
 
-Start with task 2: draft docs/agents/ for the 6 advisors so I can review them in 30 minutes. Use branch
+Code freeze is 1:30 AM. Start with task 2: draft docs/agents/ for the 6 advisors so I can review them in 20 minutes. Use branch
 feat/data-agents with small commits.
 ```

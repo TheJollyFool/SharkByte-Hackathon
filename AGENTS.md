@@ -17,10 +17,25 @@ or type on the real mdc.edu page until the student reaches that program/course/c
 
 Full spec: [docs/PRODUCT.md](docs/PRODUCT.md).
 
+## Context: event, team, deadline
+
+- **Event:** SharkByte 2026, Miami Dade College's hackathon (Nov 6–8, 2026). We build for two challenges:
+  **MDC North Campus "Smart Career and Education Pathway Navigator"** and **Swarms API**
+  ([docs/TRACKS.md](docs/TRACKS.md)). The MDC requirements are in [docs/PRODUCT.md](docs/PRODUCT.md);
+  the Swarms API usage (from the official slides) is in [docs/AGENT_PIPELINE.md](docs/AGENT_PIPELINE.md).
+- **Team (4 people, 1 role each):** Adrian = Role 1 extension, Robert = Role 2 panel app,
+  Piero = Role 3 backend + Swarms, Diego = Role 4 data, agent prompts, pitch.
+- **Deadline:** **code freeze Sun Nov 8, 1:30 AM** (everything pushed to `master`). Sunday morning is only
+  rehearsal, slides, video and Devpost (submission 10–11 AM). Prefer the simplest thing that works for the demo.
+- **Your human will tell you their role.** Read their brief in [docs/roles/](docs/roles/) right after this file
+  and work only in the folders that brief owns. If they don't say, ask which role they have.
+
 ## Read order (source of truth)
 
 | Doc | What | Who edits |
 |---|---|---|
+| [docs/CONTEXT.md](docs/CONTEXT.md) | **Background: event, challenge briefs, Swarms slides, research, team, decisions** | Team |
+| [docs/roles/](docs/roles/) | **One brief per person: tasks in order, target times, handoffs, cut list** | Team |
 | [docs/REQUIREMENTS.md](docs/REQUIREMENTS.md) | **Scope: what we build and what we DON'T** | **Humans only — read-only for agents** |
 | [docs/PRODUCT.md](docs/PRODUCT.md) | Product spec, user flow, advisors, MDC judging checklist | Team |
 | [docs/CONTRACTS.md](docs/CONTRACTS.md) | HTTP endpoints, shared types, extension ↔ panel messages | Owners of both sides together |
