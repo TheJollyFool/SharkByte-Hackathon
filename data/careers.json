@@ -17,7 +17,6 @@
       "programming",
       "programmer",
       "developer",
-      "app",
       "coding",
       "computer science",
       "programador"
@@ -58,9 +57,10 @@
     "title": "Artificial Intelligence Specialist",
     "keywords": [
       "artificial intelligence",
-      "ai",
       "machine learning",
-      "inteligencia artificial"
+      "inteligencia artificial",
+      "ai engineer",
+      "a.i."
     ]
   },
   {
@@ -93,8 +93,7 @@
       "civil",
       "construction",
       "construccion",
-      "surveying",
-      "gis"
+      "surveying"
     ]
   },
   {
@@ -187,7 +186,6 @@
     "id": "lab-scientist",
     "title": "Lab Scientist / Biotechnologist",
     "keywords": [
-      "lab",
       "laboratory",
       "biotech",
       "laboratorio"
@@ -197,7 +195,6 @@
     "id": "scientist",
     "title": "Scientist (biology, chemistry, physics, environment)",
     "keywords": [
-      "science",
       "scientist",
       "biology",
       "chemistry",
@@ -219,8 +216,7 @@
     "id": "physician-assistant",
     "title": "Physician Assistant",
     "keywords": [
-      "physician assistant",
-      "pa"
+      "physician assistant"
     ]
   },
   {
@@ -241,9 +237,9 @@
       "therapist",
       "physical therapy",
       "respiratory",
-      "speech",
       "occupational",
-      "terapia"
+      "terapia",
+      "speech therapy"
     ]
   },
   {
@@ -291,7 +287,6 @@
       "police",
       "law enforcement",
       "criminal justice",
-      "security",
       "policia"
     ]
   },
@@ -310,8 +305,9 @@
     "title": "Firefighter",
     "keywords": [
       "firefighter",
-      "fire",
-      "bombero"
+      "bombero",
+      "fire department",
+      "fire fighter"
     ]
   },
   {
@@ -319,7 +315,6 @@
     "title": "Lawyer / Paralegal",
     "keywords": [
       "lawyer",
-      "law",
       "attorney",
       "paralegal",
       "legal",
@@ -378,7 +373,6 @@
       "finance",
       "banking",
       "bank",
-      "financial",
       "economics",
       "finanzas"
     ]
@@ -429,13 +423,10 @@
     "id": "artist",
     "title": "Artist / Performer (art, music, dance, theater)",
     "keywords": [
-      "art",
       "artist",
       "music",
       "dance",
       "theater",
-      "actor",
-      "arte",
       "musica"
     ]
   },
@@ -455,9 +446,8 @@
       "film",
       "movie",
       "television",
-      "tv",
       "audio",
-      "cine"
+      "cinema"
     ]
   },
   {
@@ -526,7 +516,6 @@
     "title": "Sports Manager / Fitness & Recreation",
     "keywords": [
       "sports",
-      "sport",
       "fitness",
       "recreation",
       "deportes"
@@ -556,7 +545,6 @@
     "keywords": [
       "automotive",
       "mechanic",
-      "car",
       "truck",
       "cdl",
       "tesla",
@@ -579,8 +567,7 @@
       "not sure",
       "undecided",
       "don't know",
-      "no se",
-      "explore"
+      "no se"
     ]
   }
 ]
