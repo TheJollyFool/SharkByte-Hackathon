@@ -5,7 +5,7 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from app.api import advisors, chat, health
+from app.api import advisors, chat, health, roadmap
 from app.config import get_settings
 from app.models.errors import ApiError
 from app.swarm.client import get_swarms
@@ -45,5 +45,5 @@ async def validation_handler(_: Request, exc: RequestValidationError) -> JSONRes
     return _err(400, "invalid_request", f"{loc}: {first.get('msg', 'invalid body')}")
 
 
-for r in (health.router, advisors.router, chat.router):
+for r in (health.router, advisors.router, chat.router, roadmap.router):
     app.include_router(r)

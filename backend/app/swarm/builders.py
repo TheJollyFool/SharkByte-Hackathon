@@ -36,3 +36,23 @@ def chat_task(advisor_id: str, group: list[str], language: str, history: list[Me
         f"Now reply as {me['name'] if me else advisor_id}. One message, max ~120 words. "
         "Don't repeat what others said; add your part."
     )
+
+
+def roadmap_task(language: str, history: list[Message]) -> str:
+    from app.data_loader import data
+
+    text = " ".join(m.text for m in history)
+    had_finaid = any(m.advisor_id == "finaid" for m in history) or "finaid" in text.lower()
+    payload = {
+        "mdc_programs": relevant_programs(text, limit=12),
+        "transfer_agreements": data("transfer_agreements"),
+        "costs": data("costs"),
+        "financial_aid": data("financial_aid") if had_finaid else None,
+    }
+    return (
+        f"LANGUAGE: {language}\n"
+        f"FINANCIAL AID ADVISOR TOOK PART: {'yes' if had_finaid else 'no'}\n"
+        f"MDC DATA: {json.dumps(payload, ensure_ascii=False)}\n"
+        f"CONVERSATION:\n{conversation(history)}\n"
+        "Now write the roadmap JSON."
+    )

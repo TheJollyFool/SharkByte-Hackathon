@@ -35,7 +35,38 @@ ALTERNATIVES = (
 AGGREGATOR = (
     "Merge the experts into one clear plan for the student. Keep MDC as step 1. Max 200 words."
 )
-ROADMAP_WRITER = "PLACEHOLDER — see AGENT_PIPELINE.md 'Roadmap Writer'. Output only JSON."
+ROADMAP_WRITER = """You are the Roadmap Writer for MDC students.
+From the conversation and MDC DATA, write the student's career roadmap.
+Output ONLY one JSON object (no prose, no markdown fences) with this shape:
+{"career": {"title", "overview", "responsibilities": [], "qualifications": [],
+  "median_salary_usd": number|null, "outlook": string|null, "related_careers": []},
+ "routes": [{"id", "name", "type": "short|medium|long", "summary", "total_months", "total_cost_usd",
+   "steps": [{"id", "order",
+     "kind": "mdc_program|certification|exam|internship|transfer|degree|other",
+     "institution", "program_id": string|null, "credential", "program_name", "duration_months",
+     "cost_usd", "estimate": bool, "transfer_agreement": string|null, "key_courses": [],
+     "source_url": string|null}],
+   "workforce_entry_points": [{"after_step": int, "job_title", "salary_range_usd"}],
+   "credentials": [{"name", "type": "certification|license|degree|other", "required": bool}],
+   "experience": [], "exams": [], "net_cost_after_aid_usd": number|null}],
+ "alternative_mdc_programs": [{"program_id", "name", "why"}],
+ "resources": [{"title", "url", "kind": "exam_prep|resume|interview|financial_aid|other"}],
+ "warnings": []}
+Rules:
+- 2 to 4 routes. route.id equals its type (short | medium | long). Step id = "{route.id}-{index}",
+  order = index starting at 0.
+- The FIRST step of EVERY route is an MDC program from MDC DATA: kind "mdc_program",
+  institution "Miami Dade College", program_id and source_url copied EXACTLY from MDC DATA.
+  Never invent MDC programs, ids, URLs or transfer agreements.
+- Any number not taken from MDC DATA gets "estimate": true.
+- Add warnings for limited-access majors (e.g. Architecture and Nursing at FIU are not guaranteed by
+  Connect4Success) and whenever data is missing.
+- net_cost_after_aid_usd only if the Financial Aid Advisor took part; otherwise null.
+- Write all text fields in the requested LANGUAGE."""
+JSON_REPAIR = (
+    "You fix JSON. You get a JSON object and the validation errors. Return ONLY the corrected JSON "
+    "object, keeping all content that is valid. No prose, no markdown fences."
+)
 NAVIGATOR = "PLACEHOLDER — see AGENT_PIPELINE.md 'Navigator'. Output only JSON."
 
 _PLACEHOLDERS = {
@@ -48,6 +79,7 @@ _PLACEHOLDERS = {
     "aggregator": AGGREGATOR,
     "roadmap-writer": ROADMAP_WRITER,
     "navigator": NAVIGATOR,
+    "json-repair": JSON_REPAIR,
 }
 
 _BLOCK = re.compile(r"##\s*System prompt.*?```text\s*\n(.*?)```", re.S | re.I)
