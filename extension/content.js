@@ -177,14 +177,16 @@ window.addEventListener("message", (event) => {
     if (message.type === "shark:start_guide") {
       const language = message.language === "es" ? "es" : "en";
 
-      startLiveNavigator(message.goal, language)
-        .catch((error) => {
-          console.warn("[Shark Advisor] Live Navigator unavailable", error);
-          return startRecordedGuide(message.goal);
-        })
-        .catch((error) => {
-          console.error("[Shark Advisor] Could not start the guide", error);
-        });
+      const guide = MOCK_NAVIGATE
+        ? startRecordedGuide(message.goal)
+        : startLiveNavigator(message.goal, language).catch((error) => {
+            console.warn("[Shark Advisor] Live Navigator unavailable", error);
+            return startRecordedGuide(message.goal);
+          });
+
+      guide.catch((error) => {
+        console.error("[Shark Advisor] Could not start the guide", error);
+      });
     }
     return;
   }
@@ -384,7 +386,7 @@ guideState("load")
     console.error("[Shark Advisor] Could not resume the guide", error);
   });
 
-  async function findRecordedGuide(goal, guideFiles) {
+async function findRecordedGuide(goal, guideFiles) {
   const guides = await Promise.all(
     guideFiles.map(async (file) => {
       const response = await fetch(chrome.runtime.getURL(file));
@@ -397,16 +399,25 @@ guideState("load")
     }),
   );
 
+  const destination = new URL(goal.url);
+
   return (
     guides.find((guide) =>
-      guide.match.goal_urls.some((prefix) => goal.url.startsWith(prefix)),
+      guide.match.goal_urls.some((prefix) => {
+        const match = new URL(prefix);
+        const path = match.pathname.replace(/\/+$/, "");
+        return destination.origin === match.origin && (
+          destination.pathname === path ||
+          destination.pathname.startsWith(`${path}/`)
+        );
+      }),
     ) ??
     guides.find((guide) => guide.match.step_ids.includes(goal.step_id)) ??
     null
   );
 }
 
-const recordedGuideFiles = [];
+const recordedGuideFiles = ["guides/cybersecurity-analyst.json"];
 
 async function startRecordedGuide(goal) {
   if (typeof goal?.url !== "string" || !URL.canParse(goal.url)) {
@@ -421,11 +432,16 @@ async function startRecordedGuide(goal) {
   const guide = await findRecordedGuide(goal, recordedGuideFiles);
 
   if (!guide) {
+    await guideState("clear");
     window.location.assign(destination.href);
     return;
   }
 
-  const state = { goal, steps: guide.steps, stepIndex: 0 };
+  const state = {
+    goal: { ...goal, url: guide.destination_url ?? goal.url },
+    steps: guide.steps,
+    stepIndex: 0,
+  };
   await guideState("save", state);
   await resumeGuide(state);
 }
@@ -533,12 +549,7 @@ async function startLiveNavigator(goal, language) {
   }
 
   if (step.action === "open_url") {
-    const destination = new URL(goal.url);
-    await guideState("clear");
-
-    if (destination.protocol === "https:") {
-      window.location.assign(destination.href);
-    }
+    await startRecordedGuide(goal);
     return;
   }
 
