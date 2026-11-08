@@ -16,9 +16,10 @@ import type {
   Usage,
 } from "./types";
 
-const USE_MOCK = process.env.NEXT_PUBLIC_USE_MOCK !== "false";
+// Real backend by default. Mock data only when explicitly requested: NEXT_PUBLIC_USE_MOCK=true
+const USE_MOCK = process.env.NEXT_PUBLIC_USE_MOCK === "true";
 export const isMock = USE_MOCK;
-const API_URL = (process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000").replace(/\/$/, "");
+const API_URL = (process.env.NEXT_PUBLIC_API_URL ?? "https://sharkbyte-hackathon.onrender.com").replace(/\/$/, "");
 
 export class ApiError extends Error {
   constructor(public code: string, message: string, public status?: number) {
