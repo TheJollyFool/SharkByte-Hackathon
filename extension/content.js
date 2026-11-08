@@ -65,7 +65,7 @@ document.body.append(host);
 const panel = document.createElement("iframe");
 panel.id = "shark-panel";
 panel.title = "Shark Advisor";
-panel.srcdoc = "<h1>Shark Advisor</h1><p>Panel preview</p>";
+panel.src = PANEL_ORIGIN;
 
 style.textContent += `
   .shark-mouth {
@@ -167,7 +167,254 @@ window.addEventListener("message", (event) => {
     return;
   }
 
-  if (event.data?.type === "shark:close" && !panel.hidden) {
-    button.click();
+  const message = event.data;
+
+  if (message?.type === "shark:close" || message?.type === "shark:start_guide") {
+    if (!panel.hidden) {
+      button.click();
+    }
+
+    if (message.type === "shark:start_guide") {
+      startRecordedGuide(message.goal).catch((error) => {
+        console.error("[Shark Advisor] Could not start the guide", error);
+      });
+    }
+    return;
+  }
+
+  if (message?.type === "shark:open_url") {
+    const url = message.url;
+    if (typeof url !== "string" || !URL.canParse(url)) return;
+
+    const destination = new URL(url);
+    if (destination.protocol === "https:") {
+      window.location.assign(destination.href);
+    }
   }
 });
+
+style.textContent += `
+  .shark-guide-highlight {
+    position: fixed;
+    z-index: 2147483645;
+    box-sizing: border-box;
+    border: 3px solid #0078d4;
+    border-radius: 8px;
+    box-shadow: 0 0 0 4px rgb(0 120 212 / 25%);
+    pointer-events: none;
+  }
+`;
+
+function highlightGuideTarget(target) {
+  const highlight = document.createElement("div");
+  highlight.className = "shark-guide-highlight";
+  highlight.setAttribute("aria-hidden", "true");
+  shadow.append(highlight);
+
+  function updatePosition() {
+    const bounds = target.getBoundingClientRect();
+    Object.assign(highlight.style, {
+      top: `${bounds.top}px`,
+      left: `${bounds.left}px`,
+      width: `${bounds.width}px`,
+      height: `${bounds.height}px`,
+    });
+  }
+
+  window.addEventListener("scroll", updatePosition, true);
+  window.addEventListener("resize", updatePosition);
+
+  target.scrollIntoView({ block: "center", inline: "nearest" });
+  updatePosition();
+
+  return () => {
+    window.removeEventListener("scroll", updatePosition, true);
+    window.removeEventListener("resize", updatePosition);
+    highlight.remove();
+  };
+}
+
+style.textContent += `
+  .shark-guide-bubble {
+    position: fixed;
+    left: 16px;
+    bottom: 16px;
+    z-index: 2147483646;
+    max-width: min(300px, calc(100vw - 100px));
+    box-sizing: border-box;
+    padding: 14px;
+    border-radius: 12px;
+    background: #123047;
+    color: white;
+    font: 14px/1.4 system-ui, sans-serif;
+  }
+
+  .shark-guide-bubble p {
+    margin: 0 0 10px;
+  }
+`;
+
+function showGuideBubble(instruction, onStop) {
+  const bubble = document.createElement("div");
+  bubble.className = "shark-guide-bubble";
+
+  const message = document.createElement("p");
+  message.setAttribute("role", "status");
+  message.textContent = instruction;
+
+  const stopButton = document.createElement("button");
+  stopButton.type = "button";
+  stopButton.textContent = "Stop guide";
+  stopButton.addEventListener("click", onStop);
+
+  bubble.append(message, stopButton);
+  shadow.append(bubble);
+
+  return () => bubble.remove();
+}
+
+async function guideState(action, state) {
+  const response = await chrome.runtime.sendMessage({
+    type: "shark:guide_state",
+    action,
+    state,
+  });
+
+  if (!response?.ok) {
+    throw new Error(response?.error ?? "Could not access guide state");
+  }
+
+  return response.state;
+}
+
+function showGuideStep(step, onStop) {
+  const target = document.querySelector(step.selector);
+
+  if (!target) {
+    return null;
+  }
+
+  const removeHighlight = highlightGuideTarget(target);
+  const removeBubble = showGuideBubble(step.bubble, onStop);
+
+  return () => {
+    removeHighlight();
+    removeBubble();
+  };
+}
+
+function matchesGuideUrl(pattern, pageUrl) {
+  const regexSource = pattern
+    .split("*")
+    .map((part) => part.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
+    .join(".*");
+
+  return new RegExp(`^${regexSource}$`).test(pageUrl);
+}
+
+function findGuideStepIndex(steps, startIndex, pageUrl) {
+  return steps.findIndex(
+    (step, index) =>
+      index >= startIndex && matchesGuideUrl(step.url_pattern, pageUrl),
+  );
+}
+
+async function finishGuide(stepId, status, removeStep) {
+  removeStep?.();
+  await guideState("clear");
+
+  panel.contentWindow?.postMessage(
+    {
+      type: "shark:guide_finished",
+      step_id: stepId,
+      status,
+    },
+    PANEL_ORIGIN,
+  );
+}
+
+async function resumeGuide(state) {
+  const { goal, steps, stepIndex } = state;
+  const destination = new URL(goal.url);
+  const currentPage = new URL(window.location.href);
+  const normalizePath = (path) => path.replace(/\/+$/, "");
+
+  if (
+    destination.origin === currentPage.origin &&
+    normalizePath(destination.pathname) === normalizePath(currentPage.pathname)
+  ) {
+    await finishGuide(goal.step_id, "done");
+    return;
+  }
+
+  const index = findGuideStepIndex(steps, stepIndex, currentPage.href);
+
+  if (index === -1) {
+    await finishGuide(goal.step_id, "failed");
+    return;
+  }
+
+  const removeStep = showGuideStep(steps[index], () => {
+    finishGuide(goal.step_id, "stopped", removeStep).catch(console.error);
+  });
+
+  if (!removeStep) {
+    await finishGuide(goal.step_id, "failed");
+  }
+}
+
+guideState("load")
+  .then((state) => {
+    if (state) {
+      return resumeGuide(state);
+    }
+  })
+  .catch((error) => {
+    console.error("[Shark Advisor] Could not resume the guide", error);
+  });
+
+  async function findRecordedGuide(goal, guideFiles) {
+  const guides = await Promise.all(
+    guideFiles.map(async (file) => {
+      const response = await fetch(chrome.runtime.getURL(file));
+
+      if (!response.ok) {
+        throw new Error(`Could not load guide: ${file}`);
+      }
+
+      return response.json();
+    }),
+  );
+
+  return (
+    guides.find((guide) =>
+      guide.match.goal_urls.some((prefix) => goal.url.startsWith(prefix)),
+    ) ??
+    guides.find((guide) => guide.match.step_ids.includes(goal.step_id)) ??
+    null
+  );
+}
+
+const recordedGuideFiles = [];
+
+async function startRecordedGuide(goal) {
+  if (typeof goal?.url !== "string" || !URL.canParse(goal.url)) {
+    return;
+  }
+
+  const destination = new URL(goal.url);
+  if (destination.protocol !== "https:") {
+    return;
+  }
+
+  const guide = await findRecordedGuide(goal, recordedGuideFiles);
+
+  if (!guide) {
+    window.location.assign(destination.href);
+    return;
+  }
+
+  const state = { goal, steps: guide.steps, stepIndex: 0 };
+  await guideState("save", state);
+  await resumeGuide(state);
+}

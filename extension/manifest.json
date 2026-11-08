@@ -14,7 +14,7 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["shark.svg"],
+      "resources": ["shark.svg", "guides/*.json"],
       "matches": ["*://*.mdc.edu/*"]
     }
   ]

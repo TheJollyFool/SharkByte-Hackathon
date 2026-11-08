@@ -1,1 +1,1 @@
-const PANEL_ORIGIN = "http://localhost:3000";
+const PANEL_ORIGIN = "http://127.0.0.1:3000";
