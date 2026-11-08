@@ -86,6 +86,8 @@ Request:
 ```
 `200` → `Message` (`role: "advisor"`, `usage` and `source` set).
 
+Chat replies can reuse an exact cached turn. A demo cache miss returns `upstream_failed`.
+
 ### `POST /mixture` — merged answer (Mixture of Agents)
 Request:
 ```json
