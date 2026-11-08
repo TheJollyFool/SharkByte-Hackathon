@@ -64,7 +64,7 @@ docs/       Product, requirements, contracts, architecture, agents, team plan, d
    MDC's site, changes its content, or clicks/submits for the student. Prefix all injected CSS classes and
    ids with `shark-` so they don't clash with MDC's styles.
 7. **Small PRs, short-lived branches.** `feat/<area>-<thing>` (`feat/ext-guide-overlay`,
-   `feat/panel-chat`, `feat/backend-mixture`). Rebase on `main` often. Never force-push `main`.
+   `feat/panel-chat`, `feat/backend-mixture`). Rebase on `master` often. Never force-push `master`.
 8. **Cost awareness.** Cheap models while developing, low `max_tokens`, cache by request hash.
 
 ## Conventions

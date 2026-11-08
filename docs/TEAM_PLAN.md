@@ -1,6 +1,6 @@
 # Plan del equipo
 
-> Cada uno trabaja en su branch `feat/<area>-<cosa>` y abre PRs chiquitos a `main`. Marquen `[x]` cuando
+> Cada uno trabaja en su branch `feat/<area>-<cosa>` y abre PRs chiquitos a `master`. Marquen `[x]` cuando
 > terminen. Todos construyen contra los **mocks** de `shared/fixtures/` desde el minuto 1 — nadie espera a
 > nadie. Contratos: [CONTRACTS.md](CONTRACTS.md). Brief detallado de cada rol: [roles/](roles/).
 
@@ -15,14 +15,14 @@
 
 Regla: los LLMs (Claude, Codex, Gemini) escriben el código leyendo `AGENTS.md` + su brief. Los humanos
 deciden, revisan y prueban. El que se quede sin tokens pasa su tarea a otro modelo, no se para.
-Merge a `main`: cualquiera puede mergear su propio PR si no rompe nada; cambios a `docs/CONTRACTS.md`
+Merge a `master`: cualquiera puede mergear su propio PR si no rompe nada; cambios a `docs/CONTRACTS.md`
 o al schema requieren OK de los dueños de ambos lados.
 
 ## Horario (sáb 7 → dom 8 nov)
 
 | Hora | Fase | Meta |
 |---|---|---|
-| 7:45–8:15 PM | **0. Setup** | Mergear este spec a `main`, todos clonan, leen su brief, aprueban `REQUIREMENTS.md` |
+| 7:45–8:15 PM | **0. Setup** | Mergear este spec a `master`, todos clonan, leen su brief, aprueban `REQUIREMENTS.md` |
 | 8:15 PM–1:00 AM | **1. Partes con mocks** | Cada rol funciona solo, contra fixtures |
 | 1:00–4:00 AM | **2. Integración** | Panel ↔ backend real, extensión ↔ panel desplegado, guía ↔ `/navigate` |
 | 4:00–8:00 AM | **3. Pulido + demo** | Cachear guion, ensayar 3 veces. **Code freeze 8:00 AM** |
