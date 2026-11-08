@@ -138,4 +138,8 @@ _Fill this in after the first real call of each endpoint (paste a trimmed exampl
   ```
   Parsed by `backend/app/swarm/client.py` (`extract_text`, `to_usage`).
 - `GET /v1/models/available`: `{"success", "count": 1935, "models": [{"model_name", "input_cost_per_1m", "output_cost_per_1m", "price_source"}]}`.
-- `swarm/completions` MixtureOfAgents: TODO
+- `swarm/completions` MixtureOfAgents (verified 2026-11-07): the **last agent in `agents` is the aggregator**
+  (no extra field needed). Each agent takes its own `max_tokens`. Response uses **`output`** (singular, list of
+  `{role, content}`; `role` = agent_name, first item is a System summary) — the last item is the aggregated
+  answer. `usage` is the swarm total only (so `per_agent_usage` = `{}`). **Cost: Swarms adds ~$0.01 per agent**
+  (`billing_info.cost_breakdown.agent_cost`), so 6 advisors + aggregator ≈ $0.07 per call — cache it.

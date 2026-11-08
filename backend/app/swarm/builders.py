@@ -56,3 +56,15 @@ def roadmap_task(language: str, history: list[Message]) -> str:
         f"CONVERSATION:\n{conversation(history)}\n"
         "Now write the roadmap JSON."
     )
+
+
+def mixture_task(advisor_ids: list[str], language: str, history: list[Message]) -> str:
+    names = [a["name"] for g in advisor_ids if (a := advisor_by_id(g))]
+    return (
+        f"LANGUAGE: {language}\n"
+        f"EXPERTS: {', '.join(names)}\n"
+        'MDC DATA (use only these MDC programs; say "I don\'t have that data" otherwise): '
+        f"{mdc_data_for(history)}\n"
+        f"CONVERSATION:\n{conversation(history)}\n"
+        "Each expert answers from their own area. Give the student ONE merged, best answer."
+    )
