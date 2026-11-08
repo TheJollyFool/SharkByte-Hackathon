@@ -1,0 +1,15 @@
+{
+  "id": "msg-b218b4c9c4be",
+  "role": "advisor",
+  "advisor_id": "pathway",
+  "contributors": null,
+  "text": "Great news — MDC has a full cybersecurity ladder! Here's a smart path given your budget:\n\n1. **Start:** *Cybersecurity Analyst* Certificate (24 credits, ~12 months) — get job-ready fast.\n2. **Stack up:** *Cybersecurity* A.S. (60 credits) — your certificate credits count toward it. (A.S. = workforce degree that transfers to specific bachelor's programs.)\n3. **Stay at MDC or transfer:** MDC offers its own *Cybersecurity* **B.S.** (120 credits) — no university transfer needed!\n4. **Want more?** Transfer to FIU, UCF, or FAU for a master's in cybersecurity or information security.\n\nStarting with the certificate lets you earn while you learn, then build up credential by credential. 🔐",
+  "usage": {
+    "input_tokens": 1836,
+    "output_tokens": 197,
+    "total_tokens": 2033,
+    "cost_usd": 0.009732
+  },
+  "source": "live",
+  "created_at": "2026-11-08T04:15:38.454547+00:00"
+}

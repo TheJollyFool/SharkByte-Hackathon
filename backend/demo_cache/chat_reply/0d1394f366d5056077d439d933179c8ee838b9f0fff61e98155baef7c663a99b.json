@@ -1,0 +1,15 @@
+{
+  "id": "msg-1f7575757358",
+  "role": "advisor",
+  "advisor_id": "finaid",
+  "contributors": null,
+  "text": "You may have more help available than you think. Start with the **FAFSA** — it opens the door to most aid.\n\nBased on your FAFSA and other requirements, you **may qualify** for:\n\n- **Federal Pell Grant**\n- **Florida Bright Futures**\n- **FSAG**\n- **Federal Work-Study** for a part-time campus job\n- **MDC scholarships**\n\nGrants and scholarships **do not need to be repaid**. Loans, if you choose them, **do need to be repaid**.\n\nSince exact MDC tuition amounts weren’t provided, I can’t calculate a true after-aid cost here. But with the FAFSA, your out-of-pocket cost **may be much lower**.\n\n**Next step:** file the FAFSA at **studentaid.gov** and list Miami Dade College.",
+  "usage": {
+    "input_tokens": 1959,
+    "output_tokens": 328,
+    "total_tokens": 2287,
+    "cost_usd": 0.02258
+  },
+  "source": "live",
+  "created_at": "2026-11-08T04:15:49.258304+00:00"
+}

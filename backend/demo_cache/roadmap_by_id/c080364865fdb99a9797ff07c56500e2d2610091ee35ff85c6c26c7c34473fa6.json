@@ -1,0 +1,293 @@
+{
+  "id": "rm-99ea3088fa15",
+  "source": "live",
+  "mode": "group_chat",
+  "language": "es",
+  "career": {
+    "title": "Ciberseguridad",
+    "overview": "La ciberseguridad protege redes, sistemas y datos contra ataques. Es una carrera con buena demanda y varias formas de entrar al campo mientras sigues estudiando.",
+    "responsibilities": [
+      "Monitorear redes y sistemas",
+      "Detectar vulnerabilidades",
+      "Responder a incidentes de seguridad",
+      "Apoyar análisis forense digital",
+      "Aplicar controles y buenas prácticas de seguridad"
+    ],
+    "qualifications": [
+      "Base en redes y sistemas operativos",
+      "Pensamiento analítico y atención al detalle",
+      "Conocimientos de seguridad ofensiva y defensiva",
+      "Experiencia práctica con laboratorios, proyectos o prácticas"
+    ],
+    "median_salary_usd": 85000.0,
+    "outlook": "Alta demanda en Florida; el salario puede variar según experiencia, certificaciones y cargo.",
+    "related_careers": [
+      "Administrador/a de redes",
+      "Analista de TI",
+      "Auditor/a de TI",
+      "Analista SOC",
+      "Especialista en forense digital"
+    ]
+  },
+  "routes": [
+    {
+      "id": "short",
+      "name": "Entrada rápida con certificado",
+      "type": "short",
+      "summary": "Empieza con un certificado corto para buscar un primer puesto de apoyo en seguridad o inteligencia mientras trabajas y luego sigues estudiando.",
+      "total_months": 6.0,
+      "total_cost_usd": 1891.52,
+      "steps": [
+        {
+          "id": "short-0",
+          "order": 0,
+          "kind": "mdc_program",
+          "institution": "Miami Dade College",
+          "credential": "College Credit Certificate",
+          "duration_months": 6.0,
+          "cost_usd": 1891.52,
+          "program_id": "mdc-college-credit-certificate-intelligence-studies",
+          "program_name": "Intelligence Studies",
+          "estimate": true,
+          "transfer_agreement": null,
+          "key_courses": [
+            "CET2880C Digital Forensics",
+            "DSC1002 Domestic and International Terrorism",
+            "DSC1590 Introduction to Intelligence Studies",
+            "DSC2501 Effective Communication Skills for Security Professionals"
+          ],
+          "source_url": "https://mdc.curricunet.com/catalog/iq/9132/9267"
+        }
+      ],
+      "workforce_entry_points": [
+        {
+          "after_step": 0,
+          "job_title": "Asistente de seguridad / soporte de inteligencia",
+          "salary_range_usd": "~$35,000–$55,000"
+        }
+      ],
+      "credentials": [
+        {
+          "name": "College Credit Certificate en Intelligence Studies",
+          "type": "other",
+          "required": true
+        }
+      ],
+      "experience": [],
+      "exams": [],
+      "net_cost_after_aid_usd": 0.0
+    },
+    {
+      "id": "medium",
+      "name": "Título A.S. para empleo en ciberseguridad",
+      "type": "medium",
+      "summary": "Ruta enfocada en empleo con el A.S. en Cybersecurity. Puedes comenzar con el certificado y continuar al grado asociado sin perder avance.",
+      "total_months": 36.0,
+      "total_cost_usd": 7093.2,
+      "steps": [
+        {
+          "id": "medium-0",
+          "order": 0,
+          "kind": "mdc_program",
+          "institution": "Miami Dade College",
+          "credential": "College Credit Certificate",
+          "duration_months": 6.0,
+          "cost_usd": 1891.52,
+          "program_id": "mdc-college-credit-certificate-intelligence-studies",
+          "program_name": "Intelligence Studies",
+          "estimate": true,
+          "transfer_agreement": null,
+          "key_courses": [
+            "CET2880C Digital Forensics",
+            "DSC1002 Domestic and International Terrorism",
+            "DSC1590 Introduction to Intelligence Studies",
+            "DSC2501 Effective Communication Skills for Security Professionals"
+          ],
+          "source_url": "https://mdc.curricunet.com/catalog/iq/9132/9267"
+        },
+        {
+          "id": "medium-1",
+          "order": 1,
+          "kind": "mdc_program",
+          "institution": "Miami Dade College",
+          "credential": "A.S.",
+          "duration_months": 30.0,
+          "cost_usd": 7093.2,
+          "program_id": "mdc-a-s-cybersecurity",
+          "program_name": "Cybersecurity",
+          "estimate": true,
+          "transfer_agreement": null,
+          "key_courses": [
+            "CTS1134 Networking Technologies",
+            "CGS1700 Introduction to Operating Systems",
+            "CIS1531 Introduction to Secure Scripting",
+            "CTS1120 Cybersecurity Fundamentals"
+          ],
+          "source_url": "https://mdc.curricunet.com/catalog/iq/9132/9319"
+        }
+      ],
+      "workforce_entry_points": [
+        {
+          "after_step": 0,
+          "job_title": "Técnico/a de seguridad o soporte TI",
+          "salary_range_usd": "~$35,000–$55,000"
+        },
+        {
+          "after_step": 1,
+          "job_title": "Analista junior de ciberseguridad",
+          "salary_range_usd": "~$55,000–$80,000"
+        }
+      ],
+      "credentials": [
+        {
+          "name": "College Credit Certificate en Intelligence Studies",
+          "type": "other",
+          "required": false
+        },
+        {
+          "name": "A.S. en Cybersecurity",
+          "type": "degree",
+          "required": true
+        }
+      ],
+      "experience": [],
+      "exams": [],
+      "net_cost_after_aid_usd": 0.0
+    },
+    {
+      "id": "long",
+      "name": "A.S. en MDC y luego bachillerato",
+      "type": "long",
+      "summary": "Empieza en MDC y luego completa una licenciatura para aspirar a puestos de mayor crecimiento. Esta ruta requiere revisar bien transferencia porque el acuerdo 2+2 formal es para A.A., no para este A.S.",
+      "total_months": 60.0,
+      "total_cost_usd": 19093.2,
+      "steps": [
+        {
+          "id": "long-0",
+          "order": 0,
+          "kind": "mdc_program",
+          "institution": "Miami Dade College",
+          "credential": "A.S.",
+          "duration_months": 30.0,
+          "cost_usd": 7093.2,
+          "program_id": "mdc-a-s-cybersecurity",
+          "program_name": "Cybersecurity",
+          "estimate": true,
+          "transfer_agreement": null,
+          "key_courses": [
+            "CTS1134 Networking Technologies",
+            "CGS1700 Introduction to Operating Systems",
+            "CIS1531 Introduction to Secure Scripting",
+            "CTS1120 Cybersecurity Fundamentals"
+          ],
+          "source_url": "https://mdc.curricunet.com/catalog/iq/9132/9319"
+        },
+        {
+          "id": "long-1",
+          "order": 1,
+          "kind": "degree",
+          "institution": "FIU, FAU o UCF",
+          "credential": "B.S.",
+          "duration_months": 30.0,
+          "cost_usd": 12000.0,
+          "program_id": null,
+          "program_name": "Cybersecurity o Information Technology",
+          "estimate": true,
+          "transfer_agreement": null,
+          "key_courses": [],
+          "source_url": null
+        }
+      ],
+      "workforce_entry_points": [
+        {
+          "after_step": 0,
+          "job_title": "Analista junior de ciberseguridad",
+          "salary_range_usd": "~$55,000–$80,000"
+        },
+        {
+          "after_step": 1,
+          "job_title": "Analista de ciberseguridad / ingeniero/a junior",
+          "salary_range_usd": "~$70,000–$100,000"
+        }
+      ],
+      "credentials": [
+        {
+          "name": "A.S. en Cybersecurity",
+          "type": "degree",
+          "required": true
+        },
+        {
+          "name": "B.S. en Cybersecurity o Information Technology",
+          "type": "degree",
+          "required": false
+        }
+      ],
+      "experience": [],
+      "exams": [],
+      "net_cost_after_aid_usd": 4298.2
+    }
+  ],
+  "alternative_mdc_programs": [
+    {
+      "name": "Cybersecurity Analyst",
+      "program_id": "mdc-college-credit-certificate-cybersecurity-analyst",
+      "why": "Otra opción corta y más directa para habilidades técnicas de seguridad, redes y scripting."
+    },
+    {
+      "name": "Cybersecurity",
+      "program_id": "mdc-b-s-cybersecurity",
+      "why": "Si quieres completar el bachillerato en MDC en vez de transferirte a otra universidad."
+    },
+    {
+      "name": "Cyber Defense",
+      "program_id": "mdc-certificate-of-professional-preparation-cyber-defense",
+      "why": "Complemento útil si luego quieres reforzar defensa de redes e incident response."
+    },
+    {
+      "name": "Vulnerability Assessment",
+      "program_id": "mdc-certificate-of-professional-preparation-vulnerability-assessment",
+      "why": "Complemento útil si te interesa ethical hacking y evaluación de vulnerabilidades."
+    }
+  ],
+  "resources": [
+    {
+      "title": "FAFSA",
+      "url": "https://studentaid.gov/h/apply-for-aid/fafsa",
+      "kind": "financial_aid"
+    },
+    {
+      "title": "Ayuda financiera de MDC",
+      "url": "https://www.mdc.edu/financialaid/",
+      "kind": "financial_aid"
+    },
+    {
+      "title": "Becas de MDC",
+      "url": "https://www.mdc.edu/financialaid/scholarships/",
+      "kind": "financial_aid"
+    },
+    {
+      "title": "Información de transferencia Florida 2+2",
+      "url": "https://www.mdc.edu/transfer-information/florida2-2/",
+      "kind": "other"
+    },
+    {
+      "title": "FIU Connect4Success",
+      "url": "https://admissions.fiu.edu/how-to-apply/connect4success/apply/",
+      "kind": "other"
+    }
+  ],
+  "usage": {
+    "total_tokens": 6876,
+    "total_cost_usd": 0.048892
+  },
+  "warnings": [
+    "Como trabajas medio tiempo, tu duración real probablemente será de aproximadamente 1.8 veces el tiempo de estudio full-time; por ejemplo, 6 meses puede ser 9-12 meses y 30 meses puede ser 45-60 meses.",
+    "Los costos mostrados son estimados de matrícula y fees para residente de Florida; no incluyen libros, materiales ni posibles course user fees.",
+    "El certificado de 16 créditos puede contar dentro del A.S. según la orientación recibida, así que el total real de la ruta combinada puede seguir siendo 60 créditos y no 76.",
+    "La ruta larga usa transferencia sugerida por orientación, pero en los datos disponibles no hay un acuerdo de transferencia específico para el A.S. en Cybersecurity; confirma equivalencias con la universidad antes de matricularte.",
+    "Los acuerdos Florida 2+2, FIU Connect4Success, Link2FAU y UCF Transfer Connect en los datos aplican al A.A., no garantizan admisión desde este A.S. a un programa específico.",
+    "Los programas de acceso limitado o especializado en universidades no están garantizados.",
+    "El costo neto después de ayudas es solo una estimación. Con Pell Grant, Bright Futures, FSAG, Work-Study o becas de MDC, tu costo podría bajar bastante e incluso quedar cubierto en algunos periodos.",
+    "En las rutas con más de un programa de MDC, el total de costo suma cada paso por separado para mostrar el camino, pero si cursos del certificado se aplican al A.S., tu costo académico real puede ser menor que esa suma."
+  ]
+}

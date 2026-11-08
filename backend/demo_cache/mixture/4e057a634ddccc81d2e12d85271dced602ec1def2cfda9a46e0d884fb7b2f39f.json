@@ -1,6 +1,6 @@
 {
   "message": {
-    "id": "msg-a9734933d48c",
+    "id": "msg-2749efdfe3ab",
     "role": "aggregator",
     "advisor_id": null,
     "contributors": [
@@ -9,15 +9,15 @@
       "cost",
       "finaid"
     ],
-    "text": "- Sí puedes entrar a ciberseguridad en MDC con poco dinero y trabajo medio tiempo; la ruta más corta y barata que tengo es un CCC, y luego puedes seguir a un grado más largo.\n\n**Your path**\n- **Cybersecurity Analyst — College Credit Certificate**: 24 créditos, aprox. **12 meses** full-time; costo estimado **$2,837.28**.\n- **Intelligence Studies — College Credit Certificate**: 16 créditos, aprox. **6 meses** full-time; costo estimado **$1,891.52**.\n- **Cybersecurity — A.S.**: 60 créditos, aprox. **30 meses** full-time; costo estimado **$7,093.20**.  \n  *Nota:* los programas especializados pueden requerir admisión específica; no garantizan acceso automático.\n\n**Money**\n- **Pell Grant**: posible ayuda si calificas.\n- **Florida Bright Futures**: posible si cumples requisitos.\n- **FSAG**: posible si cumples requisitos de Florida.  \n  *Estimado:* el costo puede bajar mucho con ayuda; depende de tu elegibilidad.\n\n**Next step**\n- Completa hoy la **FAFSA** en **studentaid.gov** y pide cita con un asesor de ayuda financiera de MDC.",
+    "text": "**MDC tiene varios programas de ciberseguridad perfectos para tu situación.**\n\n---\n\n**Tu camino**\n\n- **Más rápido:** *Cybersecurity Analyst* (College Credit Certificate, 24 créditos) — ~12 meses a tiempo completo / ~18–24 meses medio tiempo. Entras al mercado laboral rápido.\n- **Asociado:** *Cybersecurity* (A.S., 60 créditos) — ~30 meses completo. Los créditos del certificado cuentan, no los pierdes.\n- **Bachillerato:** *Cybersecurity* (B.S., 120 créditos) — MDC lo ofrece completo, no necesitas transferirte.\n\n> 💡 El costo exacto por crédito no está en mis datos actuales — un asesor de MDC te lo confirma. *(Estimado)*\n\n---\n\n**Dinero**\n\n- Completa la **FAFSA** en studentaid.gov — abre acceso a **Pell Grant, FSAG y Federal Work-Study**.\n- Si cumples requisitos académicos, revisa **Florida Bright Futures**.\n- Becas y subvenciones **no se devuelven**; evita préstamos si puedes.\n\n---\n\n**Próximo paso**\n\nHoy mismo: visita **MDC Financial Aid** y habla con un asesor académico para confirmar costos y armar tu plan semestre a semestre. Aplica en mdc.edu.",
     "usage": {
-      "input_tokens": 7897,
-      "output_tokens": 1059,
-      "total_tokens": 8956,
-      "cost_usd": 0.062291
+      "input_tokens": 8753,
+      "output_tokens": 1970,
+      "total_tokens": 10723,
+      "cost_usd": 0.117958
     },
     "source": "live",
-    "created_at": "2026-11-08T03:42:26.458046+00:00"
+    "created_at": "2026-11-08T04:15:28.135826+00:00"
   },
   "per_agent_usage": {}
 }

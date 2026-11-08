@@ -1,6 +1,6 @@
 {
   "message": {
-    "id": "msg-fbaddfe320d6",
+    "id": "msg-e1c4352b0002",
     "role": "aggregator",
     "advisor_id": null,
     "contributors": [
@@ -9,15 +9,15 @@
       "cost",
       "finaid"
     ],
-    "text": "You can start affordably at MDC with a short cybersecurity certificate while you work part time, then move into the A.S. and, if you want, the B.S. later.\n\n**Your path**\n- **Cybersecurity Analyst, College Credit Certificate** — 24 credits, about **12 months full-time**; part-time is an **estimate** at about **18–24 months**. Lowest-cost quick start.\n- **Cybersecurity, A.S.** — 60 credits, about **30 months full-time**; part-time is an **estimate** at about **45–60 months**. Good broader path for cybersecurity jobs.\n- **Cybersecurity, B.S.** — 120 credits, about **30 months full-time**. This is the bachelor’s option at MDC.  \n  *Note: specialized cybersecurity admissions are not guaranteed; check program requirements first.*\n\n**Money**\n- **Estimate:** cost = credits × MDC per-credit tuition/fees, and I don’t have the exact MDC price here.\n- Aid that may fit you: **Pell Grant**, **Florida Bright Futures**, **FSAG**. These grants/scholarships do not need to be repaid.\n\n**Next step**\n- **File the FAFSA today** at **studentaid.gov**, then talk with an **MDC advisor/Financial Aid** office about the best part-time plan.",
+    "text": "Cybersecurity is a great fit — MDC has a clear, stackable path that works even on a tight budget and part-time schedule.\n\n**Your path**\n- **Fastest:** Cybersecurity Analyst (College Credit Certificate) — 24 credits, ~12–18 months part-time. Enter the job market quickly.\n- **Associate:** Cybersecurity (A.S.) — 60 credits, ~45 months part-time. Stronger credentials, higher earning potential.\n- **Bachelor's:** Cybersecurity (B.S.) — 120 credits, stay entirely at MDC, no transfer needed.\n\n> All cost figures are **estimates** — MDC data doesn't include per-credit tuition rates. Contact MDC for exact numbers.\n\n**Money**\n- **Pell Grant:** up to ~$7,395/year if you qualify (need-based, no repayment).\n- **FSAG & Bright Futures:** Florida state grants — eligibility depends on residency, GPA, and enrollment.\n- **Federal Work-Study:** part-time campus jobs that work around your schedule.\n- Grants and scholarships never need to be repaid; loans do.\n\n**Next step**\nFile your **FAFSA today** at [studentaid.gov](https://studentaid.gov) and list Miami Dade College — then book a free session with an MDC advisor to map your schedule around your job.",
     "usage": {
-      "input_tokens": 7835,
-      "output_tokens": 1006,
-      "total_tokens": 8841,
-      "cost_usd": 0.061964
+      "input_tokens": 8599,
+      "output_tokens": 1761,
+      "total_tokens": 10360,
+      "cost_usd": 0.111366
     },
     "source": "live",
-    "created_at": "2026-11-08T03:42:47.608596+00:00"
+    "created_at": "2026-11-08T04:16:41.843960+00:00"
   },
   "per_agent_usage": {}
 }
