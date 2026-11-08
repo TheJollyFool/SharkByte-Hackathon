@@ -1,0 +1,15 @@
+{
+  "id": "msg-36ced1aa58b2",
+  "role": "advisor",
+  "advisor_id": "cost",
+  "contributors": null,
+  "text": "**Tiempo y costo (MDC, matrícula + fees; no incluye libros).**  \n**No tengo en tus datos la tarifa por crédito de MDC** (in-state / out-of-state y por tipo de programa), así que **no puedo dar costo exacto**.\n\n- **Intelligence Studies (CCC, 16 cr.)**  \n  - Tiempo full-time: **~6 meses**  \n  - Si trabajas medio tiempo: **~9–12 meses**\n\n- **A.S. Cybersecurity (60 cr.)**  \n  - Tiempo full-time: **~30 meses**  \n  - Si trabajas medio tiempo: **~45–60 meses**\n\n- **Ruta total porque el CCC cuenta dentro del A.S.**  \n  - **Créditos totales reales: 60, no 76**  \n  - Tiempo total estimado: **~45–60 meses** part-time (**3.75–5 años**)\n\n- **Costo total exacto**  \n  - Fórmula cuando tengamos tarifa: **60 × precio por crédito del A.S./CCC**  \n  - Si eres out-of-state, sería **60 × tarifa out-of-state**.",
+  "usage": {
+    "input_tokens": 1768,
+    "output_tokens": 245,
+    "total_tokens": 2013,
+    "cost_usd": 0.009309
+  },
+  "source": "live",
+  "created_at": "2026-11-08T04:14:39.526817+00:00"
+}

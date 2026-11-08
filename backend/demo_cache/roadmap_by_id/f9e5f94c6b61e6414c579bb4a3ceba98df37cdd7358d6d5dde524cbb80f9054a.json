@@ -1,0 +1,377 @@
+{
+  "id": "rm-ba242952d7ca",
+  "source": "live",
+  "mode": "group_chat",
+  "language": "en",
+  "career": {
+    "title": "Cybersecurity Specialist",
+    "overview": "Cybersecurity professionals protect computers, networks, and data from attacks, misuse, and security breaches.",
+    "responsibilities": [
+      "Monitor networks and systems for threats",
+      "Investigate security incidents and vulnerabilities",
+      "Set up and improve security controls",
+      "Protect data and support safe system access"
+    ],
+    "qualifications": [
+      "Problem-solving skills",
+      "Attention to detail",
+      "Basic networking and operating systems knowledge",
+      "Security and scripting fundamentals"
+    ],
+    "median_salary_usd": 90000.0,
+    "outlook": "Strong demand and growing job opportunities.",
+    "related_careers": [
+      "Network Administrator",
+      "IT Auditor",
+      "Digital Forensics Technician",
+      "Security Analyst"
+    ]
+  },
+  "routes": [
+    {
+      "id": "short",
+      "name": "Fast entry with a certificate",
+      "type": "short",
+      "summary": "Start with the fastest MDC option to qualify for entry-level cybersecurity work, then add certifications while working.",
+      "total_months": 30.0,
+      "total_cost_usd": 2837.28,
+      "steps": [
+        {
+          "id": "short-0",
+          "order": 0,
+          "kind": "mdc_program",
+          "institution": "Miami Dade College",
+          "credential": "College Credit Certificate",
+          "duration_months": 12.0,
+          "cost_usd": 2837.28,
+          "program_id": "mdc-college-credit-certificate-cybersecurity-analyst",
+          "program_name": "Cybersecurity Analyst",
+          "estimate": true,
+          "transfer_agreement": null,
+          "key_courses": [
+            "CTS1111 Linux +",
+            "CTS1120 Cybersecurity Fundamentals",
+            "CTS1134 Networking Technologies",
+            "CIS1531 Introduction to Secure Scripting"
+          ],
+          "source_url": "https://mdc.curricunet.com/catalog/iq/9132/9244"
+        },
+        {
+          "id": "short-1",
+          "order": 1,
+          "kind": "certification",
+          "institution": "CompTIA",
+          "credential": "Security+",
+          "duration_months": 3.0,
+          "cost_usd": 0.0,
+          "program_id": null,
+          "program_name": "CompTIA Security+",
+          "estimate": true,
+          "transfer_agreement": null,
+          "key_courses": [],
+          "source_url": null
+        },
+        {
+          "id": "short-2",
+          "order": 2,
+          "kind": "internship",
+          "institution": "Employer or campus opportunity",
+          "credential": "Internship or entry-level experience",
+          "duration_months": 15.0,
+          "cost_usd": 0.0,
+          "program_id": null,
+          "program_name": "Cybersecurity internship, help desk, or SOC support role",
+          "estimate": true,
+          "transfer_agreement": null,
+          "key_courses": [],
+          "source_url": null
+        }
+      ],
+      "workforce_entry_points": [
+        {
+          "after_step": 0,
+          "job_title": "Junior Cybersecurity Technician",
+          "salary_range_usd": "About $45,000-$65,000"
+        },
+        {
+          "after_step": 1,
+          "job_title": "Security Analyst I",
+          "salary_range_usd": "About $55,000-$75,000"
+        }
+      ],
+      "credentials": [
+        {
+          "name": "Cybersecurity Analyst College Credit Certificate",
+          "type": "other",
+          "required": true
+        },
+        {
+          "name": "CompTIA Security+",
+          "type": "certification",
+          "required": false
+        }
+      ],
+      "experience": [
+        "Part-time IT support, internship, lab practice, or SOC support experience helps a lot."
+      ],
+      "exams": [
+        "CompTIA Security+ exam if you choose certification."
+      ],
+      "net_cost_after_aid_usd": 0.0
+    },
+    {
+      "id": "medium",
+      "name": "Workforce degree path",
+      "type": "medium",
+      "summary": "Begin with the certificate, then complete the A.S. to build stronger technical skills and improve job options while working part time.",
+      "total_months": 84.0,
+      "total_cost_usd": 7093.2,
+      "steps": [
+        {
+          "id": "medium-0",
+          "order": 0,
+          "kind": "mdc_program",
+          "institution": "Miami Dade College",
+          "credential": "A.S.",
+          "duration_months": 54.0,
+          "cost_usd": 7093.2,
+          "program_id": "mdc-a-s-cybersecurity",
+          "program_name": "Cybersecurity",
+          "estimate": true,
+          "transfer_agreement": null,
+          "key_courses": [
+            "CTS1134 Networking Technologies",
+            "CGS1700 Introduction to Operating Systems",
+            "CIS1531 Introduction to Secure Scripting",
+            "CTS1120 Cybersecurity Fundamentals"
+          ],
+          "source_url": "https://mdc.curricunet.com/catalog/iq/9132/9319"
+        },
+        {
+          "id": "medium-1",
+          "order": 1,
+          "kind": "certification",
+          "institution": "CompTIA",
+          "credential": "CySA+ or Security+",
+          "duration_months": 3.0,
+          "cost_usd": 0.0,
+          "program_id": null,
+          "program_name": "Entry cybersecurity certification",
+          "estimate": true,
+          "transfer_agreement": null,
+          "key_courses": [],
+          "source_url": null
+        },
+        {
+          "id": "medium-2",
+          "order": 2,
+          "kind": "internship",
+          "institution": "Employer or campus opportunity",
+          "credential": "Internship or job experience",
+          "duration_months": 27.0,
+          "cost_usd": 0.0,
+          "program_id": null,
+          "program_name": "Security operations, network support, or digital forensics support experience",
+          "estimate": true,
+          "transfer_agreement": null,
+          "key_courses": [],
+          "source_url": null
+        }
+      ],
+      "workforce_entry_points": [
+        {
+          "after_step": 0,
+          "job_title": "Cybersecurity Analyst",
+          "salary_range_usd": "About $55,000-$80,000"
+        },
+        {
+          "after_step": 1,
+          "job_title": "SOC Analyst",
+          "salary_range_usd": "About $60,000-$85,000"
+        }
+      ],
+      "credentials": [
+        {
+          "name": "Cybersecurity A.S.",
+          "type": "degree",
+          "required": true
+        },
+        {
+          "name": "CompTIA CySA+ or Security+",
+          "type": "certification",
+          "required": false
+        }
+      ],
+      "experience": [
+        "Hands-on labs, internship, part-time IT work, and incident response practice are valuable."
+      ],
+      "exams": [
+        "Optional industry certification exam such as Security+ or CySA+."
+      ],
+      "net_cost_after_aid_usd": 0.0
+    },
+    {
+      "id": "long",
+      "name": "Bachelor's path at MDC",
+      "type": "long",
+      "summary": "Stay at MDC from start to finish and earn the bachelor's degree for stronger advancement into analyst, engineering, and leadership-track roles.",
+      "total_months": 108.0,
+      "total_cost_usd": 22679.999999999996,
+      "steps": [
+        {
+          "id": "long-0",
+          "order": 0,
+          "kind": "mdc_program",
+          "institution": "Miami Dade College",
+          "credential": "B.S.",
+          "duration_months": 54.0,
+          "cost_usd": 15586.8,
+          "program_id": "mdc-b-s-cybersecurity",
+          "program_name": "Cybersecurity",
+          "estimate": true,
+          "transfer_agreement": null,
+          "key_courses": [
+            "CIS3215 Ethics in CyberSecurity",
+            "CIS3360 Principles of Information Security",
+            "CIS3361 Information Security Management",
+            "CIS4204 Ethical Hacking I"
+          ],
+          "source_url": "https://mdc.curricunet.com/catalog/iq/9132/9151"
+        },
+        {
+          "id": "long-1",
+          "order": 1,
+          "kind": "certification",
+          "institution": "CompTIA, EC-Council, or similar",
+          "credential": "Advanced cybersecurity certification",
+          "duration_months": 6.0,
+          "cost_usd": 0.0,
+          "program_id": null,
+          "program_name": "Security+, CySA+, or ethical hacking certification",
+          "estimate": true,
+          "transfer_agreement": null,
+          "key_courses": [],
+          "source_url": null
+        },
+        {
+          "id": "long-2",
+          "order": 2,
+          "kind": "internship",
+          "institution": "Employer or campus opportunity",
+          "credential": "Internship or professional experience",
+          "duration_months": 48.0,
+          "cost_usd": 0.0,
+          "program_id": null,
+          "program_name": "Security analyst, vulnerability assessment, or forensics experience",
+          "estimate": true,
+          "transfer_agreement": null,
+          "key_courses": [],
+          "source_url": null
+        },
+        {
+          "id": "long-3",
+          "order": 3,
+          "kind": "degree",
+          "institution": "Miami Dade College",
+          "credential": "B.S.",
+          "duration_months": 0.0,
+          "cost_usd": 7093.2,
+          "program_id": null,
+          "program_name": "Bachelor's completed",
+          "estimate": true,
+          "transfer_agreement": null,
+          "key_courses": [],
+          "source_url": null
+        }
+      ],
+      "workforce_entry_points": [
+        {
+          "after_step": 0,
+          "job_title": "Junior Security Analyst",
+          "salary_range_usd": "About $55,000-$75,000"
+        },
+        {
+          "after_step": 3,
+          "job_title": "Cybersecurity Analyst II or Security Engineer",
+          "salary_range_usd": "About $75,000-$110,000"
+        }
+      ],
+      "credentials": [
+        {
+          "name": "Cybersecurity B.S.",
+          "type": "degree",
+          "required": true
+        },
+        {
+          "name": "Industry certification",
+          "type": "certification",
+          "required": false
+        }
+      ],
+      "experience": [
+        "Internships, projects, cyber competitions, and part-time IT work can help you move into stronger roles."
+      ],
+      "exams": [
+        "Optional industry certification exams depending on your target role."
+      ],
+      "net_cost_after_aid_usd": 7889.999999999996
+    }
+  ],
+  "alternative_mdc_programs": [
+    {
+      "name": "Intelligence Studies",
+      "program_id": "mdc-college-credit-certificate-intelligence-studies",
+      "why": "Good add-on if you are interested in investigations, intelligence analysis, or security operations."
+    },
+    {
+      "name": "Cyber Defense",
+      "program_id": "mdc-certificate-of-professional-preparation-cyber-defense",
+      "why": "Useful for deeper defense and forensics skills after you build the basics."
+    },
+    {
+      "name": "Vulnerability Assessment",
+      "program_id": "mdc-certificate-of-professional-preparation-vulnerability-assessment",
+      "why": "Good fit if you want to focus on ethical hacking, threat detection, and security testing."
+    }
+  ],
+  "resources": [
+    {
+      "title": "FAFSA",
+      "url": "https://studentaid.gov/h/apply-for-aid/fafsa",
+      "kind": "financial_aid"
+    },
+    {
+      "title": "MDC Financial Aid",
+      "url": "https://www.mdc.edu/financialaid/",
+      "kind": "financial_aid"
+    },
+    {
+      "title": "MDC Scholarships",
+      "url": "https://www.mdc.edu/financialaid/scholarships/",
+      "kind": "financial_aid"
+    },
+    {
+      "title": "Federal Work-Study info",
+      "url": "https://studentaid.gov/understand-aid/types/work-study",
+      "kind": "financial_aid"
+    },
+    {
+      "title": "MDC Tuition and Fees",
+      "url": "https://www.mdc.edu/tuition/",
+      "kind": "other"
+    }
+  ],
+  "usage": {
+    "total_tokens": 11461,
+    "total_cost_usd": 0.094562
+  },
+  "warnings": [
+    "You said you work part time, so full-time program lengths were adjusted by about 1.8x in these route timelines.",
+    "Costs shown are tuition and fees only and do not include books, supplies, transportation, certification exam fees, or extra course user fees.",
+    "MDC program durations in the catalog are estimates.",
+    "Certification exam costs were not provided in MDC data, so those amounts are left as estimates or null.",
+    "Net cost after aid is only an estimate. Students with enough Pell Grant, Bright Futures, scholarships, or other aid may pay much less out of pocket.",
+    "The A.S. route is a workforce degree and does not use the A.A. transfer agreements like FIU Connect4Success or Florida 2+2.",
+    "If you later choose to transfer to a university, limited-access or specialized admission programs are not guaranteed."
+  ]
+}

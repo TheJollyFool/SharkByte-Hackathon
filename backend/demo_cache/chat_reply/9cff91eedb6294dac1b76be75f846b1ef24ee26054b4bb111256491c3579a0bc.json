@@ -1,0 +1,15 @@
+{
+  "id": "msg-eeae78e4030d",
+  "role": "advisor",
+  "advisor_id": "pathway",
+  "contributors": null,
+  "text": "¡Perfecto para empezar en MDC! Te recomiendo esta ruta:\n\n1. **Certificado: Intelligence Studies** (16 créditos, ~6 meses) — entrada rápida al campo mientras trabajas.\n2. **A.S. Cybersecurity** (60 créditos, ~30 meses) — profundiza en redes, forense digital, defensa y hasta IA aplicada a seguridad.\n\n> *El A.S. es título de fuerza laboral; te prepara para trabajar de inmediato y transfiere a bachilleratos específicos.*\n\n3. **Transferencia** a FIU, UCF o FAU para completar un **B.S. en Cybersecurity o Information Technology**.\n4. Opcionalmente, **maestría** en Cybersecurity.\n\nLos créditos del certificado cuentan dentro del A.S., así que no pierdes tiempo. 💡",
+  "usage": {
+    "input_tokens": 2466,
+    "output_tokens": 231,
+    "total_tokens": 2697,
+    "cost_usd": 0.012492
+  },
+  "source": "live",
+  "created_at": "2026-11-08T04:14:34.940111+00:00"
+}

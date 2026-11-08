@@ -1,0 +1,15 @@
+{
+  "id": "msg-3105830db529",
+  "role": "advisor",
+  "advisor_id": "finaid",
+  "contributors": null,
+  "text": "¡Sí se puede hacer con poco dinero! Empieza con la **FAFSA**: es la llave para la mayoría de ayudas.\n\nSegún tu FAFSA y requisitos, **podrías calificar** para:\n- **Federal Pell Grant**\n- **Florida Bright Futures**\n- **FSAG**\n- **Federal Work-Study** para trabajar y estudiar\n- **Becas de MDC**\n\nLas **becas y grants no se devuelven**. Si usas préstamos, **sí se devuelven**.\n\nComo no tenemos la tarifa por crédito, tu costo estimado queda así:  \n**60 créditos × tarifa por crédito − ayudas aprobadas = costo final estimado.**  \nCon ayuda, ese costo puede bajar bastante.\n\n**Próximo paso:** completa la FAFSA en **studentaid.gov** y pon a Miami Dade College como tu escuela.",
+  "usage": {
+    "input_tokens": 1979,
+    "output_tokens": 382,
+    "total_tokens": 2361,
+    "cost_usd": 0.024558
+  },
+  "source": "live",
+  "created_at": "2026-11-08T04:14:46.913870+00:00"
+}
