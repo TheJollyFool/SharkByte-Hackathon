@@ -1,4 +1,4 @@
-# Shark Advisor (working name) — SharkByte Hackathon
+# AdByteSor — SharkByte Hackathon
 
 A shark 🦈 on mdc.edu that helps students find their path. Chat with a **group of AI advisors** (or get one
 **merged expert answer**), get a **flowchart roadmap that starts at Miami Dade College**, download it as PDF,
